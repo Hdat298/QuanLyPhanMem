@@ -1,4 +1,4 @@
-﻿
+
 namespace QuanLyPhanMem
 {
     partial class RegisterForm
@@ -30,7 +30,7 @@ namespace QuanLyPhanMem
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-//            this.txtFirstname = new Guna.UI.WinForms.GunaTextBox();
+            this.txtFirstname = new Guna.UI.WinForms.GunaTextBox();
             this.gunaTextBox1 = new Guna.UI.WinForms.GunaTextBox();
             this.gunaTextBox2 = new Guna.UI.WinForms.GunaTextBox();
             this.gunaTextBox3 = new Guna.UI.WinForms.GunaTextBox();
