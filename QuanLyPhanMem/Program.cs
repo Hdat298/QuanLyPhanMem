@@ -16,7 +16,7 @@ namespace QuanLyPhanMem
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FluentDesignForm1());
+            Application.Run(new frmMain());
         }
     }
 }
