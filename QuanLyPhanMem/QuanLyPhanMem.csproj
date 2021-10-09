@@ -100,6 +100,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>QLDADataSetEmployee.xsd</DependentUpon>
     </Compile>
+    <Compile Include="Register2.0.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Register2.0.Designer.cs">
+      <DependentUpon>Register2.0.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Employee.resx">
       <DependentUpon>Employee.cs</DependentUpon>
     </EmbeddedResource>
@@ -122,6 +128,9 @@
     </Compile>
     <EmbeddedResource Include="frmRegister.resx">
       <DependentUpon>frmRegister.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Register2.0.resx">
+      <DependentUpon>Register2.0.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
