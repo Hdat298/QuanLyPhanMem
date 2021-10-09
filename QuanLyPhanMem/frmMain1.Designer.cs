@@ -54,6 +54,8 @@ namespace QuanLyPhanMem
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
             this.groupControl2 = new DevExpress.XtraEditors.GroupControl();
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
+            this.dateTimeOffsetEdit2 = new DevExpress.XtraEditors.DateTimeOffsetEdit();
+            this.dateTimeOffsetEdit1 = new DevExpress.XtraEditors.DateTimeOffsetEdit();
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
             this.gridView2 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
@@ -78,9 +80,7 @@ namespace QuanLyPhanMem
             this.emptySpaceItem4 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.emptySpaceItem5 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.layoutControlItem10 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.dateTimeOffsetEdit1 = new DevExpress.XtraEditors.DateTimeOffsetEdit();
             this.layoutControlItem12 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.dateTimeOffsetEdit2 = new DevExpress.XtraEditors.DateTimeOffsetEdit();
             this.layoutControlItem6 = new DevExpress.XtraLayout.LayoutControlItem();
             ((System.ComponentModel.ISupportInitialize)(this.dockManager1)).BeginInit();
             this.dockPanel1.SuspendLayout();
@@ -92,6 +92,8 @@ namespace QuanLyPhanMem
             this.groupControl2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dateTimeOffsetEdit2.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dateTimeOffsetEdit1.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
@@ -116,9 +118,7 @@ namespace QuanLyPhanMem
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem10)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateTimeOffsetEdit1.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem12)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateTimeOffsetEdit2.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).BeginInit();
             this.SuspendLayout();
             // 
@@ -337,6 +337,28 @@ namespace QuanLyPhanMem
             this.layoutControl1.TabIndex = 0;
             this.layoutControl1.Text = "layoutControl1";
             // 
+            // dateTimeOffsetEdit2
+            // 
+            this.dateTimeOffsetEdit2.EditValue = null;
+            this.dateTimeOffsetEdit2.Location = new System.Drawing.Point(1042, 36);
+            this.dateTimeOffsetEdit2.Name = "dateTimeOffsetEdit2";
+            this.dateTimeOffsetEdit2.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.dateTimeOffsetEdit2.Size = new System.Drawing.Size(102, 20);
+            this.dateTimeOffsetEdit2.StyleController = this.layoutControl1;
+            this.dateTimeOffsetEdit2.TabIndex = 16;
+            // 
+            // dateTimeOffsetEdit1
+            // 
+            this.dateTimeOffsetEdit1.EditValue = null;
+            this.dateTimeOffsetEdit1.Location = new System.Drawing.Point(360, 60);
+            this.dateTimeOffsetEdit1.Name = "dateTimeOffsetEdit1";
+            this.dateTimeOffsetEdit1.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.dateTimeOffsetEdit1.Size = new System.Drawing.Size(371, 20);
+            this.dateTimeOffsetEdit1.StyleController = this.layoutControl1;
+            this.dateTimeOffsetEdit1.TabIndex = 15;
+            // 
             // gridControl1
             // 
             this.gridControl1.Location = new System.Drawing.Point(22, 84);
@@ -550,17 +572,6 @@ namespace QuanLyPhanMem
             this.layoutControlItem10.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem10.TextVisible = false;
             // 
-            // dateTimeOffsetEdit1
-            // 
-            this.dateTimeOffsetEdit1.EditValue = null;
-            this.dateTimeOffsetEdit1.Location = new System.Drawing.Point(360, 60);
-            this.dateTimeOffsetEdit1.Name = "dateTimeOffsetEdit1";
-            this.dateTimeOffsetEdit1.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dateTimeOffsetEdit1.Size = new System.Drawing.Size(371, 20);
-            this.dateTimeOffsetEdit1.StyleController = this.layoutControl1;
-            this.dateTimeOffsetEdit1.TabIndex = 15;
-            // 
             // layoutControlItem12
             // 
             this.layoutControlItem12.Control = this.dateTimeOffsetEdit1;
@@ -569,17 +580,6 @@ namespace QuanLyPhanMem
             this.layoutControlItem12.Size = new System.Drawing.Size(486, 24);
             this.layoutControlItem12.Text = "Ngày sinh";
             this.layoutControlItem12.TextSize = new System.Drawing.Size(99, 13);
-            // 
-            // dateTimeOffsetEdit2
-            // 
-            this.dateTimeOffsetEdit2.EditValue = null;
-            this.dateTimeOffsetEdit2.Location = new System.Drawing.Point(1042, 36);
-            this.dateTimeOffsetEdit2.Name = "dateTimeOffsetEdit2";
-            this.dateTimeOffsetEdit2.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dateTimeOffsetEdit2.Size = new System.Drawing.Size(102, 20);
-            this.dateTimeOffsetEdit2.StyleController = this.layoutControl1;
-            this.dateTimeOffsetEdit2.TabIndex = 16;
             // 
             // layoutControlItem6
             // 
@@ -610,6 +610,8 @@ namespace QuanLyPhanMem
             this.groupControl2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dateTimeOffsetEdit2.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dateTimeOffsetEdit1.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
@@ -634,9 +636,7 @@ namespace QuanLyPhanMem
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem10)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateTimeOffsetEdit1.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem12)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateTimeOffsetEdit2.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).EndInit();
             this.ResumeLayout(false);
 
