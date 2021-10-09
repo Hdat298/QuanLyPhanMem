@@ -63,6 +63,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Employee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Employee.Designer.cs">
+      <DependentUpon>Employee.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmMain.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -89,6 +95,14 @@
     <Compile Include="frmRegister.Designer.cs">
       <DependentUpon>frmRegister.cs</DependentUpon>
     </Compile>
+    <Compile Include="QLDADataSetEmployee.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QLDADataSetEmployee.xsd</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Employee.resx">
+      <DependentUpon>Employee.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmMain.resx">
       <DependentUpon>frmMain.cs</DependentUpon>
     </EmbeddedResource>
@@ -123,6 +137,17 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="QLDADataSetEmployee.xsc">
+      <DependentUpon>QLDADataSetEmployee.xsd</DependentUpon>
+    </None>
+    <None Include="QLDADataSetEmployee.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>QLDADataSetEmployee.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="QLDADataSetEmployee.xss">
+      <DependentUpon>QLDADataSetEmployee.xsd</DependentUpon>
+    </None>
     <None Include="Resources\710a72cb1ac5dd29d8668d3c70a907b5.png" />
   </ItemGroup>
   <ItemGroup>
