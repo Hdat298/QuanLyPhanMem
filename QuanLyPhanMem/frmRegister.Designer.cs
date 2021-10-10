@@ -35,16 +35,13 @@ namespace QuanLyPhanMem
             this.gunaTextBox2 = new Guna.UI.WinForms.GunaTextBox();
             this.gunaTextBox3 = new Guna.UI.WinForms.GunaTextBox();
             this.gunaTextBox5 = new Guna.UI.WinForms.GunaTextBox();
-            this.gunaImageRadioButton1 = new Guna.UI.WinForms.GunaImageRadioButton();
             this.gunaMediumRadioButton1 = new Guna.UI.WinForms.GunaMediumRadioButton();
             this.gunaLabel1 = new Guna.UI.WinForms.GunaLabel();
             this.gunaLabel2 = new Guna.UI.WinForms.GunaLabel();
             this.gunaMediumRadioButton2 = new Guna.UI.WinForms.GunaMediumRadioButton();
             this.gunaDateTimePicker1 = new Guna.UI.WinForms.GunaDateTimePicker();
             this.gunaTextBox4 = new Guna.UI.WinForms.GunaTextBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnSignUp = new Guna.UI.WinForms.GunaButton();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -153,16 +150,6 @@ namespace QuanLyPhanMem
             this.gunaTextBox5.TabIndex = 8;
             this.gunaTextBox5.Text = "Address";
             // 
-            // gunaImageRadioButton1
-            // 
-            this.gunaImageRadioButton1.ImageCheckedOff = null;
-            this.gunaImageRadioButton1.ImageCheckedOn = null;
-            this.gunaImageRadioButton1.ImageSize = new System.Drawing.Size(20, 20);
-            this.gunaImageRadioButton1.Location = new System.Drawing.Point(440, 313);
-            this.gunaImageRadioButton1.Name = "gunaImageRadioButton1";
-            this.gunaImageRadioButton1.Size = new System.Drawing.Size(24, 24);
-            this.gunaImageRadioButton1.TabIndex = 9;
-            // 
             // gunaMediumRadioButton1
             // 
             this.gunaMediumRadioButton1.BaseColor = System.Drawing.Color.White;
@@ -248,16 +235,6 @@ namespace QuanLyPhanMem
             this.gunaTextBox4.TabIndex = 15;
             this.gunaTextBox4.Text = "Phone Number";
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::QuanLyPhanMem.Properties.Resources.w_arknights_tro_choi_dien_tu_anime_hinh_nen_2560x1600_7;
-            this.pictureBox1.Location = new System.Drawing.Point(-1, -1);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(377, 441);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
-            // 
             // btnSignUp
             // 
             this.btnSignUp.AnimationHoverSpeed = 0.07F;
@@ -284,7 +261,7 @@ namespace QuanLyPhanMem
             this.btnSignUp.Text = "Sign Up";
             this.btnSignUp.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // RegisterForm
+            // frmRegister
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -297,19 +274,16 @@ namespace QuanLyPhanMem
             this.Controls.Add(this.gunaMediumRadioButton2);
             this.Controls.Add(this.gunaLabel1);
             this.Controls.Add(this.gunaMediumRadioButton1);
-            this.Controls.Add(this.gunaImageRadioButton1);
             this.Controls.Add(this.gunaTextBox5);
             this.Controls.Add(this.gunaTextBox3);
             this.Controls.Add(this.gunaTextBox2);
             this.Controls.Add(this.gunaTextBox1);
             this.Controls.Add(this.txtFirstname);
-            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "RegisterForm";
+            this.Name = "frmRegister";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "RegisterForm";
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -318,13 +292,11 @@ namespace QuanLyPhanMem
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.PictureBox pictureBox1;
         private Guna.UI.WinForms.GunaTextBox txtFirstname;
         private Guna.UI.WinForms.GunaTextBox gunaTextBox1;
         private Guna.UI.WinForms.GunaTextBox gunaTextBox2;
         private Guna.UI.WinForms.GunaTextBox gunaTextBox3;
         private Guna.UI.WinForms.GunaTextBox gunaTextBox5;
-        private Guna.UI.WinForms.GunaImageRadioButton gunaImageRadioButton1;
         private Guna.UI.WinForms.GunaMediumRadioButton gunaMediumRadioButton1;
         private Guna.UI.WinForms.GunaLabel gunaLabel1;
         private Guna.UI.WinForms.GunaLabel gunaLabel2;
