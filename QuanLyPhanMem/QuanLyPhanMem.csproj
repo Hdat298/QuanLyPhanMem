@@ -71,6 +71,12 @@
     <Compile Include="Employee.Designer.cs">
       <DependentUpon>Employee.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmGameNintendo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGameNintendo.Designer.cs">
+      <DependentUpon>frmGameNintendo.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmHoadon.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -107,17 +113,35 @@
     <Compile Include="frmGamePS5.Designer.cs">
       <DependentUpon>frmGamePS5.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmMayNintendo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMayNintendo.Designer.cs">
+      <DependentUpon>frmMayNintendo.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmMayPS5.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmMayPS5.Designer.cs">
       <DependentUpon>frmMayPS5.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmPhuKienPS5.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPhuKienPS5.Designer.cs">
+      <DependentUpon>frmPhuKienPS5.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmSignIn.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmSignIn.Designer.cs">
       <DependentUpon>frmSignIn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmTayPS5.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTayPS5.Designer.cs">
+      <DependentUpon>frmTayPS5.cs</DependentUpon>
     </Compile>
     <Compile Include="frmThemKH.cs">
       <SubType>Form</SubType>
@@ -147,6 +171,9 @@
     <EmbeddedResource Include="Employee.resx">
       <DependentUpon>Employee.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmGameNintendo.resx">
+      <DependentUpon>frmGameNintendo.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmHoadon.resx">
       <DependentUpon>frmHoadon.cs</DependentUpon>
     </EmbeddedResource>
@@ -165,8 +192,20 @@
     <EmbeddedResource Include="frmGamePS5.resx">
       <DependentUpon>frmGamePS5.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmMayNintendo.resx">
+      <DependentUpon>frmMayNintendo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMayPS5.resx">
+      <DependentUpon>frmMayPS5.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPhuKienPS5.resx">
+      <DependentUpon>frmPhuKienPS5.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmSignIn.resx">
       <DependentUpon>frmSignIn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTayPS5.resx">
+      <DependentUpon>frmTayPS5.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmThemKH.resx">
       <DependentUpon>frmThemKH.cs</DependentUpon>
@@ -235,6 +274,48 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\resident-evil-village.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\may-ps5-ban-dia-825gb.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tay-ps5-dualsense-den-hang-nhap-khau.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tay-ps5-dualsense-do-hang-nhap-khau.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tay-ps5-dualsense-trang-chinh-hang-sony-viet-nam.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cap-sac-tay-ps5-xbox-series-x-dobe.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sony-media-remote-ps5.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tai-nghe-pulse-3d-wireless-headset-ps5.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\harvest-moon-life-of-hope.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\monster-hunter-stories-2-wings-of-ruin.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\the-legend-of-zelda-skyward-sword.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\may-choi-game-nintendo-switch-oled-trang.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\may-nintendo-switch-v2-grey.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\may-nintendo-switch-v2-mario-red-va-blue-edition.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\may-nintendo-switch-v2-neon.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
