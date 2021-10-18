@@ -101,6 +101,18 @@
     <Compile Include="frmMayConsole.Designer.cs">
       <DependentUpon>frmMayConsole.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmGamePS5.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGamePS5.Designer.cs">
+      <DependentUpon>frmGamePS5.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMayPS5.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMayPS5.Designer.cs">
+      <DependentUpon>frmMayPS5.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmSignIn.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -149,6 +161,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmMayConsole.resx">
       <DependentUpon>frmMayConsole.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGamePS5.resx">
+      <DependentUpon>frmGamePS5.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmSignIn.resx">
       <DependentUpon>frmSignIn.cs</DependentUpon>
@@ -208,6 +223,18 @@
   </ItemGroup>
   <ItemGroup>
     <Analyzer Include="..\..\..\Guna.UI-Framework-Lib-master\Guna.UI WinForms\.net 4.0\Guna.UI.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ghost-of-tsushima-director-cut-ps5.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\assassin-creed-valhalla.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\demon-souls.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\resident-evil-village.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -118,10 +118,64 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="ghost-of-tsushima-director-cut-ps5" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ghost-of-tsushima-director-cut-ps5.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="tai-nghe-pulse-3d-wireless-headset-ps5" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\tai-nghe-pulse-3d-wireless-headset-ps5.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="may-ps5-ban-dia-825gb" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\may-ps5-ban-dia-825gb.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="cap-sac-tay-ps5-xbox-series-x-dobe" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\cap-sac-tay-ps5-xbox-series-x-dobe.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="assassin-creed-valhalla" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\assassin-creed-valhalla.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="tay-ps5-dualsense-do-hang-nhap-khau" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\tay-ps5-dualsense-do-hang-nhap-khau.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="sony-media-remote-ps5" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\sony-media-remote-ps5.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="710a72cb1ac5dd29d8668d3c70a907b5" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\710a72cb1ac5dd29d8668d3c70a907b5.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="the-legend-of-zelda-skyward-sword" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\the-legend-of-zelda-skyward-sword.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="harvest-moon-life-of-hope" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\harvest-moon-life-of-hope.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="demon-souls" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\demon-souls.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="w-arknights-tro-choi-dien-tu-anime-hinh-nen-2560x1600_7" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\w-arknights-tro-choi-dien-tu-anime-hinh-nen-2560x1600_7.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="tay-ps5-dualsense-trang-chinh-hang-sony-viet-nam" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\tay-ps5-dualsense-trang-chinh-hang-sony-viet-nam.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="resident-evil-village" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\resident-evil-village.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="monster-hunter-stories-2-wings-of-ruin" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\monster-hunter-stories-2-wings-of-ruin.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="tay-ps5-dualsense-den-hang-nhap-khau" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\tay-ps5-dualsense-den-hang-nhap-khau.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="may-choi-game-nintendo-switch-oled-trang" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\may-choi-game-nintendo-switch-oled-trang.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="may-nintendo-switch-v2-grey" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\may-nintendo-switch-v2-grey.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="may-nintendo-switch-v2-mario-red-va-blue-edition" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\may-nintendo-switch-v2-mario-red-va-blue-edition.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="may-nintendo-switch-v2-neon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\may-nintendo-switch-v2-neon.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
