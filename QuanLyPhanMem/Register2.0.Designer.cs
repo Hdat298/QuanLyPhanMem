@@ -29,13 +29,14 @@ namespace QuanLyPhanMem
         /// </summary>
         private void InitializeComponent()
         {
+            DevExpress.XtraLayout.ColumnDefinition columnDefinition1 = new DevExpress.XtraLayout.ColumnDefinition();
+            DevExpress.XtraLayout.ColumnDefinition columnDefinition2 = new DevExpress.XtraLayout.ColumnDefinition();
+            DevExpress.XtraLayout.ColumnDefinition columnDefinition3 = new DevExpress.XtraLayout.ColumnDefinition();
             DevExpress.XtraLayout.ColumnDefinition columnDefinition4 = new DevExpress.XtraLayout.ColumnDefinition();
-            DevExpress.XtraLayout.ColumnDefinition columnDefinition5 = new DevExpress.XtraLayout.ColumnDefinition();
-            DevExpress.XtraLayout.ColumnDefinition columnDefinition6 = new DevExpress.XtraLayout.ColumnDefinition();
-            DevExpress.XtraLayout.RowDefinition rowDefinition5 = new DevExpress.XtraLayout.RowDefinition();
-            DevExpress.XtraLayout.RowDefinition rowDefinition6 = new DevExpress.XtraLayout.RowDefinition();
-            DevExpress.XtraLayout.RowDefinition rowDefinition7 = new DevExpress.XtraLayout.RowDefinition();
-            DevExpress.XtraLayout.RowDefinition rowDefinition8 = new DevExpress.XtraLayout.RowDefinition();
+            DevExpress.XtraLayout.RowDefinition rowDefinition1 = new DevExpress.XtraLayout.RowDefinition();
+            DevExpress.XtraLayout.RowDefinition rowDefinition2 = new DevExpress.XtraLayout.RowDefinition();
+            DevExpress.XtraLayout.RowDefinition rowDefinition3 = new DevExpress.XtraLayout.RowDefinition();
+            DevExpress.XtraLayout.RowDefinition rowDefinition4 = new DevExpress.XtraLayout.RowDefinition();
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
             this.gunaTextBox6 = new Guna.UI.WinForms.GunaTextBox();
             this.gunaDateTimePicker1 = new Guna.UI.WinForms.GunaDateTimePicker();
@@ -47,30 +48,38 @@ namespace QuanLyPhanMem
             this.gunaTextBox1 = new Guna.UI.WinForms.GunaTextBox();
             this.layoutControlItem8 = new DevExpress.XtraLayout.LayoutControlItem();
             this.Root = new DevExpress.XtraLayout.LayoutControlGroup();
-            this.layoutControlItem5 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem3 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem4 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.layoutControlItem7 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem6 = new DevExpress.XtraLayout.LayoutControlItem();
             this.gunaButton1 = new Guna.UI.WinForms.GunaButton();
             this.gunaButton2 = new Guna.UI.WinForms.GunaButton();
+            this.layoutControlItem5 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem7 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.gunaTextBox7 = new Guna.UI.WinForms.GunaTextBox();
+            this.layoutControlItem9 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.gunaTextBox8 = new Guna.UI.WinForms.GunaTextBox();
+            this.layoutControlItem10 = new DevExpress.XtraLayout.LayoutControlItem();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Root)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem9)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem10)).BeginInit();
             this.SuspendLayout();
             // 
             // layoutControl1
             // 
+            this.layoutControl1.Controls.Add(this.gunaTextBox8);
+            this.layoutControl1.Controls.Add(this.gunaTextBox7);
             this.layoutControl1.Controls.Add(this.gunaTextBox6);
             this.layoutControl1.Controls.Add(this.gunaDateTimePicker1);
             this.layoutControl1.Controls.Add(this.gunaTextBox5);
@@ -116,7 +125,7 @@ namespace QuanLyPhanMem
             this.gunaDateTimePicker1.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             this.gunaDateTimePicker1.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.gunaDateTimePicker1.ForeColor = System.Drawing.Color.Black;
-            this.gunaDateTimePicker1.Location = new System.Drawing.Point(1063, 72);
+            this.gunaDateTimePicker1.Location = new System.Drawing.Point(1076, 72);
             this.gunaDateTimePicker1.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
             this.gunaDateTimePicker1.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
             this.gunaDateTimePicker1.Name = "gunaDateTimePicker1";
@@ -124,8 +133,7 @@ namespace QuanLyPhanMem
             this.gunaDateTimePicker1.OnHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             this.gunaDateTimePicker1.OnHoverForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             this.gunaDateTimePicker1.OnPressedColor = System.Drawing.Color.Black;
-            this.gunaDateTimePicker1.Radius = 10;
-            this.gunaDateTimePicker1.Size = new System.Drawing.Size(207, 26);
+            this.gunaDateTimePicker1.Size = new System.Drawing.Size(194, 26);
             this.gunaDateTimePicker1.TabIndex = 14;
             this.gunaDateTimePicker1.Text = "Saturday, October 9, 2021";
             this.gunaDateTimePicker1.Value = new System.DateTime(2021, 10, 9, 21, 31, 52, 512);
@@ -140,12 +148,11 @@ namespace QuanLyPhanMem
             this.gunaTextBox5.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             this.gunaTextBox5.FocusedForeColor = System.Drawing.SystemColors.ControlText;
             this.gunaTextBox5.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.gunaTextBox5.Location = new System.Drawing.Point(1063, 42);
+            this.gunaTextBox5.Location = new System.Drawing.Point(1076, 42);
             this.gunaTextBox5.Name = "gunaTextBox5";
             this.gunaTextBox5.PasswordChar = '\0';
-            this.gunaTextBox5.Radius = 10;
             this.gunaTextBox5.SelectedText = "";
-            this.gunaTextBox5.Size = new System.Drawing.Size(207, 26);
+            this.gunaTextBox5.Size = new System.Drawing.Size(194, 26);
             this.gunaTextBox5.TabIndex = 12;
             // 
             // gunaTextBox4
@@ -178,12 +185,11 @@ namespace QuanLyPhanMem
             this.gunaComboBox1.Items.AddRange(new object[] {
             "Nam",
             "Nữ"});
-            this.gunaComboBox1.Location = new System.Drawing.Point(1063, 12);
+            this.gunaComboBox1.Location = new System.Drawing.Point(1076, 12);
             this.gunaComboBox1.Name = "gunaComboBox1";
             this.gunaComboBox1.OnHoverItemBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             this.gunaComboBox1.OnHoverItemForeColor = System.Drawing.Color.White;
-            this.gunaComboBox1.Radius = 10;
-            this.gunaComboBox1.Size = new System.Drawing.Size(207, 26);
+            this.gunaComboBox1.Size = new System.Drawing.Size(194, 26);
             this.gunaComboBox1.TabIndex = 8;
             // 
             // gunaTextBox3
@@ -199,9 +205,8 @@ namespace QuanLyPhanMem
             this.gunaTextBox3.Location = new System.Drawing.Point(92, 72);
             this.gunaTextBox3.Name = "gunaTextBox3";
             this.gunaTextBox3.PasswordChar = '\0';
-            this.gunaTextBox3.Radius = 10;
             this.gunaTextBox3.SelectedText = "";
-            this.gunaTextBox3.Size = new System.Drawing.Size(887, 26);
+            this.gunaTextBox3.Size = new System.Drawing.Size(900, 26);
             this.gunaTextBox3.TabIndex = 7;
             // 
             // gunaTextBox2
@@ -217,9 +222,8 @@ namespace QuanLyPhanMem
             this.gunaTextBox2.Location = new System.Drawing.Point(92, 42);
             this.gunaTextBox2.Name = "gunaTextBox2";
             this.gunaTextBox2.PasswordChar = '\0';
-            this.gunaTextBox2.Radius = 10;
             this.gunaTextBox2.SelectedText = "";
-            this.gunaTextBox2.Size = new System.Drawing.Size(887, 26);
+            this.gunaTextBox2.Size = new System.Drawing.Size(622, 26);
             this.gunaTextBox2.TabIndex = 6;
             // 
             // gunaTextBox1
@@ -235,9 +239,8 @@ namespace QuanLyPhanMem
             this.gunaTextBox1.Location = new System.Drawing.Point(92, 12);
             this.gunaTextBox1.Name = "gunaTextBox1";
             this.gunaTextBox1.PasswordChar = '\0';
-            this.gunaTextBox1.Radius = 10;
             this.gunaTextBox1.SelectedText = "";
-            this.gunaTextBox1.Size = new System.Drawing.Size(887, 26);
+            this.gunaTextBox1.Size = new System.Drawing.Size(622, 26);
             this.gunaTextBox1.TabIndex = 5;
             // 
             // layoutControlItem8
@@ -256,51 +259,46 @@ namespace QuanLyPhanMem
             this.Root.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.True;
             this.Root.GroupBordersVisible = false;
             this.Root.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
-            this.layoutControlItem5,
             this.layoutControlItem2,
             this.layoutControlItem3,
             this.layoutControlItem4,
+            this.layoutControlItem6,
+            this.layoutControlItem5,
             this.layoutControlItem7,
             this.layoutControlItem1,
-            this.layoutControlItem6});
+            this.layoutControlItem9,
+            this.layoutControlItem10});
             this.Root.LayoutMode = DevExpress.XtraLayout.Utils.LayoutMode.Table;
             this.Root.Name = "Root";
             this.Root.OptionsTableLayoutGroup.AutoSizeDefaultDefinitionLength = 50;
-            columnDefinition4.SizeType = System.Windows.Forms.SizeType.Absolute;
-            columnDefinition4.Width = 390D;
-            columnDefinition5.SizeType = System.Windows.Forms.SizeType.Percent;
-            columnDefinition5.Width = 100D;
-            columnDefinition6.SizeType = System.Windows.Forms.SizeType.Percent;
-            columnDefinition6.Width = 50D;
+            columnDefinition1.SizeType = System.Windows.Forms.SizeType.Absolute;
+            columnDefinition1.Width = 150D;
+            columnDefinition2.SizeType = System.Windows.Forms.SizeType.Percent;
+            columnDefinition2.Width = 100D;
+            columnDefinition3.SizeType = System.Windows.Forms.SizeType.Percent;
+            columnDefinition3.Width = 50D;
+            columnDefinition4.SizeType = System.Windows.Forms.SizeType.Percent;
+            columnDefinition4.Width = 50D;
             this.Root.OptionsTableLayoutGroup.ColumnDefinitions.AddRange(new DevExpress.XtraLayout.ColumnDefinition[] {
-            columnDefinition4,
-            columnDefinition5,
-            columnDefinition6});
-            rowDefinition5.Height = 8D;
-            rowDefinition5.SizeType = System.Windows.Forms.SizeType.Percent;
-            rowDefinition6.Height = 8D;
-            rowDefinition6.SizeType = System.Windows.Forms.SizeType.Percent;
-            rowDefinition7.Height = 8D;
-            rowDefinition7.SizeType = System.Windows.Forms.SizeType.Percent;
-            rowDefinition8.Height = 76D;
-            rowDefinition8.SizeType = System.Windows.Forms.SizeType.Percent;
+            columnDefinition1,
+            columnDefinition2,
+            columnDefinition3,
+            columnDefinition4});
+            rowDefinition1.Height = 8D;
+            rowDefinition1.SizeType = System.Windows.Forms.SizeType.Percent;
+            rowDefinition2.Height = 8D;
+            rowDefinition2.SizeType = System.Windows.Forms.SizeType.Percent;
+            rowDefinition3.Height = 8D;
+            rowDefinition3.SizeType = System.Windows.Forms.SizeType.Percent;
+            rowDefinition4.Height = 76D;
+            rowDefinition4.SizeType = System.Windows.Forms.SizeType.Percent;
             this.Root.OptionsTableLayoutGroup.RowDefinitions.AddRange(new DevExpress.XtraLayout.RowDefinition[] {
-            rowDefinition5,
-            rowDefinition6,
-            rowDefinition7,
-            rowDefinition8});
+            rowDefinition1,
+            rowDefinition2,
+            rowDefinition3,
+            rowDefinition4});
             this.Root.Size = new System.Drawing.Size(1282, 401);
             this.Root.TextVisible = false;
-            // 
-            // layoutControlItem5
-            // 
-            this.layoutControlItem5.Control = this.gunaComboBox1;
-            this.layoutControlItem5.Location = new System.Drawing.Point(971, 0);
-            this.layoutControlItem5.Name = "layoutControlItem5";
-            this.layoutControlItem5.OptionsTableLayoutItem.ColumnIndex = 2;
-            this.layoutControlItem5.Size = new System.Drawing.Size(291, 30);
-            this.layoutControlItem5.Text = "Giới tính";
-            this.layoutControlItem5.TextSize = new System.Drawing.Size(68, 13);
             // 
             // layoutControlItem2
             // 
@@ -308,7 +306,7 @@ namespace QuanLyPhanMem
             this.layoutControlItem2.Location = new System.Drawing.Point(0, 0);
             this.layoutControlItem2.Name = "layoutControlItem2";
             this.layoutControlItem2.OptionsTableLayoutItem.ColumnSpan = 2;
-            this.layoutControlItem2.Size = new System.Drawing.Size(971, 30);
+            this.layoutControlItem2.Size = new System.Drawing.Size(706, 30);
             this.layoutControlItem2.Text = "Mã nhân viên";
             this.layoutControlItem2.TextSize = new System.Drawing.Size(68, 13);
             // 
@@ -319,7 +317,7 @@ namespace QuanLyPhanMem
             this.layoutControlItem3.Name = "layoutControlItem3";
             this.layoutControlItem3.OptionsTableLayoutItem.ColumnSpan = 2;
             this.layoutControlItem3.OptionsTableLayoutItem.RowIndex = 1;
-            this.layoutControlItem3.Size = new System.Drawing.Size(971, 30);
+            this.layoutControlItem3.Size = new System.Drawing.Size(706, 30);
             this.layoutControlItem3.Text = "Tên nhân viên";
             this.layoutControlItem3.TextSize = new System.Drawing.Size(68, 13);
             // 
@@ -328,40 +326,18 @@ namespace QuanLyPhanMem
             this.layoutControlItem4.Control = this.gunaTextBox3;
             this.layoutControlItem4.Location = new System.Drawing.Point(0, 60);
             this.layoutControlItem4.Name = "layoutControlItem4";
-            this.layoutControlItem4.OptionsTableLayoutItem.ColumnSpan = 2;
+            this.layoutControlItem4.OptionsTableLayoutItem.ColumnSpan = 3;
             this.layoutControlItem4.OptionsTableLayoutItem.RowIndex = 2;
-            this.layoutControlItem4.Size = new System.Drawing.Size(971, 30);
+            this.layoutControlItem4.Size = new System.Drawing.Size(984, 30);
             this.layoutControlItem4.Text = "Chức vụ";
             this.layoutControlItem4.TextSize = new System.Drawing.Size(68, 13);
-            // 
-            // layoutControlItem7
-            // 
-            this.layoutControlItem7.Control = this.gunaTextBox5;
-            this.layoutControlItem7.Location = new System.Drawing.Point(971, 30);
-            this.layoutControlItem7.Name = "layoutControlItem7";
-            this.layoutControlItem7.OptionsTableLayoutItem.ColumnIndex = 2;
-            this.layoutControlItem7.OptionsTableLayoutItem.RowIndex = 1;
-            this.layoutControlItem7.Size = new System.Drawing.Size(291, 30);
-            this.layoutControlItem7.Text = "Số điện thoại";
-            this.layoutControlItem7.TextSize = new System.Drawing.Size(68, 13);
-            // 
-            // layoutControlItem1
-            // 
-            this.layoutControlItem1.Control = this.gunaDateTimePicker1;
-            this.layoutControlItem1.Location = new System.Drawing.Point(971, 60);
-            this.layoutControlItem1.Name = "layoutControlItem1";
-            this.layoutControlItem1.OptionsTableLayoutItem.ColumnIndex = 2;
-            this.layoutControlItem1.OptionsTableLayoutItem.RowIndex = 2;
-            this.layoutControlItem1.Size = new System.Drawing.Size(291, 30);
-            this.layoutControlItem1.Text = "Ngày sinh";
-            this.layoutControlItem1.TextSize = new System.Drawing.Size(68, 13);
             // 
             // layoutControlItem6
             // 
             this.layoutControlItem6.Control = this.gunaTextBox6;
             this.layoutControlItem6.Location = new System.Drawing.Point(0, 90);
             this.layoutControlItem6.Name = "layoutControlItem6";
-            this.layoutControlItem6.OptionsTableLayoutItem.ColumnSpan = 3;
+            this.layoutControlItem6.OptionsTableLayoutItem.ColumnSpan = 4;
             this.layoutControlItem6.OptionsTableLayoutItem.RowIndex = 3;
             this.layoutControlItem6.Size = new System.Drawing.Size(1262, 291);
             this.layoutControlItem6.Text = "Địa chỉ";
@@ -419,6 +395,91 @@ namespace QuanLyPhanMem
             this.gunaButton2.Text = "Hủy";
             this.gunaButton2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
+            // layoutControlItem5
+            // 
+            this.layoutControlItem5.Control = this.gunaComboBox1;
+            this.layoutControlItem5.Location = new System.Drawing.Point(984, 0);
+            this.layoutControlItem5.Name = "layoutControlItem5";
+            this.layoutControlItem5.OptionsTableLayoutItem.ColumnIndex = 3;
+            this.layoutControlItem5.Size = new System.Drawing.Size(278, 30);
+            this.layoutControlItem5.Text = "Giới tính";
+            this.layoutControlItem5.TextSize = new System.Drawing.Size(68, 13);
+            // 
+            // layoutControlItem7
+            // 
+            this.layoutControlItem7.Control = this.gunaTextBox5;
+            this.layoutControlItem7.Location = new System.Drawing.Point(984, 30);
+            this.layoutControlItem7.Name = "layoutControlItem7";
+            this.layoutControlItem7.OptionsTableLayoutItem.ColumnIndex = 3;
+            this.layoutControlItem7.OptionsTableLayoutItem.RowIndex = 1;
+            this.layoutControlItem7.Size = new System.Drawing.Size(278, 30);
+            this.layoutControlItem7.Text = "Số điện thoại";
+            this.layoutControlItem7.TextSize = new System.Drawing.Size(68, 13);
+            // 
+            // layoutControlItem1
+            // 
+            this.layoutControlItem1.Control = this.gunaDateTimePicker1;
+            this.layoutControlItem1.Location = new System.Drawing.Point(984, 60);
+            this.layoutControlItem1.Name = "layoutControlItem1";
+            this.layoutControlItem1.OptionsTableLayoutItem.ColumnIndex = 3;
+            this.layoutControlItem1.OptionsTableLayoutItem.RowIndex = 2;
+            this.layoutControlItem1.Size = new System.Drawing.Size(278, 30);
+            this.layoutControlItem1.Text = "Ngày sinh";
+            this.layoutControlItem1.TextSize = new System.Drawing.Size(68, 13);
+            // 
+            // gunaTextBox7
+            // 
+            this.gunaTextBox7.BaseColor = System.Drawing.Color.White;
+            this.gunaTextBox7.BorderColor = System.Drawing.Color.Silver;
+            this.gunaTextBox7.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.gunaTextBox7.FocusedBaseColor = System.Drawing.Color.White;
+            this.gunaTextBox7.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.gunaTextBox7.FocusedForeColor = System.Drawing.SystemColors.ControlText;
+            this.gunaTextBox7.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.gunaTextBox7.Location = new System.Drawing.Point(798, 12);
+            this.gunaTextBox7.Name = "gunaTextBox7";
+            this.gunaTextBox7.PasswordChar = '\0';
+            this.gunaTextBox7.SelectedText = "";
+            this.gunaTextBox7.Size = new System.Drawing.Size(194, 26);
+            this.gunaTextBox7.TabIndex = 16;
+            // 
+            // layoutControlItem9
+            // 
+            this.layoutControlItem9.Control = this.gunaTextBox7;
+            this.layoutControlItem9.Location = new System.Drawing.Point(706, 0);
+            this.layoutControlItem9.Name = "layoutControlItem9";
+            this.layoutControlItem9.OptionsTableLayoutItem.ColumnIndex = 2;
+            this.layoutControlItem9.Size = new System.Drawing.Size(278, 30);
+            this.layoutControlItem9.Text = "Tên tài khoản";
+            this.layoutControlItem9.TextSize = new System.Drawing.Size(68, 13);
+            // 
+            // gunaTextBox8
+            // 
+            this.gunaTextBox8.BaseColor = System.Drawing.Color.White;
+            this.gunaTextBox8.BorderColor = System.Drawing.Color.Silver;
+            this.gunaTextBox8.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.gunaTextBox8.FocusedBaseColor = System.Drawing.Color.White;
+            this.gunaTextBox8.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.gunaTextBox8.FocusedForeColor = System.Drawing.SystemColors.ControlText;
+            this.gunaTextBox8.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.gunaTextBox8.Location = new System.Drawing.Point(798, 42);
+            this.gunaTextBox8.Name = "gunaTextBox8";
+            this.gunaTextBox8.PasswordChar = '\0';
+            this.gunaTextBox8.SelectedText = "";
+            this.gunaTextBox8.Size = new System.Drawing.Size(194, 26);
+            this.gunaTextBox8.TabIndex = 17;
+            // 
+            // layoutControlItem10
+            // 
+            this.layoutControlItem10.Control = this.gunaTextBox8;
+            this.layoutControlItem10.Location = new System.Drawing.Point(706, 30);
+            this.layoutControlItem10.Name = "layoutControlItem10";
+            this.layoutControlItem10.OptionsTableLayoutItem.ColumnIndex = 2;
+            this.layoutControlItem10.OptionsTableLayoutItem.RowIndex = 1;
+            this.layoutControlItem10.Size = new System.Drawing.Size(278, 30);
+            this.layoutControlItem10.Text = "Mật khẩu";
+            this.layoutControlItem10.TextSize = new System.Drawing.Size(68, 13);
+            // 
             // Register2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -434,13 +495,15 @@ namespace QuanLyPhanMem
             this.layoutControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Root)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem9)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem10)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -455,17 +518,21 @@ namespace QuanLyPhanMem
         private Guna.UI.WinForms.GunaTextBox gunaTextBox3;
         private Guna.UI.WinForms.GunaTextBox gunaTextBox2;
         private Guna.UI.WinForms.GunaTextBox gunaTextBox1;
-        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem5;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem8;
         private Guna.UI.WinForms.GunaDateTimePicker gunaDateTimePicker1;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem2;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem3;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem4;
-        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem7;
-        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem1;
         private Guna.UI.WinForms.GunaTextBox gunaTextBox6;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem6;
         private Guna.UI.WinForms.GunaButton gunaButton1;
         private Guna.UI.WinForms.GunaButton gunaButton2;
+        private Guna.UI.WinForms.GunaTextBox gunaTextBox8;
+        private Guna.UI.WinForms.GunaTextBox gunaTextBox7;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem5;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem7;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem1;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem9;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem10;
     }
 }
