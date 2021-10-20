@@ -32,9 +32,7 @@ namespace QuanLyPhanMem
             this.components = new System.ComponentModel.Container();
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.qLDADataSetEmployee = new QuanLyPhanMem.QLDADataSetEmployee();
             this.nhanvienBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.nhanvienTableAdapter = new QuanLyPhanMem.QLDADataSetEmployeeTableAdapters.NhanvienTableAdapter();
             this.colMaNV = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colTenNV = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colGioiTinh = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -44,7 +42,6 @@ namespace QuanLyPhanMem
             this.colMail = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.qLDADataSetEmployee)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nhanvienBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
@@ -75,17 +72,13 @@ namespace QuanLyPhanMem
             // 
             // qLDADataSetEmployee
             // 
-            this.qLDADataSetEmployee.DataSetName = "QLDADataSetEmployee";
-            this.qLDADataSetEmployee.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // nhanvienBindingSource
             // 
             this.nhanvienBindingSource.DataMember = "Nhanvien";
-            this.nhanvienBindingSource.DataSource = this.qLDADataSetEmployee;
             // 
             // nhanvienTableAdapter
             // 
-            this.nhanvienTableAdapter.ClearBeforeFill = true;
             // 
             // colMaNV
             // 
@@ -147,7 +140,6 @@ namespace QuanLyPhanMem
             this.Load += new System.EventHandler(this.Employee_Load);
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.qLDADataSetEmployee)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nhanvienBindingSource)).EndInit();
             this.ResumeLayout(false);
 
@@ -157,9 +149,7 @@ namespace QuanLyPhanMem
 
         private DevExpress.XtraGrid.GridControl gridControl1;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
-        private QLDADataSetEmployee qLDADataSetEmployee;
         private System.Windows.Forms.BindingSource nhanvienBindingSource;
-        private QLDADataSetEmployeeTableAdapters.NhanvienTableAdapter nhanvienTableAdapter;
         private DevExpress.XtraGrid.Columns.GridColumn colMaNV;
         private DevExpress.XtraGrid.Columns.GridColumn colTenNV;
         private DevExpress.XtraGrid.Columns.GridColumn colGioiTinh;
