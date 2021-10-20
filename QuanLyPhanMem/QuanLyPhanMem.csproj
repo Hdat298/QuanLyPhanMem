@@ -71,12 +71,6 @@
     <Compile Include="Employee.Designer.cs">
       <DependentUpon>Employee.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmGameNintendo.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmGameNintendo.Designer.cs">
-      <DependentUpon>frmGameNintendo.cs</DependentUpon>
-    </Compile>
     <Compile Include="frmHoadon.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -101,47 +95,11 @@
     <Compile Include="frmMain1.Designer.cs">
       <DependentUpon>frmMain1.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmMayConsole.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmMayConsole.Designer.cs">
-      <DependentUpon>frmMayConsole.cs</DependentUpon>
-    </Compile>
-    <Compile Include="frmGamePS5.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmGamePS5.Designer.cs">
-      <DependentUpon>frmGamePS5.cs</DependentUpon>
-    </Compile>
-    <Compile Include="frmMayNintendo.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmMayNintendo.Designer.cs">
-      <DependentUpon>frmMayNintendo.cs</DependentUpon>
-    </Compile>
-    <Compile Include="frmMayPS5.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmMayPS5.Designer.cs">
-      <DependentUpon>frmMayPS5.cs</DependentUpon>
-    </Compile>
-    <Compile Include="frmPhuKienPS5.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmPhuKienPS5.Designer.cs">
-      <DependentUpon>frmPhuKienPS5.cs</DependentUpon>
-    </Compile>
     <Compile Include="frmSignIn.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmSignIn.Designer.cs">
       <DependentUpon>frmSignIn.cs</DependentUpon>
-    </Compile>
-    <Compile Include="frmTayPS5.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmTayPS5.Designer.cs">
-      <DependentUpon>frmTayPS5.cs</DependentUpon>
     </Compile>
     <Compile Include="frmThemKH.cs">
       <SubType>Form</SubType>
@@ -157,11 +115,6 @@
     <Compile Include="frmRegister.Designer.cs">
       <DependentUpon>frmRegister.cs</DependentUpon>
     </Compile>
-    <Compile Include="QLDADataSetEmployee.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>QLDADataSetEmployee.xsd</DependentUpon>
-    </Compile>
     <Compile Include="Register2.0.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -170,9 +123,6 @@
     </Compile>
     <EmbeddedResource Include="Employee.resx">
       <DependentUpon>Employee.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmGameNintendo.resx">
-      <DependentUpon>frmGameNintendo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmHoadon.resx">
       <DependentUpon>frmHoadon.cs</DependentUpon>
@@ -186,26 +136,8 @@
     <EmbeddedResource Include="frmMain1.resx">
       <DependentUpon>frmMain1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmMayConsole.resx">
-      <DependentUpon>frmMayConsole.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmGamePS5.resx">
-      <DependentUpon>frmGamePS5.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmMayNintendo.resx">
-      <DependentUpon>frmMayNintendo.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmMayPS5.resx">
-      <DependentUpon>frmMayPS5.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmPhuKienPS5.resx">
-      <DependentUpon>frmPhuKienPS5.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="frmSignIn.resx">
       <DependentUpon>frmSignIn.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmTayPS5.resx">
-      <DependentUpon>frmTayPS5.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmThemKH.resx">
       <DependentUpon>frmThemKH.cs</DependentUpon>
@@ -241,17 +173,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="QLDADataSetEmployee.xsc">
-      <DependentUpon>QLDADataSetEmployee.xsd</DependentUpon>
-    </None>
-    <None Include="QLDADataSetEmployee.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>QLDADataSetEmployee.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="QLDADataSetEmployee.xss">
-      <DependentUpon>QLDADataSetEmployee.xsd</DependentUpon>
-    </None>
     <None Include="Resources\710a72cb1ac5dd29d8668d3c70a907b5.png" />
   </ItemGroup>
   <ItemGroup>
