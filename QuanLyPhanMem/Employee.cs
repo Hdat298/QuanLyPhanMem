@@ -20,7 +20,6 @@ namespace QuanLyPhanMem
         private void Employee_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'qLDADataSetEmployee.Nhanvien' table. You can move, or remove it, as needed.
-            this.nhanvienTableAdapter.Fill(this.qLDADataSetEmployee.Nhanvien);
 
         }
     }
