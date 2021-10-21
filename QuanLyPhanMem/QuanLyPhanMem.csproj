@@ -47,6 +47,7 @@
     <Reference Include="DevExpress.XtraScheduler.v21.1, Version=21.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraScheduler.v21.1.Core, Version=21.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.XtraScheduler.v21.1.Core.Desktop, Version=21.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraTreeList.v21.1, Version=21.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="Guna.UI">
       <HintPath>..\..\..\Guna.UI-Framework-Lib-master\Guna.UI WinForms\.net 4.0\Guna.UI.dll</HintPath>
     </Reference>
@@ -109,6 +110,15 @@
     <Compile Include="frmRegister.Designer.cs">
       <DependentUpon>frmRegister.cs</DependentUpon>
     </Compile>
+    <Compile Include="QLDADataSetEmployee.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QLDADataSetEmployee.xsd</DependentUpon>
+    <Compile Include="QLDADataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QLDADataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Register2.0.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -164,6 +174,17 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="QLDADataSetEmployee.xsc">
+      <DependentUpon>QLDADataSetEmployee.xsd</DependentUpon>
+    </None>
+    <None Include="QLDADataSetEmployee.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>QLDADataSetEmployee.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="QLDADataSetEmployee.xss">
+      <DependentUpon>QLDADataSetEmployee.xsd</DependentUpon>
+    </None>
     <None Include="Resources\710a72cb1ac5dd29d8668d3c70a907b5.png" />
   </ItemGroup>
   <ItemGroup>
