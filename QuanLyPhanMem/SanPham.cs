@@ -25,10 +25,7 @@ namespace QuanLyPhanMem
         public string MaSanPham { get; set; }
         public string TenSanPham { get; set; }
         public string DonViTinh { get; set; }
-<<<<<<< Updated upstream
         public int DonGia { get; set; }
-=======
->>>>>>> Stashed changes
         public string MaLoai { get; set; }
         public string MaCTY { get; set; }
     
