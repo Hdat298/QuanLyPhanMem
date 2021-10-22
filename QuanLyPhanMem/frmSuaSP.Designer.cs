@@ -51,7 +51,7 @@ namespace QuanLyPhanMem
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnThem = new Guna.UI.WinForms.GunaButton();
-            this.gunaButton1 = new Guna.UI.WinForms.GunaButton();
+            this.btnXoa = new Guna.UI.WinForms.GunaButton();
             this.gunaButton2 = new Guna.UI.WinForms.GunaButton();
             ((System.ComponentModel.ISupportInitialize)(this.dataLayoutControl1)).BeginInit();
             this.dataLayoutControl1.SuspendLayout();
@@ -219,6 +219,7 @@ namespace QuanLyPhanMem
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.Size = new System.Drawing.Size(734, 389);
             this.dataGridView1.TabIndex = 4;
+            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick_1);
             // 
             // Column1
             // 
@@ -281,32 +282,34 @@ namespace QuanLyPhanMem
             this.btnThem.TabIndex = 5;
             this.btnThem.Text = "THÊM";
             this.btnThem.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
-            // gunaButton1
+            // btnXoa
             // 
-            this.gunaButton1.AnimationHoverSpeed = 0.07F;
-            this.gunaButton1.AnimationSpeed = 0.03F;
-            this.gunaButton1.BackColor = System.Drawing.Color.Transparent;
-            this.gunaButton1.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.gunaButton1.BorderColor = System.Drawing.Color.Black;
-            this.gunaButton1.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.gunaButton1.FocusedColor = System.Drawing.Color.Empty;
-            this.gunaButton1.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gunaButton1.ForeColor = System.Drawing.Color.White;
-            this.gunaButton1.Image = null;
-            this.gunaButton1.ImageSize = new System.Drawing.Size(20, 20);
-            this.gunaButton1.Location = new System.Drawing.Point(564, 87);
-            this.gunaButton1.Name = "gunaButton1";
-            this.gunaButton1.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
-            this.gunaButton1.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.gunaButton1.OnHoverForeColor = System.Drawing.Color.White;
-            this.gunaButton1.OnHoverImage = null;
-            this.gunaButton1.OnPressedColor = System.Drawing.Color.Black;
-            this.gunaButton1.Radius = 16;
-            this.gunaButton1.Size = new System.Drawing.Size(68, 35);
-            this.gunaButton1.TabIndex = 5;
-            this.gunaButton1.Text = "XÓA";
-            this.gunaButton1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btnXoa.AnimationHoverSpeed = 0.07F;
+            this.btnXoa.AnimationSpeed = 0.03F;
+            this.btnXoa.BackColor = System.Drawing.Color.Transparent;
+            this.btnXoa.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.btnXoa.BorderColor = System.Drawing.Color.Black;
+            this.btnXoa.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btnXoa.FocusedColor = System.Drawing.Color.Empty;
+            this.btnXoa.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnXoa.ForeColor = System.Drawing.Color.White;
+            this.btnXoa.Image = null;
+            this.btnXoa.ImageSize = new System.Drawing.Size(20, 20);
+            this.btnXoa.Location = new System.Drawing.Point(664, 87);
+            this.btnXoa.Name = "btnXoa";
+            this.btnXoa.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
+            this.btnXoa.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.btnXoa.OnHoverForeColor = System.Drawing.Color.White;
+            this.btnXoa.OnHoverImage = null;
+            this.btnXoa.OnPressedColor = System.Drawing.Color.Black;
+            this.btnXoa.Radius = 16;
+            this.btnXoa.Size = new System.Drawing.Size(68, 35);
+            this.btnXoa.TabIndex = 5;
+            this.btnXoa.Text = "XÓA";
+            this.btnXoa.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
             // 
             // gunaButton2
             // 
@@ -321,7 +324,7 @@ namespace QuanLyPhanMem
             this.gunaButton2.ForeColor = System.Drawing.Color.White;
             this.gunaButton2.Image = null;
             this.gunaButton2.ImageSize = new System.Drawing.Size(20, 20);
-            this.gunaButton2.Location = new System.Drawing.Point(638, 87);
+            this.gunaButton2.Location = new System.Drawing.Point(577, 87);
             this.gunaButton2.Name = "gunaButton2";
             this.gunaButton2.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
             this.gunaButton2.OnHoverBorderColor = System.Drawing.Color.Black;
@@ -333,6 +336,7 @@ namespace QuanLyPhanMem
             this.gunaButton2.TabIndex = 5;
             this.gunaButton2.Text = "SỬA";
             this.gunaButton2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.gunaButton2.Click += new System.EventHandler(this.gunaButton2_Click);
             // 
             // frmSuaSP
             // 
@@ -340,7 +344,7 @@ namespace QuanLyPhanMem
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(758, 529);
             this.Controls.Add(this.gunaButton2);
-            this.Controls.Add(this.gunaButton1);
+            this.Controls.Add(this.btnXoa);
             this.Controls.Add(this.btnThem);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.dataLayoutControl1);
@@ -388,7 +392,7 @@ namespace QuanLyPhanMem
         private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
         private Guna.UI.WinForms.GunaButton btnThem;
-        private Guna.UI.WinForms.GunaButton gunaButton1;
+        private Guna.UI.WinForms.GunaButton btnXoa;
         private Guna.UI.WinForms.GunaButton gunaButton2;
     }
 }

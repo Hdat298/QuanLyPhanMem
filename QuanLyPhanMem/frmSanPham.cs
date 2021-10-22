@@ -27,8 +27,11 @@ namespace QuanLyPhanMem
                 List<NhaCungCap> listNCC = ProjectContext.NhaCungCaps.ToList();
                 loadGrid(listSP);
                 loadTenLoai(listLoai);
-                loadNCC(listNCC);
                 loadDonVi(listSP);
+                loadNCC(listNCC);
+                cbxLoai.Text = null;
+                cbxNCC.Text = null;
+                cbxDonVi.Text = null;
             }
             catch (Exception ex)
             {
@@ -65,7 +68,6 @@ namespace QuanLyPhanMem
             cbxNCC.DataSource = listNCC;
             cbxNCC.DisplayMember = "TenCTY";
             cbxNCC.ValueMember = "MaCTY";
-            cbxNCC.Text = null;
         }
 
         private void loadDonVi(List<SanPham> listSP)
@@ -73,7 +75,32 @@ namespace QuanLyPhanMem
             cbxDonVi.DataSource = listSP;
             cbxDonVi.DisplayMember = "DonViTinh";
             cbxDonVi.ValueMember = "DonViTinh";
-            cbxDonVi.Text = null;
+        }
+
+        private string checkNCC(string TenCTY)
+        {
+            List<NhaCungCap> listNCC = ProjectContext.NhaCungCaps.ToList();
+            foreach (var item in listNCC)
+            {
+                if (TenCTY == item.TenCTY)
+                {
+                    return item.MaCTY;
+                }
+            }
+            return null;
+        }
+
+        private string checkLoai(string TLoai)
+        {
+            List<Loai> listLoai = ProjectContext.Loais.ToList();
+            foreach (var item in listLoai)
+            {
+                if (TLoai == item.TenLoai)
+                {
+                    return item.MaLoai;
+                }
+            }
+            return null;
         }
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -96,6 +123,44 @@ namespace QuanLyPhanMem
                 MessageBox.Show(ex.Message);
                 throw;
             }
+        }
+
+        private void btnTimKiem_Click(object sender, EventArgs e)
+        {
+            if (txtTenSP.Text == "" && txtMaSP.Text == "" && cbxNCC.Text == "" && txtGia.Text == "" && cbxLoai.Text == "" && cbxDonVi.Text == "")
+            {
+                MessageBox.Show("Thông tin nhập vào thiếu!", "Thông báo!", MessageBoxButtons.OK);
+                txtTenSP.Focus();
+            }
+            else
+            {
+                try
+                {
+                    string temp = checkNCC(cbxNCC.Text);
+                    string temp1 = checkLoai(cbxLoai.Text);
+                    List<SanPham> listSP = ProjectContext.SanPhams.ToList();
+                    List<SanPham> listSearchSP = (from s in listSP
+                                                  where s.TenSanPham == txtTenSP.Text || s.MaCTY == temp || s.MaLoai == temp1
+                                                  select s).ToList();
+                    loadGrid(listSearchSP);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                    throw;
+                }     
+            }
+        }
+
+        private void btnNew_Click(object sender, EventArgs e)
+        {
+            frmSanPham_Load(sender, e);
+            txtTenSP.Text = null;
+            txtMaSP.Text = null;
+            txtGia.Text = null;
+            cbxDonVi.Text = null;
+            cbxLoai.Text = null;
+            cbxNCC.Text = null;
         }
     }
 }
