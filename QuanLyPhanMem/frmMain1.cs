@@ -16,5 +16,16 @@ namespace QuanLyPhanMem
         {
             InitializeComponent();
         }
+
+        private void navBarSP_ItemChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void navBarSP_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
+        {
+            frmSanPham frmSP = new frmSanPham();
+            frmSP.ShowDialog();
+        }
     }
 }

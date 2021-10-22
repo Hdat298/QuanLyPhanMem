@@ -41,13 +41,15 @@ namespace QuanLyPhanMem
             this.navBarItem1 = new DevExpress.XtraNavBar.NavBarItem();
             this.navBarItem2 = new DevExpress.XtraNavBar.NavBarItem();
             this.navBarItem4 = new DevExpress.XtraNavBar.NavBarItem();
+            this.navBarGroup5 = new DevExpress.XtraNavBar.NavBarGroup();
+            this.navBarItem10 = new DevExpress.XtraNavBar.NavBarItem();
             this.navBarGroup3 = new DevExpress.XtraNavBar.NavBarGroup();
             this.navBarItem8 = new DevExpress.XtraNavBar.NavBarItem();
             this.navBarGroup4 = new DevExpress.XtraNavBar.NavBarGroup();
             this.navBarItem5 = new DevExpress.XtraNavBar.NavBarItem();
             this.navBarItem6 = new DevExpress.XtraNavBar.NavBarItem();
             this.navBarItem7 = new DevExpress.XtraNavBar.NavBarItem();
-            this.navBarItem9 = new DevExpress.XtraNavBar.NavBarItem();
+            this.navBarSP = new DevExpress.XtraNavBar.NavBarItem();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
             ((System.ComponentModel.ISupportInitialize)(this.dockManager1)).BeginInit();
             this.dockPanel1.SuspendLayout();
@@ -110,6 +112,7 @@ namespace QuanLyPhanMem
             this.navBarControl1.Groups.AddRange(new DevExpress.XtraNavBar.NavBarGroup[] {
             this.navBarGroup1,
             this.navBarGroup2,
+            this.navBarGroup5,
             this.navBarGroup3,
             this.navBarGroup4});
             this.navBarControl1.Items.AddRange(new DevExpress.XtraNavBar.NavBarItem[] {
@@ -121,7 +124,8 @@ namespace QuanLyPhanMem
             this.navBarItem6,
             this.navBarItem7,
             this.navBarItem8,
-            this.navBarItem9});
+            this.navBarSP,
+            this.navBarItem10});
             this.navBarControl1.Location = new System.Drawing.Point(0, 0);
             this.navBarControl1.Name = "navBarControl1";
             this.navBarControl1.OptionsNavPane.ExpandedWidth = 193;
@@ -169,10 +173,23 @@ namespace QuanLyPhanMem
             this.navBarItem4.Caption = "Báo Cáo Ngày";
             this.navBarItem4.Name = "navBarItem4";
             // 
+            // navBarGroup5
+            // 
+            this.navBarGroup5.Caption = "Nhân Viên";
+            this.navBarGroup5.Expanded = true;
+            this.navBarGroup5.ItemLinks.AddRange(new DevExpress.XtraNavBar.NavBarItemLink[] {
+            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItem10)});
+            this.navBarGroup5.Name = "navBarGroup5";
+            // 
+            // navBarItem10
+            // 
+            this.navBarItem10.Caption = "Thông Tin Nhân Viên";
+            this.navBarItem10.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("navBarItem10.ImageOptions.SvgImage")));
+            this.navBarItem10.Name = "navBarItem10";
+            // 
             // navBarGroup3
             // 
             this.navBarGroup3.Caption = "Khách Hàng";
-            this.navBarGroup3.Expanded = true;
             this.navBarGroup3.ItemLinks.AddRange(new DevExpress.XtraNavBar.NavBarItemLink[] {
             new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItem8)});
             this.navBarGroup3.Name = "navBarGroup3";
@@ -193,7 +210,7 @@ namespace QuanLyPhanMem
             new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItem5),
             new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItem6),
             new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItem7),
-            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItem9)});
+            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarSP)});
             this.navBarGroup4.Name = "navBarGroup4";
             // 
             // navBarItem5
@@ -215,12 +232,14 @@ namespace QuanLyPhanMem
             this.navBarItem7.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("navBarItem7.ImageOptions.SvgImage")));
             this.navBarItem7.Name = "navBarItem7";
             // 
-            // navBarItem9
+            // navBarSP
             // 
-            this.navBarItem9.Caption = "Hàng Hóa";
-            this.navBarItem9.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("navBarItem9.ImageOptions.LargeImage")));
-            this.navBarItem9.ImageOptions.SmallImage = ((System.Drawing.Image)(resources.GetObject("navBarItem9.ImageOptions.SmallImage")));
-            this.navBarItem9.Name = "navBarItem9";
+            this.navBarSP.Caption = "Sản Phẩm";
+            this.navBarSP.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("navBarSP.ImageOptions.LargeImage")));
+            this.navBarSP.ImageOptions.SmallImage = ((System.Drawing.Image)(resources.GetObject("navBarSP.ImageOptions.SmallImage")));
+            this.navBarSP.Name = "navBarSP";
+            this.navBarSP.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.navBarSP_LinkClicked);
+            this.navBarSP.ItemChanged += new System.EventHandler(this.navBarSP_ItemChanged);
             // 
             // groupControl1
             // 
@@ -267,7 +286,9 @@ namespace QuanLyPhanMem
         private DevExpress.XtraNavBar.NavBarItem navBarItem5;
         private DevExpress.XtraNavBar.NavBarItem navBarItem6;
         private DevExpress.XtraNavBar.NavBarItem navBarItem7;
-        private DevExpress.XtraNavBar.NavBarItem navBarItem9;
+        private DevExpress.XtraNavBar.NavBarItem navBarSP;
         private DevExpress.XtraEditors.GroupControl groupControl1;
+        private DevExpress.XtraNavBar.NavBarGroup navBarGroup5;
+        private DevExpress.XtraNavBar.NavBarItem navBarItem10;
     }
 }

@@ -63,6 +63,26 @@ namespace QuanLyPhanMem.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _2ebbe5b169bfb9b99e54cb0b1aae6e83 {
+            get {
+                object obj = ResourceManager.GetObject("2ebbe5b169bfb9b99e54cb0b1aae6e83", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _6bc7d0953fc1428e95d56a8a8e47f5f9 {
+            get {
+                object obj = ResourceManager.GetObject("6bc7d0953fc1428e95d56a8a8e47f5f9", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap _710a72cb1ac5dd29d8668d3c70a907b5 {
             get {
                 object obj = ResourceManager.GetObject("710a72cb1ac5dd29d8668d3c70a907b5", resourceCulture);
