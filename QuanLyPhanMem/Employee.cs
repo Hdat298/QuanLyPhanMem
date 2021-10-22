@@ -19,7 +19,10 @@ namespace QuanLyPhanMem
 
         private void Employee_Load(object sender, EventArgs e)
         {
+<<<<<<< Updated upstream
             // TODO: This line of code loads data into the 'qLDADataSetEmployee.Nhanvien' table. You can move, or remove it, as needed.
+=======
+>>>>>>> Stashed changes
         }
     }
 }
