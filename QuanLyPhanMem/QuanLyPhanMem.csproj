@@ -107,6 +107,12 @@
     <Compile Include="frmAdmin.Designer.cs">
       <DependentUpon>frmAdmin.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmGioHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGioHang.Designer.cs">
+      <DependentUpon>frmGioHang.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmHoadon.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -207,6 +213,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmAdmin.resx">
       <DependentUpon>frmAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGioHang.resx">
+      <DependentUpon>frmGioHang.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmHoadon.resx">
       <DependentUpon>frmHoadon.cs</DependentUpon>
