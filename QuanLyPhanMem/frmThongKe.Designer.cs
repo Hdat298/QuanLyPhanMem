@@ -33,7 +33,6 @@
             System.Windows.Forms.Label maSanPhamLabel;
             System.Windows.Forms.Label tongGiaLabel;
             System.Windows.Forms.Label soLuongLabel;
-            System.Windows.Forms.Label ngayLapHoaDonLabel;
             this.qLDA2DataSet = new QuanLyPhanMem.QLDA2DataSet();
             this.chiTietHoaDonBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.chiTietHoaDonTableAdapter = new QuanLyPhanMem.QLDA2DataSetTableAdapters.ChiTietHoaDonTableAdapter();
@@ -42,23 +41,22 @@
             this.txtMaSP = new System.Windows.Forms.TextBox();
             this.tongGiaTextBox = new System.Windows.Forms.TextBox();
             this.dgvThongKe = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nudSL = new System.Windows.Forms.NumericUpDown();
             this.hoaDonBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.hoaDonTableAdapter = new QuanLyPhanMem.QLDA2DataSetTableAdapters.HoaDonTableAdapter();
-            this.dtpNgayLap = new System.Windows.Forms.DateTimePicker();
-            this.btnAdd = new System.Windows.Forms.Button();
-            this.btnDel = new System.Windows.Forms.Button();
-            this.btnRep = new System.Windows.Forms.Button();
+            this.btnDay = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.btnMonth = new System.Windows.Forms.Button();
+            this.btnYear = new System.Windows.Forms.Button();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             maHoaDonLabel = new System.Windows.Forms.Label();
             maSanPhamLabel = new System.Windows.Forms.Label();
             tongGiaLabel = new System.Windows.Forms.Label();
             soLuongLabel = new System.Windows.Forms.Label();
-            ngayLapHoaDonLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.qLDA2DataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chiTietHoaDonBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvThongKe)).BeginInit();
@@ -101,15 +99,6 @@
             soLuongLabel.Size = new System.Drawing.Size(68, 17);
             soLuongLabel.TabIndex = 8;
             soLuongLabel.Text = "Số lượng:";
-            // 
-            // ngayLapHoaDonLabel
-            // 
-            ngayLapHoaDonLabel.AutoSize = true;
-            ngayLapHoaDonLabel.Location = new System.Drawing.Point(19, 210);
-            ngayLapHoaDonLabel.Name = "ngayLapHoaDonLabel";
-            ngayLapHoaDonLabel.Size = new System.Drawing.Size(68, 17);
-            ngayLapHoaDonLabel.TabIndex = 9;
-            ngayLapHoaDonLabel.Text = "Ngày lập:";
             // 
             // qLDA2DataSet
             // 
@@ -171,8 +160,8 @@
             this.dgvThongKe.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvThongKe.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn1,
-            this.dataGridViewTextBoxColumn2,
             this.Column1,
+            this.dataGridViewTextBoxColumn2,
             this.dataGridViewTextBoxColumn3,
             this.dataGridViewTextBoxColumn4});
             this.dgvThongKe.DataSource = this.chiTietHoaDonBindingSource;
@@ -182,46 +171,6 @@
             this.dgvThongKe.RowTemplate.Height = 24;
             this.dgvThongKe.Size = new System.Drawing.Size(860, 538);
             this.dgvThongKe.TabIndex = 8;
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "MaHoaDon";
-            this.dataGridViewTextBoxColumn1.HeaderText = "MaHoaDon";
-            this.dataGridViewTextBoxColumn1.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.Width = 125;
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.DataPropertyName = "MaSanPham";
-            this.dataGridViewTextBoxColumn2.HeaderText = "MaSanPham";
-            this.dataGridViewTextBoxColumn2.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            this.dataGridViewTextBoxColumn2.Width = 125;
-            // 
-            // Column1
-            // 
-            this.Column1.DataPropertyName = "MaHoaDon";
-            this.Column1.HeaderText = "NgayLap";
-            this.Column1.MinimumWidth = 6;
-            this.Column1.Name = "Column1";
-            this.Column1.Width = 125;
-            // 
-            // dataGridViewTextBoxColumn3
-            // 
-            this.dataGridViewTextBoxColumn3.DataPropertyName = "SoLuong";
-            this.dataGridViewTextBoxColumn3.HeaderText = "SoLuong";
-            this.dataGridViewTextBoxColumn3.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            this.dataGridViewTextBoxColumn3.Width = 50;
-            // 
-            // dataGridViewTextBoxColumn4
-            // 
-            this.dataGridViewTextBoxColumn4.DataPropertyName = "TongGia";
-            this.dataGridViewTextBoxColumn4.HeaderText = "TongGia";
-            this.dataGridViewTextBoxColumn4.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            this.dataGridViewTextBoxColumn4.Width = 125;
             // 
             // nudSL
             // 
@@ -240,53 +189,91 @@
             // 
             this.hoaDonTableAdapter.ClearBeforeFill = true;
             // 
-            // dtpNgayLap
+            // btnDay
             // 
-            this.dtpNgayLap.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.hoaDonBindingSource, "NgayLapHoaDon", true));
-            this.dtpNgayLap.Location = new System.Drawing.Point(22, 240);
-            this.dtpNgayLap.Name = "dtpNgayLap";
-            this.dtpNgayLap.Size = new System.Drawing.Size(200, 22);
-            this.dtpNgayLap.TabIndex = 10;
+            this.btnDay.Location = new System.Drawing.Point(22, 226);
+            this.btnDay.Name = "btnDay";
+            this.btnDay.Size = new System.Drawing.Size(126, 34);
+            this.btnDay.TabIndex = 11;
+            this.btnDay.Text = "Theo ngày";
+            this.btnDay.UseVisualStyleBackColor = true;
             // 
-            // btnAdd
+            // label1
             // 
-            this.btnAdd.Location = new System.Drawing.Point(22, 287);
-            this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(90, 35);
-            this.btnAdd.TabIndex = 11;
-            this.btnAdd.Text = "Add";
-            this.btnAdd.UseVisualStyleBackColor = true;
-            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(22, 203);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(136, 17);
+            this.label1.TabIndex = 12;
+            this.label1.Text = "Tính tổng doanh thu";
             // 
-            // btnDel
+            // btnMonth
             // 
-            this.btnDel.Location = new System.Drawing.Point(22, 344);
-            this.btnDel.Name = "btnDel";
-            this.btnDel.Size = new System.Drawing.Size(90, 35);
-            this.btnDel.TabIndex = 12;
-            this.btnDel.Text = "Delete";
-            this.btnDel.UseVisualStyleBackColor = true;
-            this.btnDel.Click += new System.EventHandler(this.btnDel_Click);
+            this.btnMonth.Location = new System.Drawing.Point(22, 266);
+            this.btnMonth.Name = "btnMonth";
+            this.btnMonth.Size = new System.Drawing.Size(126, 34);
+            this.btnMonth.TabIndex = 13;
+            this.btnMonth.Text = "Theo tháng";
+            this.btnMonth.UseVisualStyleBackColor = true;
             // 
-            // btnRep
+            // btnYear
             // 
-            this.btnRep.Location = new System.Drawing.Point(22, 401);
-            this.btnRep.Name = "btnRep";
-            this.btnRep.Size = new System.Drawing.Size(90, 35);
-            this.btnRep.TabIndex = 13;
-            this.btnRep.Text = "Repair";
-            this.btnRep.UseVisualStyleBackColor = true;
+            this.btnYear.Location = new System.Drawing.Point(22, 306);
+            this.btnYear.Name = "btnYear";
+            this.btnYear.Size = new System.Drawing.Size(126, 34);
+            this.btnYear.TabIndex = 14;
+            this.btnYear.Text = "Theo năm";
+            this.btnYear.UseVisualStyleBackColor = true;
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "MaHoaDon";
+            this.dataGridViewTextBoxColumn1.HeaderText = "MaHoaDon";
+            this.dataGridViewTextBoxColumn1.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.Width = 125;
+            // 
+            // Column1
+            // 
+            this.Column1.DataPropertyName = "MaHoaDon";
+            this.Column1.HeaderText = "NgayLap";
+            this.Column1.MinimumWidth = 6;
+            this.Column1.Name = "Column1";
+            this.Column1.Width = 125;
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "MaSanPham";
+            this.dataGridViewTextBoxColumn2.HeaderText = "MaSanPham";
+            this.dataGridViewTextBoxColumn2.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.Width = 125;
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.DataPropertyName = "SoLuong";
+            this.dataGridViewTextBoxColumn3.HeaderText = "SoLuong";
+            this.dataGridViewTextBoxColumn3.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn3.Width = 50;
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            this.dataGridViewTextBoxColumn4.DataPropertyName = "TongGia";
+            this.dataGridViewTextBoxColumn4.HeaderText = "TongGia";
+            this.dataGridViewTextBoxColumn4.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            this.dataGridViewTextBoxColumn4.Width = 125;
             // 
             // frmThongKe
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1177, 580);
-            this.Controls.Add(this.btnRep);
-            this.Controls.Add(this.btnDel);
-            this.Controls.Add(this.btnAdd);
-            this.Controls.Add(ngayLapHoaDonLabel);
-            this.Controls.Add(this.dtpNgayLap);
+            this.Controls.Add(this.btnYear);
+            this.Controls.Add(this.btnMonth);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.btnDay);
             this.Controls.Add(soLuongLabel);
             this.Controls.Add(this.nudSL);
             this.Controls.Add(this.dgvThongKe);
@@ -323,13 +310,13 @@
         private System.Windows.Forms.BindingSource hoaDonBindingSource;
         private QLDA2DataSetTableAdapters.HoaDonTableAdapter hoaDonTableAdapter;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
-        private System.Windows.Forms.DateTimePicker dtpNgayLap;
-        private System.Windows.Forms.Button btnAdd;
-        private System.Windows.Forms.Button btnDel;
-        private System.Windows.Forms.Button btnRep;
+        private System.Windows.Forms.Button btnDay;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button btnMonth;
+        private System.Windows.Forms.Button btnYear;
     }
 }
