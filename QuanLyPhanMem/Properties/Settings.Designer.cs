@@ -33,5 +33,15 @@ namespace QuanLyPhanMem.Properties {
                 return ((string)(this["QLDAConnectionString"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=ADMIN;Initial Catalog=QLDA2;Integrated Security=True")]
+        public string QLDA2ConnectionString {
+            get {
+                return ((string)(this["QLDA2ConnectionString"]));
+            }
+        }
     }
 }

@@ -29,129 +29,146 @@ namespace QuanLyPhanMem
         /// </summary>
         private void InitializeComponent()
         {
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.components = new System.ComponentModel.Container();
+            this.btnRepair = new System.Windows.Forms.Button();
+            this.btnDelete = new System.Windows.Forms.Button();
+            this.btnAdd = new System.Windows.Forms.Button();
+            this.dtpNgayLap = new System.Windows.Forms.DateTimePicker();
             this.label8 = new System.Windows.Forms.Label();
-            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.txtMaSP = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.txtMaHD = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.txtTongGia = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtSL = new System.Windows.Forms.TextBox();
+            this.txtTenMH = new System.Windows.Forms.TextBox();
+            this.txtMaKH = new System.Windows.Forms.TextBox();
+            this.txtSTT = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.qLDA2DataSet = new QuanLyPhanMem.QLDA2DataSet();
+            this.chiTietHoaDonBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.chiTietHoaDonTableAdapter = new QuanLyPhanMem.QLDA2DataSetTableAdapters.ChiTietHoaDonTableAdapter();
+            this.tableAdapterManager = new QuanLyPhanMem.QLDA2DataSetTableAdapters.TableAdapterManager();
+            this.lsvHoaDon = new System.Windows.Forms.ListView();
+            this.colSTT = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.colMaHD = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.colMaKH = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.colMaSP = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.colNgayLap = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.colSL = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.colTonggia = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            ((System.ComponentModel.ISupportInitialize)(this.qLDA2DataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chiTietHoaDonBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
-            // button3
+            // btnRepair
             // 
-            this.button3.Location = new System.Drawing.Point(955, 77);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 23);
-            this.button3.TabIndex = 41;
-            this.button3.Text = "Repair";
-            this.button3.UseVisualStyleBackColor = true;
+            this.btnRepair.Location = new System.Drawing.Point(1273, 95);
+            this.btnRepair.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnRepair.Name = "btnRepair";
+            this.btnRepair.Size = new System.Drawing.Size(100, 28);
+            this.btnRepair.TabIndex = 41;
+            this.btnRepair.Text = "Repair";
+            this.btnRepair.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // btnDelete
             // 
-            this.button2.Location = new System.Drawing.Point(955, 43);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 40;
-            this.button2.Text = "Delete";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnDelete.Location = new System.Drawing.Point(1273, 53);
+            this.btnDelete.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(100, 28);
+            this.btnDelete.TabIndex = 40;
+            this.btnDelete.Text = "Delete";
+            this.btnDelete.UseVisualStyleBackColor = true;
             // 
-            // button1
+            // btnAdd
             // 
-            this.button1.Location = new System.Drawing.Point(955, 11);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 39;
-            this.button1.Text = "Add";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnAdd.Location = new System.Drawing.Point(1273, 14);
+            this.btnAdd.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnAdd.Name = "btnAdd";
+            this.btnAdd.Size = new System.Drawing.Size(100, 28);
+            this.btnAdd.TabIndex = 39;
+            this.btnAdd.Text = "Add";
+            this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
-            // dateTimePicker1
+            // dtpNgayLap
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(427, 42);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(161, 20);
-            this.dateTimePicker1.TabIndex = 38;
+            this.dtpNgayLap.Location = new System.Drawing.Point(569, 52);
+            this.dtpNgayLap.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dtpNgayLap.Name = "dtpNgayLap";
+            this.dtpNgayLap.Size = new System.Drawing.Size(213, 22);
+            this.dtpNgayLap.TabIndex = 38;
             // 
             // label8
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(335, 41);
+            this.label8.Location = new System.Drawing.Point(447, 50);
+            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(85, 20);
+            this.label8.Size = new System.Drawing.Size(106, 25);
             this.label8.TabIndex = 37;
             this.label8.Text = "NGAYLAP";
             // 
-            // textBox7
+            // txtMaSP
             // 
-            this.textBox7.Location = new System.Drawing.Point(691, 11);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(228, 20);
-            this.textBox7.TabIndex = 36;
+            this.txtMaSP.Location = new System.Drawing.Point(921, 14);
+            this.txtMaSP.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtMaSP.Name = "txtMaSP";
+            this.txtMaSP.Size = new System.Drawing.Size(303, 22);
+            this.txtMaSP.TabIndex = 36;
             // 
             // label7
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(612, 12);
+            this.label7.Location = new System.Drawing.Point(816, 15);
+            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(54, 20);
+            this.label7.Size = new System.Drawing.Size(70, 25);
             this.label7.TabIndex = 35;
             this.label7.Text = "MASP";
             // 
-            // textBox6
+            // txtMaHD
             // 
-            this.textBox6.Location = new System.Drawing.Point(691, 80);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(228, 20);
-            this.textBox6.TabIndex = 34;
+            this.txtMaHD.Location = new System.Drawing.Point(921, 98);
+            this.txtMaHD.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtMaHD.Name = "txtMaHD";
+            this.txtMaHD.Size = new System.Drawing.Size(303, 22);
+            this.txtMaHD.TabIndex = 34;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(612, 47);
+            this.label6.Location = new System.Drawing.Point(816, 58);
+            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(55, 20);
+            this.label6.Size = new System.Drawing.Size(71, 25);
             this.label6.TabIndex = 33;
             this.label6.Text = "MAKH";
             // 
-            // textBox5
+            // txtTongGia
             // 
-            this.textBox5.Location = new System.Drawing.Point(106, 42);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(221, 20);
-            this.textBox5.TabIndex = 32;
+            this.txtTongGia.Location = new System.Drawing.Point(141, 52);
+            this.txtTongGia.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtTongGia.Name = "txtTongGia";
+            this.txtTongGia.Size = new System.Drawing.Size(293, 22);
+            this.txtTongGia.TabIndex = 32;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(15, 41);
+            this.label5.Location = new System.Drawing.Point(20, 50);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(87, 20);
+            this.label5.Size = new System.Drawing.Size(109, 25);
             this.label5.TabIndex = 31;
             this.label5.Text = "TONG GIA";
             // 
@@ -159,47 +176,53 @@ namespace QuanLyPhanMem
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(15, 65);
+            this.label4.Location = new System.Drawing.Point(20, 80);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(29, 20);
+            this.label4.Size = new System.Drawing.Size(37, 25);
             this.label4.TabIndex = 30;
             this.label4.Text = "SL";
             // 
-            // textBox4
+            // txtSL
             // 
-            this.textBox4.Location = new System.Drawing.Point(106, 67);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(100, 20);
-            this.textBox4.TabIndex = 29;
+            this.txtSL.Location = new System.Drawing.Point(141, 82);
+            this.txtSL.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtSL.Name = "txtSL";
+            this.txtSL.Size = new System.Drawing.Size(132, 22);
+            this.txtSL.TabIndex = 29;
             // 
-            // textBox3
+            // txtTenMH
             // 
-            this.textBox3.Location = new System.Drawing.Point(233, 12);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(355, 20);
-            this.textBox3.TabIndex = 28;
+            this.txtTenMH.Location = new System.Drawing.Point(311, 15);
+            this.txtTenMH.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtTenMH.Name = "txtTenMH";
+            this.txtTenMH.Size = new System.Drawing.Size(472, 22);
+            this.txtTenMH.TabIndex = 28;
             // 
-            // textBox2
+            // txtMaKH
             // 
-            this.textBox2.Location = new System.Drawing.Point(691, 45);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(228, 20);
-            this.textBox2.TabIndex = 27;
+            this.txtMaKH.Location = new System.Drawing.Point(921, 55);
+            this.txtMaKH.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtMaKH.Name = "txtMaKH";
+            this.txtMaKH.Size = new System.Drawing.Size(303, 22);
+            this.txtMaKH.TabIndex = 27;
             // 
-            // textBox1
+            // txtSTT
             // 
-            this.textBox1.Location = new System.Drawing.Point(106, 12);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(50, 20);
-            this.textBox1.TabIndex = 26;
+            this.txtSTT.Location = new System.Drawing.Point(141, 15);
+            this.txtSTT.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtSTT.Name = "txtSTT";
+            this.txtSTT.Size = new System.Drawing.Size(65, 22);
+            this.txtSTT.TabIndex = 26;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(162, 12);
+            this.label3.Location = new System.Drawing.Point(216, 15);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(65, 20);
+            this.label3.Size = new System.Drawing.Size(83, 25);
             this.label3.TabIndex = 25;
             this.label3.Text = "TENMH";
             // 
@@ -207,9 +230,10 @@ namespace QuanLyPhanMem
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(609, 80);
+            this.label2.Location = new System.Drawing.Point(812, 98);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(57, 20);
+            this.label2.Size = new System.Drawing.Size(71, 25);
             this.label2.TabIndex = 24;
             this.label2.Text = "MAHD";
             // 
@@ -217,115 +241,127 @@ namespace QuanLyPhanMem
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(15, 12);
+            this.label1.Location = new System.Drawing.Point(20, 15);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(38, 20);
+            this.label1.Size = new System.Drawing.Size(52, 25);
             this.label1.TabIndex = 23;
             this.label1.Text = "STT";
             // 
-            // dataGridView1
+            // qLDA2DataSet
             // 
-            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column1,
-            this.Column2,
-            this.Column3,
-            this.Column4,
-            this.Column5,
-            this.Column6,
-            this.Column7,
-            this.Column8});
-            this.dataGridView1.Location = new System.Drawing.Point(15, 120);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(1018, 490);
-            this.dataGridView1.TabIndex = 22;
+            this.qLDA2DataSet.DataSetName = "QLDA2DataSet";
+            this.qLDA2DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // Column1
+            // chiTietHoaDonBindingSource
             // 
-            this.Column1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Column1.FillWeight = 91.08049F;
-            this.Column1.HeaderText = "STT";
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
+            this.chiTietHoaDonBindingSource.DataMember = "ChiTietHoaDon";
+            this.chiTietHoaDonBindingSource.DataSource = this.qLDA2DataSet;
             // 
-            // Column2
+            // chiTietHoaDonTableAdapter
             // 
-            this.Column2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Column2.FillWeight = 91.08049F;
-            this.Column2.HeaderText = "MAHD";
-            this.Column2.Name = "Column2";
+            this.chiTietHoaDonTableAdapter.ClearBeforeFill = true;
             // 
-            // Column3
+            // tableAdapterManager
             // 
-            this.Column3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Column3.FillWeight = 162.4366F;
-            this.Column3.HeaderText = "TENMH";
-            this.Column3.Name = "Column3";
+            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager.ChiTietHoaDonTableAdapter = this.chiTietHoaDonTableAdapter;
+            this.tableAdapterManager.ChiTietPhieuXuatKhoTableAdapter = null;
+            this.tableAdapterManager.ChucVuTableAdapter = null;
+            this.tableAdapterManager.HoaDonTableAdapter = null;
+            this.tableAdapterManager.KhachHangTableAdapter = null;
+            this.tableAdapterManager.KhoTableAdapter = null;
+            this.tableAdapterManager.LoaiTableAdapter = null;
+            this.tableAdapterManager.NhaCungCapTableAdapter = null;
+            this.tableAdapterManager.NhanVienTableAdapter = null;
+            this.tableAdapterManager.PhieuXuatKhoTableAdapter = null;
+            this.tableAdapterManager.SanPhamTableAdapter = null;
+            this.tableAdapterManager.UpdateOrder = QuanLyPhanMem.QLDA2DataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             // 
-            // Column4
+            // lsvHoaDon
             // 
-            this.Column4.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Column4.FillWeight = 91.08049F;
-            this.Column4.HeaderText = "SL";
-            this.Column4.Name = "Column4";
+            this.lsvHoaDon.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.colSTT,
+            this.colMaHD,
+            this.colNgayLap,
+            this.colMaKH,
+            this.colMaSP,
+            this.colSL,
+            this.colTonggia});
+            this.lsvHoaDon.FullRowSelect = true;
+            this.lsvHoaDon.GridLines = true;
+            this.lsvHoaDon.HideSelection = false;
+            this.lsvHoaDon.Location = new System.Drawing.Point(12, 132);
+            this.lsvHoaDon.Name = "lsvHoaDon";
+            this.lsvHoaDon.Size = new System.Drawing.Size(1369, 626);
+            this.lsvHoaDon.TabIndex = 42;
+            this.lsvHoaDon.UseCompatibleStateImageBehavior = false;
+            this.lsvHoaDon.View = System.Windows.Forms.View.Details;
             // 
-            // Column5
+            // colSTT
             // 
-            this.Column5.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Column5.FillWeight = 91.08049F;
-            this.Column5.HeaderText = "TONGGIA";
-            this.Column5.Name = "Column5";
+            this.colSTT.Text = "STT";
             // 
-            // Column6
+            // colMaHD
             // 
-            this.Column6.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Column6.FillWeight = 91.08049F;
-            this.Column6.HeaderText = "MAKH";
-            this.Column6.Name = "Column6";
+            this.colMaHD.Text = "Mã hóa đơn";
+            this.colMaHD.Width = 150;
             // 
-            // Column7
+            // colMaKH
             // 
-            this.Column7.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Column7.FillWeight = 91.08049F;
-            this.Column7.HeaderText = "MASP";
-            this.Column7.Name = "Column7";
+            this.colMaKH.Text = "Mã khách hàng";
+            this.colMaKH.Width = 150;
             // 
-            // Column8
+            // colMaSP
             // 
-            this.Column8.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Column8.FillWeight = 91.08049F;
-            this.Column8.HeaderText = "NGAYLAPHD";
-            this.Column8.Name = "Column8";
+            this.colMaSP.Text = "Mã sản phẩm";
+            this.colMaSP.Width = 150;
+            // 
+            // colNgayLap
+            // 
+            this.colNgayLap.Text = "Ngày lập";
+            this.colNgayLap.Width = 100;
+            // 
+            // colSL
+            // 
+            this.colSL.Text = "Số lượng";
+            // 
+            // colTonggia
+            // 
+            this.colTonggia.Text = "Tổng giá";
+            this.colTonggia.Width = 100;
             // 
             // frmHoadon
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1045, 626);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.dateTimePicker1);
+            this.ClientSize = new System.Drawing.Size(1393, 770);
+            this.Controls.Add(this.lsvHoaDon);
+            this.Controls.Add(this.btnRepair);
+            this.Controls.Add(this.btnDelete);
+            this.Controls.Add(this.btnAdd);
+            this.Controls.Add(this.dtpNgayLap);
             this.Controls.Add(this.label8);
-            this.Controls.Add(this.textBox7);
+            this.Controls.Add(this.txtMaSP);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.textBox6);
+            this.Controls.Add(this.txtMaHD);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.textBox5);
+            this.Controls.Add(this.txtTongGia);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtSL);
+            this.Controls.Add(this.txtTenMH);
+            this.Controls.Add(this.txtMaKH);
+            this.Controls.Add(this.txtSTT);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.dataGridView1);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "frmHoadon";
             this.Text = "frmHoadon";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.Load += new System.EventHandler(this.frmHoadon_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.qLDA2DataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chiTietHoaDonBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -333,33 +369,36 @@ namespace QuanLyPhanMem
 
         #endregion
 
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.Button btnRepair;
+        private System.Windows.Forms.Button btnDelete;
+        private System.Windows.Forms.Button btnAdd;
+        private System.Windows.Forms.DateTimePicker dtpNgayLap;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.TextBox txtMaSP;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox txtMaHD;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox txtTongGia;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtSL;
+        private System.Windows.Forms.TextBox txtTenMH;
+        private System.Windows.Forms.TextBox txtMaKH;
+        private System.Windows.Forms.TextBox txtSTT;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column8;
+        private QLDA2DataSet qLDA2DataSet;
+        private System.Windows.Forms.BindingSource chiTietHoaDonBindingSource;
+        private QLDA2DataSetTableAdapters.ChiTietHoaDonTableAdapter chiTietHoaDonTableAdapter;
+        private QLDA2DataSetTableAdapters.TableAdapterManager tableAdapterManager;
+        private System.Windows.Forms.ListView lsvHoaDon;
+        private System.Windows.Forms.ColumnHeader colSTT;
+        private System.Windows.Forms.ColumnHeader colMaHD;
+        private System.Windows.Forms.ColumnHeader colNgayLap;
+        private System.Windows.Forms.ColumnHeader colMaKH;
+        private System.Windows.Forms.ColumnHeader colMaSP;
+        private System.Windows.Forms.ColumnHeader colSL;
+        private System.Windows.Forms.ColumnHeader colTonggia;
     }
 }

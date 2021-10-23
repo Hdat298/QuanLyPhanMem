@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace QuanLyPhanMem
 {
-    public partial class frmHoadon : Form
+    public partial class frmThongKe : Form
     {
-        public frmHoadon()
+        public frmThongKe()
         {
             InitializeComponent();
         }
@@ -24,20 +24,27 @@ namespace QuanLyPhanMem
             this.tableAdapterManager.UpdateAll(this.qLDA2DataSet);
 
         }
-
-        private void frmHoadon_Load(object sender, EventArgs e)
+        
+        private void frmThongKe_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'qLDA2DataSet.HoaDon' table. You can move, or remove it, as needed.
+            this.hoaDonTableAdapter.Fill(this.qLDA2DataSet.HoaDon);
             // TODO: This line of code loads data into the 'qLDA2DataSet.ChiTietHoaDon' table. You can move, or remove it, as needed.
             this.chiTietHoaDonTableAdapter.Fill(this.qLDA2DataSet.ChiTietHoaDon);
 
         }
-        private void SetNull()
-        {
-            txtSL.Text. = 
-        }
+
         private void btnAdd_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnDel_Click(object sender, EventArgs e)
+        {
+            foreach(DataGridViewRow r in dgvThongKe.SelectedRows)
+            {
+
+            }    
         }
     }
 }
