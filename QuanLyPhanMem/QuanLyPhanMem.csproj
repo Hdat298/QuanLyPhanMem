@@ -62,7 +62,7 @@
       <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
     <Reference Include="Guna.UI">
-      <HintPath>..\..\..\..\..\..\DATA\STUDY\Framework\Guna.UI-Framework-Lib-master\Guna.UI WinForms\.net 4.0\Guna.UI.dll</HintPath>
+      <HintPath>..\..\..\Downloads\Guna.UI-Framework-Lib-master\Guna.UI WinForms\.net 4.0\Guna.UI.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.VisualBasic" />
     <Reference Include="System" />
@@ -149,6 +149,12 @@
     <Compile Include="frmThemKH.Designer.cs">
       <DependentUpon>frmThemKH.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmThongKe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmThongKe.Designer.cs">
+      <DependentUpon>frmThongKe.cs</DependentUpon>
+    </Compile>
     <Compile Include="HoaDon.cs">
       <DependentUpon>QLDAModel.tt</DependentUpon>
     </Compile>
@@ -177,6 +183,11 @@
     </Compile>
     <Compile Include="frmRegister.Designer.cs">
       <DependentUpon>frmRegister.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QLDA2DataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QLDA2DataSet.xsd</DependentUpon>
     </Compile>
     <Compile Include="QLDAModel.Context.cs">
       <AutoGen>True</AutoGen>
@@ -229,6 +240,9 @@
     <EmbeddedResource Include="frmThemKH.resx">
       <DependentUpon>frmThemKH.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmThongKe.resx">
+      <DependentUpon>frmThongKe.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -246,6 +260,7 @@
     <EmbeddedResource Include="Register2.0.resx">
       <DependentUpon>Register2.0.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Report1.rdlc" />
     <None Include="App.Config" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -263,6 +278,17 @@
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>QLDAModel.Designer.cs</LastGenOutput>
     </EntityDeploy>
+    <None Include="QLDA2DataSet.xsc">
+      <DependentUpon>QLDA2DataSet.xsd</DependentUpon>
+    </None>
+    <None Include="QLDA2DataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>QLDA2DataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="QLDA2DataSet.xss">
+      <DependentUpon>QLDA2DataSet.xsd</DependentUpon>
+    </None>
     <None Include="QLDAModel.edmx.diagram">
       <DependentUpon>QLDAModel.edmx</DependentUpon>
     </None>
