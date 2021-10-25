@@ -158,6 +158,7 @@
     <Compile Include="HoaDon.cs">
       <DependentUpon>QLDAModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="HoaDonModel.cs" />
     <Compile Include="KhachHang.cs">
       <DependentUpon>QLDAModel.tt</DependentUpon>
     </Compile>
