@@ -1,4 +1,5 @@
-﻿using System;
+﻿using from_thong_ke;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
