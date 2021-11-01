@@ -12,7 +12,7 @@ namespace QuanLyPhanMem
 {
     public partial class Register2 : Form
     {
-        QLDAEntities1 context = new QLDAEntities1();
+        QLDAEntities context = new QLDAEntities();
         public Register2()
         {
             InitializeComponent();

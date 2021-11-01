@@ -33,7 +33,6 @@ namespace QuanLyPhanMem
         }
         private void SetNull()
         {
-            txtSL.Text. = 
         }
         private void btnAdd_Click(object sender, EventArgs e)
         {
