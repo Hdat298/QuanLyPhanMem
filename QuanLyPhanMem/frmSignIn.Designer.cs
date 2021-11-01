@@ -64,9 +64,9 @@
             this.gunaLabel1.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.gunaLabel1.Location = new System.Drawing.Point(330, 103);
             this.gunaLabel1.Name = "gunaLabel1";
-            this.gunaLabel1.Size = new System.Drawing.Size(88, 28);
+            this.gunaLabel1.Size = new System.Drawing.Size(231, 28);
             this.gunaLabel1.TabIndex = 2;
-            this.gunaLabel1.Text = "LOGIN";
+            this.gunaLabel1.Text = "Phần Mềm Quản Lý";
             // 
             // gunaLabel2
             // 
@@ -75,9 +75,9 @@
             this.gunaLabel2.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.gunaLabel2.Location = new System.Drawing.Point(332, 155);
             this.gunaLabel2.Name = "gunaLabel2";
-            this.gunaLabel2.Size = new System.Drawing.Size(87, 19);
+            this.gunaLabel2.Size = new System.Drawing.Size(102, 19);
             this.gunaLabel2.TabIndex = 2;
-            this.gunaLabel2.Text = "Username";
+            this.gunaLabel2.Text = "Tên truy cập";
             // 
             // gunaLabel3
             // 
@@ -86,9 +86,9 @@
             this.gunaLabel3.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.gunaLabel3.Location = new System.Drawing.Point(332, 225);
             this.gunaLabel3.Name = "gunaLabel3";
-            this.gunaLabel3.Size = new System.Drawing.Size(80, 19);
+            this.gunaLabel3.Size = new System.Drawing.Size(79, 19);
             this.gunaLabel3.TabIndex = 3;
-            this.gunaLabel3.Text = "Password";
+            this.gunaLabel3.Text = "Mật Khẩu";
             // 
             // txtPass
             // 
@@ -132,7 +132,7 @@
             this.btnSignIn.Radius = 18;
             this.btnSignIn.Size = new System.Drawing.Size(250, 42);
             this.btnSignIn.TabIndex = 2;
-            this.btnSignIn.Text = "Sign In";
+            this.btnSignIn.Text = "Đăng Nhập";
             this.btnSignIn.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.btnSignIn.Click += new System.EventHandler(this.btnSignIn_Click);
             // 

@@ -95,29 +95,17 @@
     <Compile Include="ChucVu.cs">
       <DependentUpon>QLDAModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="Employee.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Employee.Designer.cs">
-      <DependentUpon>Employee.cs</DependentUpon>
-    </Compile>
     <Compile Include="frmAdmin.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmAdmin.Designer.cs">
       <DependentUpon>frmAdmin.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmHoadon.cs">
+    <Compile Include="frmHoaDon.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmHoadon.Designer.cs">
-      <DependentUpon>frmHoadon.cs</DependentUpon>
-    </Compile>
-    <Compile Include="frmKhachHang.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmKhachHang.Designer.cs">
-      <DependentUpon>frmKhachHang.cs</DependentUpon>
+    <Compile Include="frmHoaDon.Designer.cs">
+      <DependentUpon>frmHoaDon.cs</DependentUpon>
     </Compile>
     <Compile Include="frmMain1.cs">
       <SubType>Form</SubType>
@@ -213,17 +201,11 @@
     <Compile Include="SanPham.cs">
       <DependentUpon>QLDAModel.tt</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Employee.resx">
-      <DependentUpon>Employee.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="frmAdmin.resx">
       <DependentUpon>frmAdmin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmHoadon.resx">
-      <DependentUpon>frmHoadon.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmKhachHang.resx">
-      <DependentUpon>frmKhachHang.cs</DependentUpon>
+    <EmbeddedResource Include="frmHoaDon.resx">
+      <DependentUpon>frmHoaDon.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmMain1.resx">
       <DependentUpon>frmMain1.cs</DependentUpon>
@@ -260,7 +242,6 @@
     <EmbeddedResource Include="Register2.0.resx">
       <DependentUpon>Register2.0.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Report1.rdlc" />
     <None Include="App.Config" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
