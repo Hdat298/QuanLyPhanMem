@@ -1,4 +1,5 @@
-﻿using System;
+﻿using from_thong_ke;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -16,7 +17,7 @@ namespace QuanLyPhanMem
         {
             InitializeComponent();
         }
-
+        List<HoaDon> hoaDons;
         private void chiTietHoaDonBindingNavigatorSaveItem_Click(object sender, EventArgs e)
         {
             this.Validate();
@@ -33,18 +34,65 @@ namespace QuanLyPhanMem
             this.chiTietHoaDonTableAdapter.Fill(this.qLDA2DataSet.ChiTietHoaDon);
 
         }
-
-        private void btnAdd_Click(object sender, EventArgs e)
+        private void TaiDanhSachHoaDon()
         {
+
+            using (var dbcontext = new HoaDonModel())
+            {
+                hoaDons = dbcontext.HoaDons.ToList();
+            }
+
+            int soThuTu = 1;
+            dgvThongKe.Rows.Clear();
+            if (hoaDons.Count <= 0) return;
+            foreach (var hd in hoaDons)
+            {
+                int indexRow = dgvThongKe.Rows.Add();
+                dgvThongKe.Rows[indexRow].Cells[0].Value = soThuTu++;
+                dgvThongKe.Rows[indexRow].Cells[1].Value = hd.MaHoaDon;
+                dgvThongKe.Rows[indexRow].Cells[2].Value = hd.NgayLapHoaDon;
+                dgvThongKe.Rows[indexRow].Cells[3].Value = hd.TongGia;
+            }
+            dgvThongKe.Rows[0].Selected = false;
 
         }
 
-        private void btnDel_Click(object sender, EventArgs e)
+        private void dgvThongKe_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            foreach(DataGridViewRow r in dgvThongKe.SelectedRows)
-            {
+            if (e.RowIndex == -1) return;
+            if (dgvThongKe.Rows[e.RowIndex].Cells[e.ColumnIndex].Value == null) return;
 
-            }    
+            dgvThongKe.CurrentRow.Selected = true;
+            txtMaHD.Text = dgvThongKe.Rows[e.RowIndex].Cells[1].FormattedValue.ToString();
+            txtNgayLap.Text = dgvThongKe.Rows[e.RowIndex].Cells[2].FormattedValue.ToString();
+            txtTongGia.Text = dgvThongKe.Rows[e.RowIndex].Cells[3].FormattedValue.ToString();
+        }
+
+        private void btnNgay_Click(object sender, System.EventArgs e)
+        {
+            int? tongTien = 0;
+            foreach (var hd in hoaDons)
+                if (hd.NgayLapHoaDon.ToString("MM-dd-yyyy") == dtpNgay.Value.ToString("MM-dd-yyyy"))
+                    tongTien += hd.TongGia;
+            txtTongDoanhThu.Text = tongTien.ToString();
+        }
+
+        private void btnThang_Click(object sender, System.EventArgs e)
+        {
+            int? tongTien = 0;
+            foreach (var hd in hoaDons)
+                if (hd.NgayLapHoaDon.ToString("MM-yyyy") == dtpThang.Value.ToString("MM-yyyy"))
+                    tongTien += hd.TongGia;
+            txtTongDoanhThu.Text = tongTien.ToString();
+        }
+
+        private void btnNam_Click(object sender, System.EventArgs e)
+        {
+            int? tongTien = 0;
+            foreach (var hd in hoaDons)
+                if (hd.NgayLapHoaDon.ToString("yyyy") == dtpNam.Value.ToString("yyyy"))
+                    tongTien += hd.TongGia;
+            txtTongDoanhThu.Text = tongTien.ToString();
         }
     }
 }

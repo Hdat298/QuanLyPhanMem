@@ -128,6 +128,28 @@
     <Compile Include="frmThongKe.Designer.cs">
       <DependentUpon>frmThongKe.cs</DependentUpon>
     </Compile>
+    <Compile Include="HoaDon.cs">
+      <DependentUpon>QLDAModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="HoaDonModel.cs" />
+    <Compile Include="KhachHang.cs">
+      <DependentUpon>QLDAModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Kho.cs">
+      <DependentUpon>QLDAModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Loai.cs">
+      <DependentUpon>QLDAModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NhaCungCap.cs">
+      <DependentUpon>QLDAModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NhanVien.cs">
+      <DependentUpon>QLDAModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PhieuXuatKho.cs">
+      <DependentUpon>QLDAModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="frmRegister.cs">
