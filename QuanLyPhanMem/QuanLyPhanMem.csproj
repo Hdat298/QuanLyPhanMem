@@ -131,12 +131,6 @@
     <Compile Include="frmSuaSP.Designer.cs">
       <DependentUpon>frmSuaSP.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmThemKH.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmThemKH.Designer.cs">
-      <DependentUpon>frmThemKH.cs</DependentUpon>
-    </Compile>
     <Compile Include="frmThongKe.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -218,9 +212,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmSuaSP.resx">
       <DependentUpon>frmSuaSP.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmThemKH.resx">
-      <DependentUpon>frmThemKH.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmThongKe.resx">
       <DependentUpon>frmThongKe.cs</DependentUpon>
