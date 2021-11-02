@@ -33,6 +33,11 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="AxShockwaveFlashObjects, Version=1.0.0.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.BonusSkins.v21.1, Version=21.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.Data.Desktop.v21.1, Version=21.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.Data.v21.1, Version=21.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
@@ -62,7 +67,7 @@
       <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
     <Reference Include="Guna.UI">
-      <HintPath>..\..\..\Downloads\Guna.UI-Framework-Lib-master\Guna.UI WinForms\.net 4.0\Guna.UI.dll</HintPath>
+      <HintPath>..\..\..\..\..\..\DATA\STUDY\Framework\Guna.UI-Framework-Lib-master\Guna.UI WinForms\.net 4.0\Guna.UI.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.VisualBasic" />
     <Reference Include="System" />
@@ -86,6 +91,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ChiTietHoaDon.cs">
+      <DependentUpon>QLDAModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ChucVu.cs">
+      <DependentUpon>QLDAModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="frmAdmin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -122,6 +133,25 @@
     <Compile Include="frmSuaSP.Designer.cs">
       <DependentUpon>frmSuaSP.cs</DependentUpon>
     </Compile>
+    <Compile Include="HoaDon.cs">
+      <DependentUpon>QLDAModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="KhachHang.cs">
+      <DependentUpon>QLDAModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Kho.cs">
+      <DependentUpon>QLDAModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Loai.cs">
+      <DependentUpon>QLDAModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\SanPhamReportClass.cs" />
+    <Compile Include="NhaCungCap.cs">
+      <DependentUpon>QLDAModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NhanVien.cs">
+      <DependentUpon>QLDAModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="frmRegister.cs">
@@ -130,11 +160,41 @@
     <Compile Include="frmRegister.Designer.cs">
       <DependentUpon>frmRegister.cs</DependentUpon>
     </Compile>
+    <Compile Include="QLDAModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QLDAModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="QLDAModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QLDAModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="QLDAModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QLDAModel.edmx</DependentUpon>
+    </Compile>
     <Compile Include="Register2.0.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Register2.0.Designer.cs">
       <DependentUpon>Register2.0.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\frmSPReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\frmSPReport.Designer.cs">
+      <DependentUpon>frmSPReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\SanPhamReport.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SanPhamReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SanPham.cs">
+      <DependentUpon>QLDAModel.tt</DependentUpon>
     </Compile>
     <EmbeddedResource Include="frmAdmin.resx">
       <DependentUpon>frmAdmin.cs</DependentUpon>
@@ -171,6 +231,13 @@
     <EmbeddedResource Include="Register2.0.resx">
       <DependentUpon>Register2.0.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Reports\frmSPReport.resx">
+      <DependentUpon>frmSPReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\SanPhamReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>SanPhamReport.cs</LastGenOutput>
+    </EmbeddedResource>
     <None Include="App.Config" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -184,6 +251,13 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EntityDeploy Include="QLDAModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>QLDAModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="QLDAModel.edmx.diagram">
+      <DependentUpon>QLDAModel.edmx</DependentUpon>
+    </None>
     <None Include="Resources\710a72cb1ac5dd29d8668d3c70a907b5.png" />
   </ItemGroup>
   <ItemGroup>
@@ -257,6 +331,20 @@
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="QLDAModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>QLDAModel.edmx</DependentUpon>
+      <LastGenOutput>QLDAModel.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="QLDAModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>QLDAModel.edmx</DependentUpon>
+      <LastGenOutput>QLDAModel.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
