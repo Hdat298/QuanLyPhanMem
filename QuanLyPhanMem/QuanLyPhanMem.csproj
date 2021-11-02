@@ -86,15 +86,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ChiTietHoaDon.cs">
-      <DependentUpon>QLDAModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="ChiTietPhieuXuatKho.cs">
-      <DependentUpon>QLDAModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="ChucVu.cs">
-      <DependentUpon>QLDAModel.tt</DependentUpon>
-    </Compile>
     <Compile Include="frmAdmin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -137,27 +128,6 @@
     <Compile Include="frmThongKe.Designer.cs">
       <DependentUpon>frmThongKe.cs</DependentUpon>
     </Compile>
-    <Compile Include="HoaDon.cs">
-      <DependentUpon>QLDAModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="KhachHang.cs">
-      <DependentUpon>QLDAModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Kho.cs">
-      <DependentUpon>QLDAModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Loai.cs">
-      <DependentUpon>QLDAModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="NhaCungCap.cs">
-      <DependentUpon>QLDAModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="NhanVien.cs">
-      <DependentUpon>QLDAModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="PhieuXuatKho.cs">
-      <DependentUpon>QLDAModel.tt</DependentUpon>
-    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="frmRegister.cs">
@@ -166,34 +136,11 @@
     <Compile Include="frmRegister.Designer.cs">
       <DependentUpon>frmRegister.cs</DependentUpon>
     </Compile>
-    <Compile Include="QLDA2DataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>QLDA2DataSet.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="QLDAModel.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>QLDAModel.Context.tt</DependentUpon>
-    </Compile>
-    <Compile Include="QLDAModel.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>QLDAModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="QLDAModel.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>QLDAModel.edmx</DependentUpon>
-    </Compile>
     <Compile Include="Register2.0.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Register2.0.Designer.cs">
       <DependentUpon>Register2.0.cs</DependentUpon>
-    </Compile>
-    <Compile Include="SanPham.cs">
-      <DependentUpon>QLDAModel.tt</DependentUpon>
     </Compile>
     <EmbeddedResource Include="frmAdmin.resx">
       <DependentUpon>frmAdmin.cs</DependentUpon>
@@ -246,24 +193,6 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EntityDeploy Include="QLDAModel.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>QLDAModel.Designer.cs</LastGenOutput>
-    </EntityDeploy>
-    <None Include="QLDA2DataSet.xsc">
-      <DependentUpon>QLDA2DataSet.xsd</DependentUpon>
-    </None>
-    <None Include="QLDA2DataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>QLDA2DataSet.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="QLDA2DataSet.xss">
-      <DependentUpon>QLDA2DataSet.xsd</DependentUpon>
-    </None>
-    <None Include="QLDAModel.edmx.diagram">
-      <DependentUpon>QLDAModel.edmx</DependentUpon>
-    </None>
     <None Include="Resources\710a72cb1ac5dd29d8668d3c70a907b5.png" />
   </ItemGroup>
   <ItemGroup>
@@ -337,18 +266,6 @@
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="QLDAModel.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>QLDAModel.Context.cs</LastGenOutput>
-      <DependentUpon>QLDAModel.edmx</DependentUpon>
-    </Content>
-    <Content Include="QLDAModel.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>QLDAModel.edmx</DependentUpon>
-      <LastGenOutput>QLDAModel.cs</LastGenOutput>
-    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
