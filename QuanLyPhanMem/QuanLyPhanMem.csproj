@@ -145,6 +145,7 @@
     <Compile Include="Loai.cs">
       <DependentUpon>QLDAModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\NhanVienReportClass.cs" />
     <Compile Include="Models\SanPhamReportClass.cs" />
     <Compile Include="NhaCungCap.cs">
       <DependentUpon>QLDAModel.tt</DependentUpon>
@@ -181,11 +182,23 @@
     <Compile Include="Register2.0.Designer.cs">
       <DependentUpon>Register2.0.cs</DependentUpon>
     </Compile>
+    <Compile Include="Reports\frmNVReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\frmNVReport.Designer.cs">
+      <DependentUpon>frmNVReport.cs</DependentUpon>
+    </Compile>
     <Compile Include="Reports\frmSPReport.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Reports\frmSPReport.Designer.cs">
       <DependentUpon>frmSPReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\NhanVienReport.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>NhanVienReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="Reports\SanPhamReport.cs">
       <AutoGen>True</AutoGen>
@@ -231,8 +244,15 @@
     <EmbeddedResource Include="Register2.0.resx">
       <DependentUpon>Register2.0.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Reports\frmNVReport.resx">
+      <DependentUpon>frmNVReport.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Reports\frmSPReport.resx">
       <DependentUpon>frmSPReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\NhanVienReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>NhanVienReport.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\SanPhamReport.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
@@ -345,6 +365,5 @@
       <LastGenOutput>QLDAModel.cs</LastGenOutput>
     </Content>
   </ItemGroup>
-  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
