@@ -274,5 +274,10 @@ namespace QuanLyPhanMem
                 pictureBox1.ImageLocation = dlg.FileName;
             }
         }
+
+        private void btnNew_Click(object sender, EventArgs e)
+        {
+            Refresh();
+        }
     }
 }

@@ -55,6 +55,7 @@ namespace QuanLyPhanMem
             this.gunaButton2 = new Guna.UI.WinForms.GunaButton();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnThemAnh = new Guna.UI.WinForms.GunaButton();
+            this.btnNew = new Guna.UI.WinForms.GunaButton();
             ((System.ComponentModel.ISupportInitialize)(this.dataLayoutControl1)).BeginInit();
             this.dataLayoutControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtGia.Properties)).BeginInit();
@@ -343,6 +344,7 @@ namespace QuanLyPhanMem
             // 
             // pictureBox1
             // 
+            this.pictureBox1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.pictureBox1.Location = new System.Drawing.Point(572, 128);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(152, 165);
@@ -376,12 +378,40 @@ namespace QuanLyPhanMem
             this.btnThemAnh.Text = "Thêm Ảnh";
             this.btnThemAnh.Click += new System.EventHandler(this.btnThemAnh_Click);
             // 
+            // btnNew
+            // 
+            this.btnNew.AnimationHoverSpeed = 0.07F;
+            this.btnNew.AnimationSpeed = 0.03F;
+            this.btnNew.BackColor = System.Drawing.Color.Transparent;
+            this.btnNew.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.btnNew.BorderColor = System.Drawing.Color.Black;
+            this.btnNew.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btnNew.FocusedColor = System.Drawing.Color.Empty;
+            this.btnNew.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnNew.ForeColor = System.Drawing.Color.White;
+            this.btnNew.Image = null;
+            this.btnNew.ImageSize = new System.Drawing.Size(20, 20);
+            this.btnNew.Location = new System.Drawing.Point(401, 87);
+            this.btnNew.Name = "btnNew";
+            this.btnNew.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
+            this.btnNew.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.btnNew.OnHoverForeColor = System.Drawing.Color.White;
+            this.btnNew.OnHoverImage = null;
+            this.btnNew.OnPressedColor = System.Drawing.Color.Black;
+            this.btnNew.Radius = 16;
+            this.btnNew.Size = new System.Drawing.Size(83, 35);
+            this.btnNew.TabIndex = 8;
+            this.btnNew.Text = "LÀM MỚI";
+            this.btnNew.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btnNew.Click += new System.EventHandler(this.btnNew_Click);
+            // 
             // frmSuaSP
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(775, 529);
+            this.Controls.Add(this.btnNew);
             this.Controls.Add(this.btnThemAnh);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.gunaButton2);
@@ -438,5 +468,6 @@ namespace QuanLyPhanMem
         private Guna.UI.WinForms.GunaButton gunaButton2;
         private System.Windows.Forms.PictureBox pictureBox1;
         private Guna.UI.WinForms.GunaButton btnThemAnh;
+        private Guna.UI.WinForms.GunaButton btnNew;
     }
 }
