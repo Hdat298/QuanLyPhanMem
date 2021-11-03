@@ -169,6 +169,7 @@ namespace QuanLyPhanMem
                     SanPham sp = new SanPham() { MaSanPham = txtMaSP.Text, TenSanPham = txtTenSP.Text, DonGia = int.Parse(txtGia.Text), DonViTinh = cbxDonVi.Text, MaCTY = temp, MaLoai = temp1, HinhAnh = ms.ToArray() };
                     ProjectContext.SanPhams.Add(sp);
                     ProjectContext.SaveChanges();
+                    MessageBox.Show("Thêm Sản Phẩm Thành Công!","Thông Báo",MessageBoxButtons.OK);
                     List<SanPham> listSP = ProjectContext.SanPhams.ToList();
                     Refresh();
                     loadGrid(listSP);
