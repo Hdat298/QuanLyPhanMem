@@ -161,6 +161,11 @@
     <Compile Include="frmRegister.Designer.cs">
       <DependentUpon>frmRegister.cs</DependentUpon>
     </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="QLDAModel.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -230,14 +235,9 @@
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
-    </Compile>
     <EmbeddedResource Include="frmRegister.resx">
       <DependentUpon>frmRegister.cs</DependentUpon>
     </EmbeddedResource>
@@ -271,6 +271,12 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Analyzer Include="..\..\..\Guna.UI-Framework-Lib-master\Guna.UI WinForms\.net 4.0\Guna.UI.dll" />
+  </ItemGroup>
+  <ItemGroup>
     <EntityDeploy Include="QLDAModel.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>QLDAModel.Designer.cs</LastGenOutput>
@@ -278,72 +284,6 @@
     <None Include="QLDAModel.edmx.diagram">
       <DependentUpon>QLDAModel.edmx</DependentUpon>
     </None>
-    <None Include="Resources\710a72cb1ac5dd29d8668d3c70a907b5.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\w-arknights-tro-choi-dien-tu-anime-hinh-nen-2560x1600_7.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <WCFMetadata Include="Connected Services\" />
-  </ItemGroup>
-  <ItemGroup>
-    <Analyzer Include="..\..\..\Guna.UI-Framework-Lib-master\Guna.UI WinForms\.net 4.0\Guna.UI.dll" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\ghost-of-tsushima-director-cut-ps5.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\assassin-creed-valhalla.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\demon-souls.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\resident-evil-village.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\may-ps5-ban-dia-825gb.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\tay-ps5-dualsense-den-hang-nhap-khau.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\tay-ps5-dualsense-do-hang-nhap-khau.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\tay-ps5-dualsense-trang-chinh-hang-sony-viet-nam.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\cap-sac-tay-ps5-xbox-series-x-dobe.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\sony-media-remote-ps5.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\tai-nghe-pulse-3d-wireless-headset-ps5.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\harvest-moon-life-of-hope.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\monster-hunter-stories-2-wings-of-ruin.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\the-legend-of-zelda-skyward-sword.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\may-choi-game-nintendo-switch-oled-trang.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\may-nintendo-switch-v2-grey.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\may-nintendo-switch-v2-mario-red-va-blue-edition.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\may-nintendo-switch-v2-neon.jpg" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\2ebbe5b169bfb9b99e54cb0b1aae6e83.jpg" />
   </ItemGroup>
   <ItemGroup>

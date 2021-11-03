@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -116,6 +117,10 @@ namespace QuanLyPhanMem
                     cbxNCC.Text = dataGridView1.Rows[e.RowIndex].Cells["Column4"].FormattedValue.ToString();
                     txtGia.Text = dataGridView1.Rows[e.RowIndex].Cells["Column5"].FormattedValue.ToString();
                     cbxDonVi.Text = dataGridView1.Rows[e.RowIndex].Cells["Column6"].FormattedValue.ToString();
+                    var item = ProjectContext.SanPhams.FirstOrDefault(p => p.TenSanPham == txtTenSP.Text);
+                    byte[] arr = item.HinhAnh;
+                    MemoryStream ms = new MemoryStream(arr);
+                    pictureBox1.Image = Image.FromStream(ms);
                 }
             }
             catch (Exception ex)
@@ -161,6 +166,7 @@ namespace QuanLyPhanMem
             cbxDonVi.Text = null;
             cbxLoai.Text = null;
             cbxNCC.Text = null;
+            pictureBox1.Image = null;
         }
     }
 }

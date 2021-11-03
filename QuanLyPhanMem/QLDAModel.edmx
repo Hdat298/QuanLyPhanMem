@@ -95,6 +95,7 @@
           <Property Name="DonGia" Type="int" Nullable="false" />
           <Property Name="MaLoai" Type="varchar" MaxLength="10" />
           <Property Name="MaCTY" Type="varchar" MaxLength="10" />
+          <Property Name="HinhAnh" Type="image" />
         </EntityType>
         <Association Name="FK__ChiTietHo__MaHoa__5441852A">
           <End Role="HoaDon" Type="Self.HoaDon" Multiplicity="1" />
@@ -360,6 +361,7 @@
           <Property Name="DonGia" Type="Int32" Nullable="false" />
           <Property Name="MaLoai" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
           <Property Name="MaCTY" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="HinhAnh" Type="Binary" MaxLength="Max" FixedLength="false" />
           <NavigationProperty Name="ChiTietHoaDons" Relationship="Self.FK__ChiTietHo__MaSan__5535A963" FromRole="SanPham" ToRole="ChiTietHoaDon" />
           <NavigationProperty Name="Khoes" Relationship="Self.FK__Kho__MaSanPham__48CFD27E" FromRole="SanPham" ToRole="Kho" />
           <NavigationProperty Name="Loai" Relationship="Self.FK__SanPham__MaLoai__440B1D61" FromRole="SanPham" ToRole="Loai" />
@@ -623,6 +625,7 @@
                 <ScalarProperty Name="DonGia" ColumnName="DonGia" />
                 <ScalarProperty Name="MaLoai" ColumnName="MaLoai" />
                 <ScalarProperty Name="MaCTY" ColumnName="MaCTY" />
+                <ScalarProperty Name="HinhAnh" ColumnName="HinhAnh" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

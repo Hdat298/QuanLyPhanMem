@@ -17,7 +17,7 @@ namespace QuanLyPhanMem
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Register2());
+            Application.Run(new frmSuaSP());
         }
     }
 }

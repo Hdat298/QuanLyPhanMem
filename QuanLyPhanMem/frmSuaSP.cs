@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -35,6 +36,16 @@ namespace QuanLyPhanMem
                 MessageBox.Show(ex.Message);
                 throw;
             }
+        }
+        private void Refresh()
+        {
+            txtTenSP.Text = null;
+            txtMaSP.Text = null;
+            txtGia.Text = null;
+            cbxDonVi.Text = null;
+            cbxLoai.Text = null;
+            cbxNCC.Text = null;
+            pictureBox1.Image = null;
         }
         private void loadGrid(List<SanPham> listSP)
         {
@@ -150,12 +161,16 @@ namespace QuanLyPhanMem
                 }
                 else
                 {
+                    Image img = Image.FromFile(pictureBox1.ImageLocation);
+                    MemoryStream ms = new MemoryStream();
+                    img.Save(ms, img.RawFormat);
                     string temp = checkNCC(cbxNCC.Text);
                     string temp1 = checkLoai(cbxLoai.Text);
-                    SanPham sp = new SanPham() { MaSanPham = txtMaSP.Text, TenSanPham = txtTenSP.Text, DonGia = int.Parse(txtGia.Text), DonViTinh = cbxDonVi.Text, MaCTY = temp, MaLoai = temp1 };
+                    SanPham sp = new SanPham() { MaSanPham = txtMaSP.Text, TenSanPham = txtTenSP.Text, DonGia = int.Parse(txtGia.Text), DonViTinh = cbxDonVi.Text, MaCTY = temp, MaLoai = temp1, HinhAnh = ms.ToArray() };
                     ProjectContext.SanPhams.Add(sp);
                     ProjectContext.SaveChanges();
                     List<SanPham> listSP = ProjectContext.SanPhams.ToList();
+                    Refresh();
                     loadGrid(listSP);
                 }
             }
@@ -193,6 +208,7 @@ namespace QuanLyPhanMem
                         ProjectContext.SaveChanges();
                     }
                     List<SanPham> listStudents = ProjectContext.SanPhams.ToList();
+                    Refresh();
                     loadGrid(listStudents);
                 }
             }
@@ -211,6 +227,11 @@ namespace QuanLyPhanMem
                     cbxNCC.Text = dataGridView1.Rows[e.RowIndex].Cells["Column4"].FormattedValue.ToString();
                     txtGia.Text = dataGridView1.Rows[e.RowIndex].Cells["Column5"].FormattedValue.ToString();
                     cbxDonVi.Text = dataGridView1.Rows[e.RowIndex].Cells["Column6"].FormattedValue.ToString();
+
+                    var item = ProjectContext.SanPhams.FirstOrDefault(p => p.TenSanPham == txtTenSP.Text);
+                    byte[] arr = item.HinhAnh;
+                    MemoryStream ms = new MemoryStream(arr);
+                    pictureBox1.Image = Image.FromStream(ms);
                 }
             }
             catch (Exception ex)
@@ -237,9 +258,20 @@ namespace QuanLyPhanMem
                         ProjectContext.SaveChanges();
                         MessageBox.Show("Xóa sản phẩm thành công!", "Thông báo!", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         List<SanPham> listStudents = ProjectContext.SanPhams.ToList();
+                        Refresh();
                         loadGrid(listStudents);
                     }
                 }
+            }
+        }
+
+        private void btnThemAnh_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog dlg = new OpenFileDialog();
+            dlg.RestoreDirectory = true;
+            if (dlg.ShowDialog() == DialogResult.OK)
+            {
+                pictureBox1.ImageLocation = dlg.FileName;
             }
         }
     }
