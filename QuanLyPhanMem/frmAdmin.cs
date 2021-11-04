@@ -41,5 +41,11 @@ namespace QuanLyPhanMem
             var rp = new frmSPReport();
             rp.ShowDialog();
         }
+
+        private void accordionControlElement8_Click(object sender, EventArgs e)
+        {
+            frmHoaDon fHD = new frmHoaDon();
+            fHD.ShowDialog();
+        }
     }
 }

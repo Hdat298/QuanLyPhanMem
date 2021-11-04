@@ -119,6 +119,7 @@ namespace QuanLyPhanMem
             this.txtGia.Size = new System.Drawing.Size(293, 20);
             this.txtGia.StyleController = this.dataLayoutControl1;
             this.txtGia.TabIndex = 12;
+            this.txtGia.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtGia_KeyPress);
             // 
             // txtMaSP
             // 

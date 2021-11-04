@@ -27,5 +27,11 @@ namespace QuanLyPhanMem
             frmSanPham frmSP = new frmSanPham();
             frmSP.ShowDialog();
         }
+
+        private void navBarItem3_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
+        {
+            frmHoaDon fHD = new frmHoaDon();
+            fHD.ShowDialog();
+        }
     }
 }

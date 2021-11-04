@@ -37,7 +37,7 @@ namespace QuanLyPhanMem
                 throw;
             }
         }
-        private void Refresh()
+        private void LamMoi()
         {
             txtTenSP.Text = null;
             txtMaSP.Text = null;
@@ -171,7 +171,7 @@ namespace QuanLyPhanMem
                     ProjectContext.SaveChanges();
                     MessageBox.Show("Thêm Sản Phẩm Thành Công!","Thông Báo",MessageBoxButtons.OK);
                     List<SanPham> listSP = ProjectContext.SanPhams.ToList();
-                    Refresh();
+                    LamMoi();
                     loadGrid(listSP);
                 }
             }
@@ -209,7 +209,7 @@ namespace QuanLyPhanMem
                         ProjectContext.SaveChanges();
                     }
                     List<SanPham> listStudents = ProjectContext.SanPhams.ToList();
-                    Refresh();
+                    LamMoi();
                     loadGrid(listStudents);
                 }
             }
@@ -259,7 +259,7 @@ namespace QuanLyPhanMem
                         ProjectContext.SaveChanges();
                         MessageBox.Show("Xóa sản phẩm thành công!", "Thông báo!", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         List<SanPham> listStudents = ProjectContext.SanPhams.ToList();
-                        Refresh();
+                        LamMoi();
                         loadGrid(listStudents);
                     }
                 }
@@ -278,7 +278,15 @@ namespace QuanLyPhanMem
 
         private void btnNew_Click(object sender, EventArgs e)
         {
-            Refresh();
+            LamMoi();
+        }
+
+        private void txtGia_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if(!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && e.KeyChar != '.')
+            {
+                e.Handled = true;
+            }
         }
     }
 }

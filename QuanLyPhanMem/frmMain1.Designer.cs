@@ -37,12 +37,12 @@ namespace QuanLyPhanMem
             this.navBarControl1 = new DevExpress.XtraNavBar.NavBarControl();
             this.navBarGroup1 = new DevExpress.XtraNavBar.NavBarGroup();
             this.navBarItem3 = new DevExpress.XtraNavBar.NavBarItem();
+            this.navBarGroup4 = new DevExpress.XtraNavBar.NavBarGroup();
+            this.navBarSP = new DevExpress.XtraNavBar.NavBarItem();
             this.navBarItem1 = new DevExpress.XtraNavBar.NavBarItem();
             this.navBarItem2 = new DevExpress.XtraNavBar.NavBarItem();
             this.navBarItem4 = new DevExpress.XtraNavBar.NavBarItem();
             this.navBarItem8 = new DevExpress.XtraNavBar.NavBarItem();
-            this.navBarGroup4 = new DevExpress.XtraNavBar.NavBarGroup();
-            this.navBarSP = new DevExpress.XtraNavBar.NavBarItem();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
             ((System.ComponentModel.ISupportInitialize)(this.dockManager1)).BeginInit();
             this.dockPanel1.SuspendLayout();
@@ -134,6 +134,25 @@ namespace QuanLyPhanMem
             this.navBarItem3.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("navBarItem3.ImageOptions.LargeImage")));
             this.navBarItem3.ImageOptions.SmallImage = ((System.Drawing.Image)(resources.GetObject("navBarItem3.ImageOptions.SmallImage")));
             this.navBarItem3.Name = "navBarItem3";
+            this.navBarItem3.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.navBarItem3_LinkClicked);
+            // 
+            // navBarGroup4
+            // 
+            this.navBarGroup4.Caption = "Kho";
+            this.navBarGroup4.Expanded = true;
+            this.navBarGroup4.GroupStyle = DevExpress.XtraNavBar.NavBarGroupStyle.LargeIconsText;
+            this.navBarGroup4.ItemLinks.AddRange(new DevExpress.XtraNavBar.NavBarItemLink[] {
+            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarSP)});
+            this.navBarGroup4.Name = "navBarGroup4";
+            // 
+            // navBarSP
+            // 
+            this.navBarSP.Caption = "Sản Phẩm";
+            this.navBarSP.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("navBarSP.ImageOptions.LargeImage")));
+            this.navBarSP.ImageOptions.SmallImage = ((System.Drawing.Image)(resources.GetObject("navBarSP.ImageOptions.SmallImage")));
+            this.navBarSP.Name = "navBarSP";
+            this.navBarSP.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.navBarSP_LinkClicked);
+            this.navBarSP.ItemChanged += new System.EventHandler(this.navBarSP_ItemChanged);
             // 
             // navBarItem1
             // 
@@ -156,24 +175,6 @@ namespace QuanLyPhanMem
             this.navBarItem8.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("navBarItem8.ImageOptions.LargeImage")));
             this.navBarItem8.ImageOptions.SmallImage = ((System.Drawing.Image)(resources.GetObject("navBarItem8.ImageOptions.SmallImage")));
             this.navBarItem8.Name = "navBarItem8";
-            // 
-            // navBarGroup4
-            // 
-            this.navBarGroup4.Caption = "Kho";
-            this.navBarGroup4.Expanded = true;
-            this.navBarGroup4.GroupStyle = DevExpress.XtraNavBar.NavBarGroupStyle.LargeIconsText;
-            this.navBarGroup4.ItemLinks.AddRange(new DevExpress.XtraNavBar.NavBarItemLink[] {
-            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarSP)});
-            this.navBarGroup4.Name = "navBarGroup4";
-            // 
-            // navBarSP
-            // 
-            this.navBarSP.Caption = "Sản Phẩm";
-            this.navBarSP.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("navBarSP.ImageOptions.LargeImage")));
-            this.navBarSP.ImageOptions.SmallImage = ((System.Drawing.Image)(resources.GetObject("navBarSP.ImageOptions.SmallImage")));
-            this.navBarSP.Name = "navBarSP";
-            this.navBarSP.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.navBarSP_LinkClicked);
-            this.navBarSP.ItemChanged += new System.EventHandler(this.navBarSP_ItemChanged);
             // 
             // groupControl1
             // 
