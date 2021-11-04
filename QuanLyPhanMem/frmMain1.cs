@@ -17,11 +17,6 @@ namespace QuanLyPhanMem
             InitializeComponent();
         }
 
-        private void navBarSP_ItemChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void navBarSP_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
         {
             frmSanPham frmSP = new frmSanPham();
@@ -32,6 +27,11 @@ namespace QuanLyPhanMem
         {
             frmHoaDon fHD = new frmHoaDon();
             fHD.ShowDialog();
+        }
+
+        private void navBarItem6_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
+        {
+            Help.ShowHelp(this, System.IO.Path.Combine(Application.StartupPath, @"C:\Users\Administrator\source\repos\QuanLyPhanMem\QuanLyPhanMem\Resources\FileHelpDoAn.chm"));
         }
     }
 }

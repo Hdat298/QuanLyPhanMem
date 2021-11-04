@@ -369,7 +369,8 @@ namespace QuanLyPhanMem
             this.Controls.Add(this.dataLayoutControl1);
             this.Controls.Add(this.dataGridView1);
             this.Name = "frmSanPham";
-            this.Text = "frmSanPham";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Sản Phẩm";
             this.Load += new System.EventHandler(this.frmSanPham_Load);
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();

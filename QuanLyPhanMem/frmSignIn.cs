@@ -12,13 +12,12 @@ namespace QuanLyPhanMem
 {
     public partial class frmSignIn : Form
     {
+        public static string valueText;
         QLDAEntities QLDAContext = new QLDAEntities();
-
         public frmSignIn()
         {
             InitializeComponent();
         }
-
         private void btnSignIn_Click(object sender, EventArgs e)
         {
             try
@@ -27,6 +26,7 @@ namespace QuanLyPhanMem
                 {
                     MessageBox.Show("Đăng nhập admin thành công!", "Thông báo!", MessageBoxButtons.OK);
                     frmAdmin fAdmin = new frmAdmin();
+                    valueText = txtUserName.Text;
                     this.Hide();
                     fAdmin.ShowDialog();
                     return;
@@ -35,6 +35,7 @@ namespace QuanLyPhanMem
                 {
                     MessageBox.Show("Đăng nhập nhân viên thành công!", "Thông báo!", MessageBoxButtons.OK);
                     frmMain1 fMain = new frmMain1();
+                    valueText = txtUserName.Text;
                     this.Hide();
                     fMain.ShowDialog();
                 }
@@ -50,11 +51,6 @@ namespace QuanLyPhanMem
             {
                 MessageBox.Show(ex.Message);
             }
-        }
-
-        private void checkUser()
-        {
-            
         }
 
         private void simpleButton1_Click(object sender, EventArgs e)

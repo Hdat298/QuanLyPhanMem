@@ -8,10 +8,11 @@
         <EntityType Name="ChiTietHoaDon">
           <Key>
             <PropertyRef Name="MaHoaDon" />
+            <PropertyRef Name="MaSanPham" />
           </Key>
           <Property Name="MaHoaDon" Type="varchar" MaxLength="10" Nullable="false" />
-          <Property Name="MaSanPham" Type="varchar" MaxLength="10" />
-          <Property Name="SoLuong" Type="int" />
+          <Property Name="MaSanPham" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="SoLuong" Type="int" Nullable="false" />
           <Property Name="ThanhTien" Type="float" Nullable="false" />
           <Property Name="NgayLapHoaDon" Type="date" />
         </EntityType>
@@ -99,7 +100,7 @@
         </EntityType>
         <Association Name="FK__ChiTietHo__MaHoa__5441852A">
           <End Role="HoaDon" Type="Self.HoaDon" Multiplicity="1" />
-          <End Role="ChiTietHoaDon" Type="Self.ChiTietHoaDon" Multiplicity="0..1" />
+          <End Role="ChiTietHoaDon" Type="Self.ChiTietHoaDon" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="HoaDon">
               <PropertyRef Name="MaHoaDon" />
@@ -110,7 +111,7 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK__ChiTietHo__MaSan__5535A963">
-          <End Role="SanPham" Type="Self.SanPham" Multiplicity="0..1" />
+          <End Role="SanPham" Type="Self.SanPham" Multiplicity="1" />
           <End Role="ChiTietHoaDon" Type="Self.ChiTietHoaDon" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="SanPham">
@@ -260,10 +261,11 @@
         <EntityType Name="ChiTietHoaDon">
           <Key>
             <PropertyRef Name="MaHoaDon" />
+            <PropertyRef Name="MaSanPham" />
           </Key>
           <Property Name="MaHoaDon" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="MaSanPham" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
-          <Property Name="SoLuong" Type="Int32" />
+          <Property Name="MaSanPham" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="SoLuong" Type="Int32" Nullable="false" />
           <Property Name="ThanhTien" Type="Double" Nullable="false" />
           <Property Name="NgayLapHoaDon" Type="DateTime" Precision="0" />
           <NavigationProperty Name="HoaDon" Relationship="Self.FK__ChiTietHo__MaHoa__5441852A" FromRole="ChiTietHoaDon" ToRole="HoaDon" />
@@ -286,7 +288,7 @@
           <Property Name="TongTien" Type="Double" />
           <Property Name="MaNhanVien" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
           <Property Name="MaKhachHang" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
-          <NavigationProperty Name="ChiTietHoaDon" Relationship="Self.FK__ChiTietHo__MaHoa__5441852A" FromRole="HoaDon" ToRole="ChiTietHoaDon" />
+          <NavigationProperty Name="ChiTietHoaDons" Relationship="Self.FK__ChiTietHo__MaHoa__5441852A" FromRole="HoaDon" ToRole="ChiTietHoaDon" />
           <NavigationProperty Name="KhachHang" Relationship="Self.FK__HoaDon__MaKhachH__5165187F" FromRole="HoaDon" ToRole="KhachHang" />
           <NavigationProperty Name="NhanVien" Relationship="Self.FK__HoaDon__MaNhanVi__5070F446" FromRole="HoaDon" ToRole="NhanVien" />
         </EntityType>
@@ -369,7 +371,7 @@
         </EntityType>
         <Association Name="FK__ChiTietHo__MaHoa__5441852A">
           <End Role="HoaDon" Type="Self.HoaDon" Multiplicity="1" />
-          <End Role="ChiTietHoaDon" Type="Self.ChiTietHoaDon" Multiplicity="0..1" />
+          <End Role="ChiTietHoaDon" Type="Self.ChiTietHoaDon" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="HoaDon">
               <PropertyRef Name="MaHoaDon" />
@@ -380,7 +382,7 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK__ChiTietHo__MaSan__5535A963">
-          <End Role="SanPham" Type="Self.SanPham" Multiplicity="0..1" />
+          <End Role="SanPham" Type="Self.SanPham" Multiplicity="1" />
           <End Role="ChiTietHoaDon" Type="Self.ChiTietHoaDon" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="SanPham">

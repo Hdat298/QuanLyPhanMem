@@ -13,11 +13,22 @@ namespace QuanLyPhanMem
 {
     public partial class frmHoaDon : Form
     {
-            QLDAEntities context = new QLDAEntities();
+        frmAdmin fAd = new frmAdmin();
+        QLDAEntities context = new QLDAEntities();
     public frmHoaDon()
     {
         InitializeComponent();
     }
+
+    private void TongTien()
+        {
+            double sum = 0;
+            for(int i = 0; i < dataGridView1.Rows.Count;i++)
+            {
+                sum += Convert.ToDouble(dataGridView1.Rows[i].Cells[3].Value);
+            }
+            txtTongTien.Text = sum.ToString();
+        }
 
     #region method
     private void loadGridView2(List<SanPham> listStudents)
@@ -32,6 +43,18 @@ namespace QuanLyPhanMem
         }
     }
 
+        private string checkNV(string TenTruyCap)
+        {
+            List<NhanVien> listNVs = context.NhanViens.ToList();
+            foreach (var item in listNVs)
+            {
+                if (TenTruyCap == item.TenTaiKhoan)
+                {
+                    return item.MaNhanVien;
+                }
+            }
+            return null;
+        }
         private string check(string ID)
         {
             List<HoaDon> list = context.HoaDons.ToList();
@@ -66,8 +89,10 @@ namespace QuanLyPhanMem
 
         private void frmHoaDon_Load(object sender, EventArgs e)
     {
+            string temp = checkNV(frmSignIn.valueText);
             List<SanPham> sanPhams = context.SanPhams.ToList();
             loadGridView2(sanPhams);
+            txtMaNV.Text = temp;
     }
 
 
@@ -141,12 +166,18 @@ namespace QuanLyPhanMem
             }
             else
             {
+                double sum = 0;
+                for (int i = 0; i < dataGridView1.Rows.Count; i++)
+                {
+                    sum += Convert.ToDouble(dataGridView1.Rows[i].Cells[3].Value);
+                }
+                txtTongTien.Text = sum.ToString();
                 HoaDon stu = new HoaDon() 
                 { 
                     MaHoaDon = txtMaHD.Text, 
                     MaKhachHang = txtMaKH.Text, 
                     MaNhanVien = txtMaNV.Text,
-                    TongTien = Convert.ToInt32(txtTongTien.Text)
+                    TongTien = Convert.ToDouble(txtTongTien.Text)
                 };
                 context.HoaDons.Add(stu);
                 context.SaveChanges();
@@ -160,7 +191,7 @@ namespace QuanLyPhanMem
                     NgayLapHoaDon = dateTimePicker1.Value
                 };
                 context.ChiTietHoaDons.Add(stu1);
-                context.SaveChange();
+                context.SaveChanges();
 
                 double SoLuong = Convert.ToDouble(txtSoLuong.Text);
                 double DonGia = Convert.ToDouble(txtDonGia.Text);

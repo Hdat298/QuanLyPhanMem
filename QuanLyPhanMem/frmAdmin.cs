@@ -47,5 +47,10 @@ namespace QuanLyPhanMem
             frmHoaDon fHD = new frmHoaDon();
             fHD.ShowDialog();
         }
+
+        private void accordionControlElement13_Click(object sender, EventArgs e)
+        {
+            Help.ShowHelp(this, System.IO.Path.Combine(Application.StartupPath, @"C:\Users\Administrator\source\repos\QuanLyPhanMem\QuanLyPhanMem\Resources\FileHelpDoAn.chm"));
+        }
     }
 }

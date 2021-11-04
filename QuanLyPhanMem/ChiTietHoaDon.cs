@@ -16,7 +16,7 @@ namespace QuanLyPhanMem
     {
         public string MaHoaDon { get; set; }
         public string MaSanPham { get; set; }
-        public Nullable<int> SoLuong { get; set; }
+        public int SoLuong { get; set; }
         public double ThanhTien { get; set; }
         public Nullable<System.DateTime> NgayLapHoaDon { get; set; }
     
