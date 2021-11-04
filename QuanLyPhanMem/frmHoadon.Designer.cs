@@ -39,9 +39,6 @@ namespace QuanLyPhanMem
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnXoa = new Guna.UI.WinForms.GunaButton();
             this.btnLuu = new Guna.UI.WinForms.GunaButton();
             this.btnThem = new Guna.UI.WinForms.GunaButton();
@@ -63,6 +60,14 @@ namespace QuanLyPhanMem
             this.label5 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.txtTongTien = new System.Windows.Forms.TextBox();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -116,6 +121,7 @@ namespace QuanLyPhanMem
             this.txtMaHD.Name = "txtMaHD";
             this.txtMaHD.Size = new System.Drawing.Size(100, 21);
             this.txtMaHD.TabIndex = 1;
+            this.txtMaHD.TextChanged += new System.EventHandler(this.txtMaHD_TextChanged);
             // 
             // label4
             // 
@@ -165,28 +171,17 @@ namespace QuanLyPhanMem
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
             this.Column2,
-            this.Column3});
+            this.Column6,
+            this.Column3,
+            this.Column4,
+            this.Column5});
             this.dataGridView1.Location = new System.Drawing.Point(603, 12);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersVisible = false;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(358, 595);
+            this.dataGridView1.Size = new System.Drawing.Size(358, 565);
             this.dataGridView1.TabIndex = 4;
-            // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "Tên sản phẩm";
-            this.Column1.Name = "Column1";
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "Số lượng";
-            this.Column2.Name = "Column2";
-            // 
-            // Column3
-            // 
-            this.Column3.HeaderText = "Thành tiền";
-            this.Column3.Name = "Column3";
+            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             // 
             // btnXoa
             // 
@@ -225,7 +220,7 @@ namespace QuanLyPhanMem
             this.btnLuu.ForeColor = System.Drawing.Color.White;
             this.btnLuu.Image = null;
             this.btnLuu.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnLuu.Location = new System.Drawing.Point(876, 640);
+            this.btnLuu.Location = new System.Drawing.Point(859, 640);
             this.btnLuu.Name = "btnLuu";
             this.btnLuu.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
             this.btnLuu.OnHoverBorderColor = System.Drawing.Color.Black;
@@ -236,6 +231,7 @@ namespace QuanLyPhanMem
             this.btnLuu.TabIndex = 3;
             this.btnLuu.Text = "Lưu";
             this.btnLuu.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btnLuu.Click += new System.EventHandler(this.btnLuu_Click);
             // 
             // btnThem
             // 
@@ -429,11 +425,62 @@ namespace QuanLyPhanMem
             this.label8.TabIndex = 0;
             this.label8.Text = "Mã Hóa Đơn";
             // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(600, 593);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(69, 18);
+            this.label11.TabIndex = 5;
+            this.label11.Text = "Tổng tiền";
+            // 
+            // txtTongTien
+            // 
+            this.txtTongTien.Location = new System.Drawing.Point(690, 591);
+            this.txtTongTien.Name = "txtTongTien";
+            this.txtTongTien.Size = new System.Drawing.Size(276, 20);
+            this.txtTongTien.TabIndex = 6;
+            // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "Tên sản phẩm";
+            this.Column1.Name = "Column1";
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "Số lượng";
+            this.Column2.Name = "Column2";
+            // 
+            // Column6
+            // 
+            this.Column6.HeaderText = "Đơn giá";
+            this.Column6.Name = "Column6";
+            // 
+            // Column3
+            // 
+            this.Column3.HeaderText = "Thành tiền";
+            this.Column3.Name = "Column3";
+            // 
+            // Column4
+            // 
+            this.Column4.HeaderText = "Mã Hóa Đơn";
+            this.Column4.Name = "Column4";
+            this.Column4.Visible = false;
+            // 
+            // Column5
+            // 
+            this.Column5.HeaderText = "Mã Sản Phẩm";
+            this.Column5.Name = "Column5";
+            this.Column5.Visible = false;
+            // 
             // frmHoaDon
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(978, 709);
+            this.Controls.Add(this.txtTongTien);
+            this.Controls.Add(this.label11);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.groupControl2);
             this.Controls.Add(this.btnXoa);
@@ -453,6 +500,7 @@ namespace QuanLyPhanMem
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -485,12 +533,17 @@ namespace QuanLyPhanMem
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox txtThanhTien;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column8;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column9;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.TextBox txtTongTien;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
     }
 }
