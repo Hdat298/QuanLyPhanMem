@@ -13,8 +13,8 @@ namespace QuanLyPhanMem
 {
     public partial class frmHoaDon : Form
     {
-        frmAdmin fAd = new frmAdmin();
-        QLDAEntities context = new QLDAEntities();
+        //frmAdmin fAd = new frmAdmin();
+        QLDAEntities1 context = new QLDAEntities1();
         public frmHoaDon()
         {
             InitializeComponent();
@@ -27,16 +27,6 @@ namespace QuanLyPhanMem
             cbxMaKH.ValueMember = "MaKhachHang";
         }
 
-        private void LamMoi()
-        {
-            txtMaHD.Clear();
-            txtMaHD2.Clear();
-            txtMaSP.Clear();
-            txtTenSP.Clear();
-            txtDonGia.Clear();
-            txtSoLuong.Clear();
-            txtThanhTien.Clear();
-        }
     #region method
         private void loadGridView2(List<SanPham> listStudents)
         {
@@ -62,14 +52,27 @@ namespace QuanLyPhanMem
             }
             return null;
         }
-        private string check(string ID)
+        private string checkHD(string ID)
         {
-            List<HoaDon> list = context.HoaDons.ToList();
+            List<ChiTietHoaDon> list = context.ChiTietHoaDons.ToList();
             foreach (var item in list)
             {
                 if (ID.Equals(item.MaHoaDon))
                 {
                     return item.MaHoaDon;
+                }
+            }
+            return null;
+        }
+
+        private string checkSP(string ID)
+        {
+            List<ChiTietHoaDon> list = context.ChiTietHoaDons.ToList();
+            foreach (var item in list)
+            {
+                if (ID.Equals(item.MaSanPham))
+                {
+                    return item.MaSanPham;
                 }
             }
             return null;
@@ -96,19 +99,19 @@ namespace QuanLyPhanMem
 
         private void frmHoaDon_Load(object sender, EventArgs e)
         {
-            string temp = checkNV(frmSignIn.valueText);
+            //string temp = checkNV(frmSignIn.valueText);
             List<SanPham> sanPhams = context.SanPhams.ToList();
             List<KhachHang> KH = context.KhachHangs.ToList();
             loadKH(KH);
             loadGridView2(sanPhams);
-            txtMaNV.Text = temp;
+            //txtMaNV.Text = temp;
         }
 
 
 
         private void txtSoLuong_TextChanged(object sender, EventArgs e)
-        {
-            txtThanhTien.Text = (Convert.ToInt32(txtSoLuong.Text) * Convert.ToInt32(txtDonGia.Text)).ToString();
+        {         
+                txtThanhTien.Text = (Convert.ToInt32(txtSoLuong.Text) * Convert.ToInt32(txtDonGia.Text)).ToString();
         }
 
         private void txtMaHD_TextChanged(object sender, EventArgs e)
@@ -160,6 +163,14 @@ namespace QuanLyPhanMem
                 throw;
             }
         }
+        private void btnThem1_Click(object sender, EventArgs e)
+        {
+            if (txtMaHD.Text == "" || cbxMaKH.Text == "" || txtMaNV.Text == "")
+                throw new Exception("Vui lòng nhập đầy đủ thông tin hóa đơn");
+            HoaDon hd = new HoaDon() { MaHoaDon = txtMaHD.Text, TongTien = Convert.ToInt32(txtTongTien.Text), MaNhanVien = txtMaNV.Text, MaKhachHang = cbxMaKH.Text };
+            context.HoaDons.Add(hd);
+            context.SaveChanges();
+        }
 
         private void btnThem_Click(object sender, EventArgs e)
         {
@@ -168,25 +179,21 @@ namespace QuanLyPhanMem
             dataGridView1.Rows[index].Cells[1].Value = txtSoLuong.Text;
             dataGridView1.Rows[index].Cells[2].Value = txtDonGia.Text;
             dataGridView1.Rows[index].Cells[3].Value = txtThanhTien.Text;
+            dataGridView1.Rows[index].Cells[4].Value = txtMaHD2.Text;
+            dataGridView1.Rows[index].Cells[5].Value = txtMaSP.Text;
             double sum = 0;
             for (int i = 0; i < dataGridView1.Rows.Count; i++)
             {
                 sum += Convert.ToDouble(dataGridView1.Rows[i].Cells[3].Value);
             }
             txtTongTien.Text = sum.ToString();
-            LamMoi();
 
-            //HoaDon hd = new HoaDon() { MaHoaDon = txtMaHD.Text, TongTien = Convert.ToInt32(txtTongTien.Text), MaNhanVien = txtMaNV.Text, MaKhachHang = cbxMaKH.Text };
-            //context.HoaDons.Add(hd);
-            //context.SaveChanges();
-
-            //ChiTietHoaDon cthd = new ChiTietHoaDon() { MaHoaDon = txtMaHD2.Text, MaSanPham = txtMaSP.Text, SoLuong = Convert.ToInt32(txtSoLuong.Text), ThanhTien = Convert.ToInt32(txtThanhTien.Text), NgayLapHoaDon = dateTimePicker1.Value };
-            //context.ChiTietHoaDons.Add(cthd);
-            //context.SaveChanges();
+            ChiTietHoaDon cthd = new ChiTietHoaDon() { MaHoaDon = txtMaHD2.Text, MaSanPham = txtMaSP.Text, SoLuong = Convert.ToInt32(txtSoLuong.Text), ThanhTien = Convert.ToInt32(txtThanhTien.Text), NgayLapHoaDon = dateTimePicker1.Value };
+            context.ChiTietHoaDons.Add(cthd);
+            context.SaveChanges();
 
 
-            //if (txtMaHD.Text == "" || cbxMaKH.Text == "" || txtMaNV.Text == "")
-            //    throw new Exception("Vui lòng nhập đầy đủ thông tin hóa đơn");
+            
             //if (check(txtMaHD.Text) != null)
             //{
             //    HoaDon update = context.HoaDons.FirstOrDefault(p => p.MaHoaDon == txtMaHD.Text);
@@ -242,45 +249,36 @@ namespace QuanLyPhanMem
         {
             int rowIndex = dataGridView1.CurrentCell.RowIndex;
             dataGridView1.Rows.RemoveAt(rowIndex);
-            LamMoi();
 
-            //if (check(txtMaHD.Text) == null || check(txtMaSP.Text) == null)
-            //{
-            //    MessageBox.Show("Không tìm thấy vật phẩm cần xóa!", "Thông báo!", MessageBoxButtons.OK);
-            //}
-            //else
-            //{
-            //    ChiTietHoaDon delete = context.ChiTietHoaDons.FirstOrDefault(p => p.MaHoaDon == txtMaHD.Text && p.MaSanPham == txtMaSP.Text);
-            //    if (delete != null)
-            //    {
-            //        if (MessageBox.Show("Bạn có muốn xóa ?", "Thông báo!", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
-            //        {
-            //            context.ChiTietHoaDons.Remove(delete);
-            //            context.SaveChanges();
-            //            MessageBox.Show("Xóa sản phẩm thành công!", "Thông báo!", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            //            List<ChiTietHoaDon> list = context.ChiTietHoaDons.ToList();
-            //        }
-            //    }
-            //    else
-            //    {
-            //        MessageBox.Show("Không tìm thấy mã nhân viên cần xóa!", "Thông báo!", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            //    }
-            //}
+            if (checkHD(txtMaHD.Text) == null || checkSP(txtMaSP.Text) == null)
+            {
+                MessageBox.Show("Không tìm thấy vật phẩm cần xóa!", "Thông báo!", MessageBoxButtons.OK);
+            }
+            else
+            {
+                ChiTietHoaDon delete = context.ChiTietHoaDons.FirstOrDefault(p => p.MaHoaDon == txtMaHD.Text && p.MaSanPham == txtMaSP.Text);
+                if (delete != null)
+                {
+                    if (MessageBox.Show("Bạn có muốn xóa ?", "Thông báo!", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                    {
+                        context.ChiTietHoaDons.Remove(delete);
+                        context.SaveChanges();
+                        MessageBox.Show("Xóa sản phẩm thành công!", "Thông báo!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        List<ChiTietHoaDon> list = context.ChiTietHoaDons.ToList();
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Không tìm thấy mã nhân viên cần xóa!", "Thông báo!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+            }
         }
 
         private void btnLuu_Click(object sender, EventArgs e)
         {
             try
-            {
-                HoaDon hd = new HoaDon() { MaHoaDon = txtMaHD.Text, TongTien = Convert.ToInt32(txtTongTien.Text), MaNhanVien = txtMaNV.Text, MaKhachHang = cbxMaKH.Text };
-                context.HoaDons.Add(hd);
-                context.SaveChanges();
-
-                ChiTietHoaDon cthd = new ChiTietHoaDon() { MaHoaDon = txtMaHD2.Text, MaSanPham = txtMaSP.Text, SoLuong = Convert.ToInt32(txtSoLuong.Text), ThanhTien = Convert.ToInt32(txtThanhTien.Text), NgayLapHoaDon = dateTimePicker1.Value };
-                context.ChiTietHoaDons.Add(cthd);
-                context.SaveChanges();
-                MessageBox.Show("Lưu thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                LamMoi();
+            {                
+                MessageBox.Show("Lưu thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information); 
             }
             catch (Exception ex)
             {
@@ -298,5 +296,7 @@ namespace QuanLyPhanMem
             }
         }
         #endregion
+
+
     }
 }
