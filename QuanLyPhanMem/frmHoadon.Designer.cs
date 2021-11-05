@@ -31,8 +31,6 @@ namespace QuanLyPhanMem
         {
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.txtMaKH = new System.Windows.Forms.TextBox();
-            this.txtMaNV = new System.Windows.Forms.TextBox();
             this.txtMaHD = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -68,6 +66,8 @@ namespace QuanLyPhanMem
             this.label8 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.txtTongTien = new System.Windows.Forms.TextBox();
+            this.cbxMaKH = new System.Windows.Forms.ComboBox();
+            this.txtMaNV = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -79,9 +79,9 @@ namespace QuanLyPhanMem
             // 
             // groupControl1
             // 
-            this.groupControl1.Controls.Add(this.dateTimePicker1);
-            this.groupControl1.Controls.Add(this.txtMaKH);
             this.groupControl1.Controls.Add(this.txtMaNV);
+            this.groupControl1.Controls.Add(this.cbxMaKH);
+            this.groupControl1.Controls.Add(this.dateTimePicker1);
             this.groupControl1.Controls.Add(this.txtMaHD);
             this.groupControl1.Controls.Add(this.label4);
             this.groupControl1.Controls.Add(this.label3);
@@ -100,20 +100,6 @@ namespace QuanLyPhanMem
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(100, 21);
             this.dateTimePicker1.TabIndex = 2;
-            // 
-            // txtMaKH
-            // 
-            this.txtMaKH.Location = new System.Drawing.Point(131, 53);
-            this.txtMaKH.Name = "txtMaKH";
-            this.txtMaKH.Size = new System.Drawing.Size(100, 21);
-            this.txtMaKH.TabIndex = 1;
-            // 
-            // txtMaNV
-            // 
-            this.txtMaNV.Location = new System.Drawing.Point(427, 25);
-            this.txtMaNV.Name = "txtMaNV";
-            this.txtMaNV.Size = new System.Drawing.Size(100, 21);
-            this.txtMaNV.TabIndex = 1;
             // 
             // txtMaHD
             // 
@@ -355,6 +341,7 @@ namespace QuanLyPhanMem
             // 
             // txtTenSP
             // 
+            this.txtTenSP.Enabled = false;
             this.txtTenSP.Location = new System.Drawing.Point(131, 80);
             this.txtTenSP.Name = "txtTenSP";
             this.txtTenSP.Size = new System.Drawing.Size(151, 21);
@@ -362,6 +349,7 @@ namespace QuanLyPhanMem
             // 
             // txtMaSP
             // 
+            this.txtMaSP.Enabled = false;
             this.txtMaSP.Location = new System.Drawing.Point(131, 53);
             this.txtMaSP.Name = "txtMaSP";
             this.txtMaSP.Size = new System.Drawing.Size(100, 21);
@@ -369,6 +357,7 @@ namespace QuanLyPhanMem
             // 
             // txtThanhTien
             // 
+            this.txtThanhTien.Enabled = false;
             this.txtThanhTien.Location = new System.Drawing.Point(427, 81);
             this.txtThanhTien.Name = "txtThanhTien";
             this.txtThanhTien.Size = new System.Drawing.Size(127, 21);
@@ -385,6 +374,7 @@ namespace QuanLyPhanMem
             // 
             // txtDonGia
             // 
+            this.txtDonGia.Enabled = false;
             this.txtDonGia.Location = new System.Drawing.Point(427, 25);
             this.txtDonGia.Name = "txtDonGia";
             this.txtDonGia.Size = new System.Drawing.Size(127, 21);
@@ -392,6 +382,7 @@ namespace QuanLyPhanMem
             // 
             // txtMaHD2
             // 
+            this.txtMaHD2.Enabled = false;
             this.txtMaHD2.Location = new System.Drawing.Point(131, 26);
             this.txtMaHD2.Name = "txtMaHD2";
             this.txtMaHD2.Size = new System.Drawing.Size(100, 21);
@@ -474,6 +465,23 @@ namespace QuanLyPhanMem
             this.txtTongTien.Size = new System.Drawing.Size(276, 20);
             this.txtTongTien.TabIndex = 6;
             // 
+            // cbxMaKH
+            // 
+            this.cbxMaKH.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbxMaKH.FormattingEnabled = true;
+            this.cbxMaKH.Location = new System.Drawing.Point(131, 56);
+            this.cbxMaKH.Name = "cbxMaKH";
+            this.cbxMaKH.Size = new System.Drawing.Size(100, 21);
+            this.cbxMaKH.TabIndex = 3;
+            // 
+            // txtMaNV
+            // 
+            this.txtMaNV.Enabled = false;
+            this.txtMaNV.Location = new System.Drawing.Point(427, 27);
+            this.txtMaNV.Name = "txtMaNV";
+            this.txtMaNV.Size = new System.Drawing.Size(100, 21);
+            this.txtMaNV.TabIndex = 4;
+            // 
             // frmHoaDon
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -512,8 +520,6 @@ namespace QuanLyPhanMem
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.TextBox txtMaKH;
-        private System.Windows.Forms.TextBox txtMaNV;
         private System.Windows.Forms.TextBox txtMaHD;
         private System.Windows.Forms.Label label4;
         private Guna.UI.WinForms.GunaButton btnXoa;
@@ -546,5 +552,7 @@ namespace QuanLyPhanMem
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
+        private System.Windows.Forms.ComboBox cbxMaKH;
+        private System.Windows.Forms.TextBox txtMaNV;
     }
 }

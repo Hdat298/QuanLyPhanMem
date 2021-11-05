@@ -145,6 +145,7 @@
     <Compile Include="Loai.cs">
       <DependentUpon>QLDAModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\HoaDonReportClass.cs" />
     <Compile Include="Models\NhanVienReportClass.cs" />
     <Compile Include="Models\SanPhamReportClass.cs" />
     <Compile Include="NhaCungCap.cs">
@@ -181,6 +182,12 @@
     <Compile Include="Register2.0.Designer.cs">
       <DependentUpon>Register2.0.cs</DependentUpon>
     </Compile>
+    <Compile Include="Reports\frmHDReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\frmHDReport.Designer.cs">
+      <DependentUpon>frmHDReport.cs</DependentUpon>
+    </Compile>
     <Compile Include="Reports\frmNVReport.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -192,6 +199,12 @@
     </Compile>
     <Compile Include="Reports\frmSPReport.Designer.cs">
       <DependentUpon>frmSPReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\HoaDonReport.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HoaDonReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="Reports\NhanVienReport.cs">
       <AutoGen>True</AutoGen>
@@ -235,11 +248,18 @@
     <EmbeddedResource Include="Register2.0.resx">
       <DependentUpon>Register2.0.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Reports\frmHDReport.resx">
+      <DependentUpon>frmHDReport.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Reports\frmNVReport.resx">
       <DependentUpon>frmNVReport.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\frmSPReport.resx">
       <DependentUpon>frmSPReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\HoaDonReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>HoaDonReport.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\NhanVienReport.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
