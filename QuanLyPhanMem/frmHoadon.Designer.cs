@@ -30,6 +30,8 @@ namespace QuanLyPhanMem
         private void InitializeComponent()
         {
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
+            this.txtMaNV = new System.Windows.Forms.TextBox();
+            this.cbxMaKH = new System.Windows.Forms.ComboBox();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.txtMaHD = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -37,12 +39,6 @@ namespace QuanLyPhanMem
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnXoa = new Guna.UI.WinForms.GunaButton();
             this.btnLuu = new Guna.UI.WinForms.GunaButton();
             this.btnThem = new Guna.UI.WinForms.GunaButton();
@@ -66,8 +62,13 @@ namespace QuanLyPhanMem
             this.label8 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.txtTongTien = new System.Windows.Forms.TextBox();
-            this.cbxMaKH = new System.Windows.Forms.ComboBox();
-            this.txtMaNV = new System.Windows.Forms.TextBox();
+            this.btnThem1 = new Guna.UI.WinForms.GunaButton();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -79,6 +80,7 @@ namespace QuanLyPhanMem
             // 
             // groupControl1
             // 
+            this.groupControl1.Controls.Add(this.btnThem1);
             this.groupControl1.Controls.Add(this.txtMaNV);
             this.groupControl1.Controls.Add(this.cbxMaKH);
             this.groupControl1.Controls.Add(this.dateTimePicker1);
@@ -89,9 +91,25 @@ namespace QuanLyPhanMem
             this.groupControl1.Controls.Add(this.label1);
             this.groupControl1.Location = new System.Drawing.Point(12, 12);
             this.groupControl1.Name = "groupControl1";
-            this.groupControl1.Size = new System.Drawing.Size(579, 113);
+            this.groupControl1.Size = new System.Drawing.Size(579, 130);
             this.groupControl1.TabIndex = 1;
             this.groupControl1.Text = "Thông Tin Hóa Đơn";
+            // 
+            // txtMaNV
+            // 
+            this.txtMaNV.Location = new System.Drawing.Point(427, 27);
+            this.txtMaNV.Name = "txtMaNV";
+            this.txtMaNV.Size = new System.Drawing.Size(100, 21);
+            this.txtMaNV.TabIndex = 4;
+            // 
+            // cbxMaKH
+            // 
+            this.cbxMaKH.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbxMaKH.FormattingEnabled = true;
+            this.cbxMaKH.Location = new System.Drawing.Point(131, 56);
+            this.cbxMaKH.Name = "cbxMaKH";
+            this.cbxMaKH.Size = new System.Drawing.Size(100, 21);
+            this.cbxMaKH.TabIndex = 3;
             // 
             // dateTimePicker1
             // 
@@ -151,7 +169,6 @@ namespace QuanLyPhanMem
             // 
             // dataGridView1
             // 
-            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.Window;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -165,41 +182,9 @@ namespace QuanLyPhanMem
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersVisible = false;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(358, 565);
+            this.dataGridView1.Size = new System.Drawing.Size(363, 565);
             this.dataGridView1.TabIndex = 4;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
-            // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "Tên sản phẩm";
-            this.Column1.Name = "Column1";
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "Số lượng";
-            this.Column2.Name = "Column2";
-            // 
-            // Column6
-            // 
-            this.Column6.HeaderText = "Đơn giá";
-            this.Column6.Name = "Column6";
-            // 
-            // Column3
-            // 
-            this.Column3.HeaderText = "Thành tiền";
-            this.Column3.Name = "Column3";
-            // 
-            // Column4
-            // 
-            this.Column4.HeaderText = "Mã Hóa Đơn";
-            this.Column4.Name = "Column4";
-            this.Column4.Visible = false;
-            // 
-            // Column5
-            // 
-            this.Column5.HeaderText = "Mã Sản Phẩm";
-            this.Column5.Name = "Column5";
-            this.Column5.Visible = false;
             // 
             // btnXoa
             // 
@@ -369,6 +354,7 @@ namespace QuanLyPhanMem
             this.txtSoLuong.Name = "txtSoLuong";
             this.txtSoLuong.Size = new System.Drawing.Size(100, 21);
             this.txtSoLuong.TabIndex = 1;
+            this.txtSoLuong.Text = "0";
             this.txtSoLuong.TextChanged += new System.EventHandler(this.txtSoLuong_TextChanged);
             this.txtSoLuong.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSoLuong_KeyPress);
             // 
@@ -465,22 +451,68 @@ namespace QuanLyPhanMem
             this.txtTongTien.Size = new System.Drawing.Size(276, 20);
             this.txtTongTien.TabIndex = 6;
             // 
-            // cbxMaKH
+            // btnThem1
             // 
-            this.cbxMaKH.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbxMaKH.FormattingEnabled = true;
-            this.cbxMaKH.Location = new System.Drawing.Point(131, 56);
-            this.cbxMaKH.Name = "cbxMaKH";
-            this.cbxMaKH.Size = new System.Drawing.Size(100, 21);
-            this.cbxMaKH.TabIndex = 3;
+            this.btnThem1.AnimationHoverSpeed = 0.07F;
+            this.btnThem1.AnimationSpeed = 0.03F;
+            this.btnThem1.BaseColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnThem1.BorderColor = System.Drawing.Color.Black;
+            this.btnThem1.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btnThem1.FocusedColor = System.Drawing.Color.Empty;
+            this.btnThem1.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnThem1.ForeColor = System.Drawing.Color.White;
+            this.btnThem1.Image = null;
+            this.btnThem1.ImageSize = new System.Drawing.Size(20, 20);
+            this.btnThem1.Location = new System.Drawing.Point(265, 91);
+            this.btnThem1.Name = "btnThem1";
+            this.btnThem1.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
+            this.btnThem1.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.btnThem1.OnHoverForeColor = System.Drawing.Color.White;
+            this.btnThem1.OnHoverImage = null;
+            this.btnThem1.OnPressedColor = System.Drawing.Color.Black;
+            this.btnThem1.Size = new System.Drawing.Size(85, 34);
+            this.btnThem1.TabIndex = 5;
+            this.btnThem1.Text = "Thêm";
+            this.btnThem1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btnThem1.Click += new System.EventHandler(this.btnThem1_Click);
             // 
-            // txtMaNV
+            // Column1
             // 
-            this.txtMaNV.Enabled = false;
-            this.txtMaNV.Location = new System.Drawing.Point(427, 27);
-            this.txtMaNV.Name = "txtMaNV";
-            this.txtMaNV.Size = new System.Drawing.Size(100, 21);
-            this.txtMaNV.TabIndex = 4;
+            this.Column1.HeaderText = "Tên sản phẩm";
+            this.Column1.Name = "Column1";
+            this.Column1.Width = 118;
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "Số lượng";
+            this.Column2.Name = "Column2";
+            this.Column2.Width = 59;
+            // 
+            // Column6
+            // 
+            this.Column6.HeaderText = "Đơn giá";
+            this.Column6.Name = "Column6";
+            this.Column6.Width = 85;
+            // 
+            // Column3
+            // 
+            this.Column3.HeaderText = "Thành tiền";
+            this.Column3.Name = "Column3";
+            this.Column3.Width = 98;
+            // 
+            // Column4
+            // 
+            this.Column4.HeaderText = "Mã Hóa Đơn";
+            this.Column4.Name = "Column4";
+            this.Column4.Visible = false;
+            this.Column4.Width = 59;
+            // 
+            // Column5
+            // 
+            this.Column5.HeaderText = "Mã Sản Phẩm";
+            this.Column5.Name = "Column5";
+            this.Column5.Visible = false;
+            this.Column5.Width = 59;
             // 
             // frmHoaDon
             // 
@@ -546,13 +578,14 @@ namespace QuanLyPhanMem
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.TextBox txtTongTien;
+        private System.Windows.Forms.ComboBox cbxMaKH;
+        private System.Windows.Forms.TextBox txtMaNV;
+        private Guna.UI.WinForms.GunaButton btnThem1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
-        private System.Windows.Forms.ComboBox cbxMaKH;
-        private System.Windows.Forms.TextBox txtMaNV;
     }
 }
