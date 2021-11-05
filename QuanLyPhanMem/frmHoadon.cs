@@ -13,8 +13,7 @@ namespace QuanLyPhanMem
 {
     public partial class frmHoaDon : Form
     {
-        //frmAdmin fAd = new frmAdmin();
-        QLDAEntities1 context = new QLDAEntities1();
+        QLDAEntities context = new QLDAEntities();
         public frmHoaDon()
         {
             InitializeComponent();
@@ -99,12 +98,12 @@ namespace QuanLyPhanMem
 
         private void frmHoaDon_Load(object sender, EventArgs e)
         {
-            //string temp = checkNV(frmSignIn.valueText);
+            string temp = checkNV(frmSignIn.valueText);
             List<SanPham> sanPhams = context.SanPhams.ToList();
             List<KhachHang> KH = context.KhachHangs.ToList();
             loadKH(KH);
             loadGridView2(sanPhams);
-            //txtMaNV.Text = temp;
+            txtMaNV.Text = temp;
         }
 
 
@@ -167,9 +166,10 @@ namespace QuanLyPhanMem
         {
             if (txtMaHD.Text == "" || cbxMaKH.Text == "" || txtMaNV.Text == "")
                 throw new Exception("Vui lòng nhập đầy đủ thông tin hóa đơn");
-            HoaDon hd = new HoaDon() { MaHoaDon = txtMaHD.Text, TongTien = Convert.ToInt32(txtTongTien.Text), MaNhanVien = txtMaNV.Text, MaKhachHang = cbxMaKH.Text };
+            HoaDon hd = new HoaDon() { MaHoaDon = txtMaHD.Text, TongTien = 0, MaNhanVien = txtMaNV.Text, MaKhachHang = cbxMaKH.Text };
             context.HoaDons.Add(hd);
             context.SaveChanges();
+            MessageBox.Show("Thêm Hóa Đơn Thành Công!", "Thông Báo!");
         }
 
         private void btnThem_Click(object sender, EventArgs e)
@@ -188,6 +188,11 @@ namespace QuanLyPhanMem
             }
             txtTongTien.Text = sum.ToString();
 
+            HoaDon listHD = context.HoaDons.FirstOrDefault(p => p.MaHoaDon == txtMaHD2.Text);
+            if(listHD != null)
+            {
+                listHD.TongTien = Convert.ToDouble(txtTongTien.Text);
+            }
             ChiTietHoaDon cthd = new ChiTietHoaDon() { MaHoaDon = txtMaHD2.Text, MaSanPham = txtMaSP.Text, SoLuong = Convert.ToInt32(txtSoLuong.Text), ThanhTien = Convert.ToInt32(txtThanhTien.Text), NgayLapHoaDon = dateTimePicker1.Value };
             context.ChiTietHoaDons.Add(cthd);
             context.SaveChanges();
