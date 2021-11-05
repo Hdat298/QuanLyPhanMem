@@ -34,6 +34,13 @@ namespace QuanLyPhanMem
             this.btnXoa = new System.Windows.Forms.Button();
             this.btnThem = new System.Windows.Forms.Button();
             this.dgvKhachHang = new System.Windows.Forms.DataGridView();
+            this.Column0 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.txtMail = new System.Windows.Forms.TextBox();
             this.txtSDT = new System.Windows.Forms.TextBox();
             this.txtDiaChi = new System.Windows.Forms.TextBox();
@@ -47,13 +54,6 @@ namespace QuanLyPhanMem
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.Column0 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvKhachHang)).BeginInit();
             this.SuspendLayout();
             // 
@@ -123,6 +123,48 @@ namespace QuanLyPhanMem
             this.dgvKhachHang.TabIndex = 33;
             this.dgvKhachHang.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvKhachHang_CellClick);
             // 
+            // Column0
+            // 
+            this.Column0.HeaderText = "Mã Khách hàng";
+            this.Column0.MinimumWidth = 6;
+            this.Column0.Name = "Column0";
+            // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "Họ tên";
+            this.Column1.MinimumWidth = 6;
+            this.Column1.Name = "Column1";
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "Phái";
+            this.Column2.MinimumWidth = 6;
+            this.Column2.Name = "Column2";
+            // 
+            // Column3
+            // 
+            this.Column3.HeaderText = "Ngày sinh";
+            this.Column3.MinimumWidth = 6;
+            this.Column3.Name = "Column3";
+            // 
+            // Column4
+            // 
+            this.Column4.HeaderText = "Địa chỉ";
+            this.Column4.MinimumWidth = 6;
+            this.Column4.Name = "Column4";
+            // 
+            // Column5
+            // 
+            this.Column5.HeaderText = "SDT";
+            this.Column5.MinimumWidth = 6;
+            this.Column5.Name = "Column5";
+            // 
+            // Column6
+            // 
+            this.Column6.HeaderText = "E-Mail";
+            this.Column6.MinimumWidth = 6;
+            this.Column6.Name = "Column6";
+            // 
             // txtMail
             // 
             this.txtMail.Location = new System.Drawing.Point(370, 103);
@@ -149,10 +191,11 @@ namespace QuanLyPhanMem
             // 
             // dtpNgaySinh
             // 
+            this.dtpNgaySinh.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtpNgaySinh.Location = new System.Drawing.Point(162, 145);
             this.dtpNgaySinh.Margin = new System.Windows.Forms.Padding(2);
             this.dtpNgaySinh.Name = "dtpNgaySinh";
-            this.dtpNgaySinh.Size = new System.Drawing.Size(168, 20);
+            this.dtpNgaySinh.Size = new System.Drawing.Size(87, 20);
             this.dtpNgaySinh.TabIndex = 29;
             // 
             // txtHoTen
@@ -240,48 +283,6 @@ namespace QuanLyPhanMem
             this.label1.Size = new System.Drawing.Size(82, 13);
             this.label1.TabIndex = 20;
             this.label1.Text = "Mã khách hàng";
-            // 
-            // Column0
-            // 
-            this.Column0.HeaderText = "Mã Khách hàng";
-            this.Column0.MinimumWidth = 6;
-            this.Column0.Name = "Column0";
-            // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "Họ tên";
-            this.Column1.MinimumWidth = 6;
-            this.Column1.Name = "Column1";
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "Phái";
-            this.Column2.MinimumWidth = 6;
-            this.Column2.Name = "Column2";
-            // 
-            // Column3
-            // 
-            this.Column3.HeaderText = "Ngày sinh";
-            this.Column3.MinimumWidth = 6;
-            this.Column3.Name = "Column3";
-            // 
-            // Column4
-            // 
-            this.Column4.HeaderText = "Địa chỉ";
-            this.Column4.MinimumWidth = 6;
-            this.Column4.Name = "Column4";
-            // 
-            // Column5
-            // 
-            this.Column5.HeaderText = "SDT";
-            this.Column5.MinimumWidth = 6;
-            this.Column5.Name = "Column5";
-            // 
-            // Column6
-            // 
-            this.Column6.HeaderText = "E-Mail";
-            this.Column6.MinimumWidth = 6;
-            this.Column6.Name = "Column6";
             // 
             // frmKhachHang
             // 

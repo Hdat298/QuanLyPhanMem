@@ -13,7 +13,7 @@ namespace QuanLyPhanMem
 {
     public partial class frmKhachHang : Form
     {
-        QLDAEntities1 context = new QLDAEntities1();
+        QLDAEntities context = new QLDAEntities();
         public frmKhachHang()
         {
             InitializeComponent();

@@ -109,6 +109,12 @@
     <Compile Include="frmHoaDon.Designer.cs">
       <DependentUpon>frmHoaDon.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmKhachHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmKhachHang.Designer.cs">
+      <DependentUpon>frmKhachHang.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmMain1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -132,6 +138,12 @@
     </Compile>
     <Compile Include="frmSuaSP.Designer.cs">
       <DependentUpon>frmSuaSP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmThongKe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmThongKe.Designer.cs">
+      <DependentUpon>frmThongKe.cs</DependentUpon>
     </Compile>
     <Compile Include="HoaDon.cs">
       <DependentUpon>QLDAModel.tt</DependentUpon>
@@ -227,6 +239,9 @@
     <EmbeddedResource Include="frmHoaDon.resx">
       <DependentUpon>frmHoaDon.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmKhachHang.resx">
+      <DependentUpon>frmKhachHang.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmMain1.resx">
       <DependentUpon>frmMain1.cs</DependentUpon>
     </EmbeddedResource>
@@ -238,6 +253,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmSuaSP.resx">
       <DependentUpon>frmSuaSP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmThongKe.resx">
+      <DependentUpon>frmThongKe.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
