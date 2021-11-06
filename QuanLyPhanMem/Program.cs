@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-//using QuanLyPhanMem.Reports;
+using QuanLyPhanMem.Reports;
 
 namespace QuanLyPhanMem
 {
@@ -17,7 +17,7 @@ namespace QuanLyPhanMem
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmThongKe());
+            Application.Run(new frmHoaDon ());
         }
     }
 }

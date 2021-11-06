@@ -81,26 +81,26 @@ namespace QuanLyPhanMem
 
         #region event
 
-        //Không tìm thấy gunabutton 1   
-        //private void gunaButton1_Click(object sender, EventArgs e)
-        //{
-        //    if (txtMaHD.Text == "" || txtMaKH.Text == "" || txtMaNV.Text == "")
-        //        throw new Exception("Vui lòng nhập đầy đủ thông tin hóa đơn");
-        //    if (checkStudent(txtMaHD.Text) != null)
-        //    {
-        //        MessageBox.Show("Hóa đơn đã tồn tại!", "Thông báo!", MessageBoxButtons.OK);
-        //    }
-        //    else
-        //    {
-        //        dataGridView1.Rows.Add(txtTenSP.Text, txtSoLuong.Text, txtThanhTien.Text);
-        //    }
-        //}
+        private void loadGridHD(List<HoaDon> listHDs)
+        {
+            dataGridView3.Rows.Clear();
+            foreach (var item in listHDs)
+            {
+                int index = dataGridView3.Rows.Add();
+                dataGridView3.Rows[index].Cells[0].Value = item.MaHoaDon;
+                dataGridView3.Rows[index].Cells[1].Value = item.MaKhachHang;
+                dataGridView3.Rows[index].Cells[2].Value = item.MaNhanVien;
+                dataGridView3.Rows[index].Cells[3].Value = item.TongTien;
+            }
+        }
 
         private void frmHoaDon_Load(object sender, EventArgs e)
         {
             string temp = checkNV(frmSignIn.valueText);
             List<SanPham> sanPhams = context.SanPhams.ToList();
             List<KhachHang> KH = context.KhachHangs.ToList();
+            List<HoaDon> HD = context.HoaDons.ToList();
+            loadGridHD(HD);
             loadKH(KH);
             loadGridView2(sanPhams);
             txtMaNV.Text = temp;
@@ -300,8 +300,7 @@ namespace QuanLyPhanMem
                 e.Handled = true;
             }
         }
+
         #endregion
-
-
     }
 }
