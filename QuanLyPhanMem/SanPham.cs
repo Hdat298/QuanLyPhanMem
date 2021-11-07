@@ -18,7 +18,6 @@ namespace QuanLyPhanMem
         public SanPham()
         {
             this.ChiTietHoaDons = new HashSet<ChiTietHoaDon>();
-            this.Khoes = new HashSet<Kho>();
         }
     
         public string MaSanPham { get; set; }
@@ -31,8 +30,6 @@ namespace QuanLyPhanMem
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<ChiTietHoaDon> ChiTietHoaDons { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Kho> Khoes { get; set; }
         public virtual Loai Loai { get; set; }
         public virtual NhaCungCap NhaCungCap { get; set; }
     }

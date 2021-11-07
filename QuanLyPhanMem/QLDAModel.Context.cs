@@ -29,7 +29,6 @@ namespace QuanLyPhanMem
         public virtual DbSet<ChucVu> ChucVus { get; set; }
         public virtual DbSet<HoaDon> HoaDons { get; set; }
         public virtual DbSet<KhachHang> KhachHangs { get; set; }
-        public virtual DbSet<Kho> Khoes { get; set; }
         public virtual DbSet<Loai> Loais { get; set; }
         public virtual DbSet<NhaCungCap> NhaCungCaps { get; set; }
         public virtual DbSet<NhanVien> NhanViens { get; set; }

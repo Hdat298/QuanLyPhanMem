@@ -4,25 +4,22 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="8d8e021754954cb79e6ef47f1b1ede1e" Name="Diagram1">
-        <EntityTypeShape EntityType="QLDAModel.ChiTietHoaDon" Width="1.5" PointX="8.25" PointY="3.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="QLDAModel.ChucVu" Width="1.5" PointX="1.5" PointY="12" IsExpanded="true" />
-        <EntityTypeShape EntityType="QLDAModel.HoaDon" Width="1.5" PointX="6" PointY="10.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="QLDAModel.KhachHang" Width="1.5" PointX="3.75" PointY="7.875" IsExpanded="true" />
-        <EntityTypeShape EntityType="QLDAModel.Kho" Width="1.5" PointX="3" PointY="3.625" IsExpanded="true" />
-        <EntityTypeShape EntityType="QLDAModel.Loai" Width="1.5" PointX="0.75" PointY="3.875" IsExpanded="true" />
-        <EntityTypeShape EntityType="QLDAModel.NhaCungCap" Width="1.5" PointX="3.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="QLDAModel.NhanVien" Width="1.5" PointX="3.75" PointY="11.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="QLDAModel.SanPham" Width="1.5" PointX="6" PointY="3.125" IsExpanded="true" />
-        <AssociationConnector Association="QLDAModel.FK__ChiTietHo__MaHoa__5441852A" ManuallyRouted="false" />
-        <AssociationConnector Association="QLDAModel.FK__ChiTietHo__MaSan__5535A963" ManuallyRouted="false" />
-        <AssociationConnector Association="QLDAModel.FK__NhanVien__MaChuc__4D94879B" ManuallyRouted="false" />
-        <AssociationConnector Association="QLDAModel.FK__HoaDon__MaKhachH__5165187F" ManuallyRouted="false" />
-        <AssociationConnector Association="QLDAModel.FK__HoaDon__MaNhanVi__5070F446" ManuallyRouted="false" />
-        <AssociationConnector Association="QLDAModel.FK__Kho__MaLoai__47DBAE45" ManuallyRouted="false" />
-        <AssociationConnector Association="QLDAModel.FK__Kho__MaSanPham__48CFD27E" ManuallyRouted="false" />
-        <AssociationConnector Association="QLDAModel.FK__SanPham__MaLoai__440B1D61" ManuallyRouted="false" />
-        <AssociationConnector Association="QLDAModel.FK__SanPham__MaCTY__44FF419A" ManuallyRouted="false" />
+      <Diagram DiagramId="aab8bc0cb1d54a1cae2c91a2270eacc4" Name="Diagram1">
+        <EntityTypeShape EntityType="QLDAModel.ChiTietHoaDon" Width="1.5" PointX="5.25" PointY="1.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDAModel.ChucVu" Width="1.5" PointX="1.5" PointY="16.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDAModel.HoaDon" Width="1.5" PointX="3" PointY="10.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDAModel.KhachHang" Width="1.5" PointX="0.75" PointY="8.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDAModel.Loai" Width="1.5" PointX="0.75" PointY="1.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDAModel.NhaCungCap" Width="1.5" PointX="0.75" PointY="5.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDAModel.NhanVien" Width="1.5" PointX="0.75" PointY="11.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDAModel.SanPham" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
+        <AssociationConnector Association="QLDAModel.FK__ChiTietHo__MaHoa__398D8EEE" ManuallyRouted="false" />
+        <AssociationConnector Association="QLDAModel.FK__ChiTietHo__MaSan__3A81B327" ManuallyRouted="false" />
+        <AssociationConnector Association="QLDAModel.FK__NhanVien__MaChuc__3D5E1FD2" ManuallyRouted="false" />
+        <AssociationConnector Association="QLDAModel.FK__HoaDon__MaKhachH__3B75D760" ManuallyRouted="false" />
+        <AssociationConnector Association="QLDAModel.FK__HoaDon__MaNhanVi__3C69FB99" ManuallyRouted="false" />
+        <AssociationConnector Association="QLDAModel.FK__SanPham__MaLoai__3F466844" ManuallyRouted="false" />
+        <AssociationConnector Association="QLDAModel.FK__SanPham__MaCTY__3E52440B" ManuallyRouted="false" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

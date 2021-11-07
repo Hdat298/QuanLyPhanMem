@@ -30,15 +30,20 @@ namespace QuanLyPhanMem
         private void InitializeComponent()
         {
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
+            this.dataGridView3 = new System.Windows.Forms.DataGridView();
+            this.Column10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnThem1 = new Guna.UI.WinForms.GunaButton();
             this.txtMaNV = new System.Windows.Forms.TextBox();
             this.cbxMaKH = new System.Windows.Forms.ComboBox();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.txtMaHD = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.label4 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -47,7 +52,6 @@ namespace QuanLyPhanMem
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnXoa = new Guna.UI.WinForms.GunaButton();
-            this.btnLuu = new Guna.UI.WinForms.GunaButton();
             this.btnThem = new Guna.UI.WinForms.GunaButton();
             this.groupControl2 = new DevExpress.XtraEditors.GroupControl();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -69,19 +73,15 @@ namespace QuanLyPhanMem
             this.label8 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.txtTongTien = new System.Windows.Forms.TextBox();
-            this.dataGridView3 = new System.Windows.Forms.DataGridView();
-            this.Column10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnLamMoi = new Guna.UI.WinForms.GunaButton();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).BeginInit();
             this.groupControl2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
             this.SuspendLayout();
             // 
             // groupControl1
@@ -99,6 +99,43 @@ namespace QuanLyPhanMem
             this.groupControl1.Size = new System.Drawing.Size(954, 260);
             this.groupControl1.TabIndex = 1;
             this.groupControl1.Text = "Thông Tin Hóa Đơn";
+            // 
+            // dataGridView3
+            // 
+            this.dataGridView3.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView3.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column10,
+            this.Column11,
+            this.Column12,
+            this.Column13});
+            this.dataGridView3.Location = new System.Drawing.Point(326, 27);
+            this.dataGridView3.Name = "dataGridView3";
+            this.dataGridView3.RowHeadersVisible = false;
+            this.dataGridView3.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridView3.Size = new System.Drawing.Size(623, 228);
+            this.dataGridView3.TabIndex = 6;
+            this.dataGridView3.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView3_CellClick);
+            // 
+            // Column10
+            // 
+            this.Column10.HeaderText = "Mã Hóa Đơn";
+            this.Column10.Name = "Column10";
+            // 
+            // Column11
+            // 
+            this.Column11.HeaderText = "Mã Khách Hàng";
+            this.Column11.Name = "Column11";
+            // 
+            // Column12
+            // 
+            this.Column12.HeaderText = "Mã Nhân Viên";
+            this.Column12.Name = "Column12";
+            // 
+            // Column13
+            // 
+            this.Column13.HeaderText = "Tổng Tiền";
+            this.Column13.Name = "Column13";
             // 
             // btnThem1
             // 
@@ -142,14 +179,6 @@ namespace QuanLyPhanMem
             this.cbxMaKH.Size = new System.Drawing.Size(100, 21);
             this.cbxMaKH.TabIndex = 3;
             // 
-            // dateTimePicker1
-            // 
-            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker1.Location = new System.Drawing.Point(171, 106);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(100, 21);
-            this.dateTimePicker1.TabIndex = 2;
-            // 
             // txtMaHD
             // 
             this.txtMaHD.Location = new System.Drawing.Point(172, 25);
@@ -157,16 +186,6 @@ namespace QuanLyPhanMem
             this.txtMaHD.Size = new System.Drawing.Size(100, 21);
             this.txtMaHD.TabIndex = 1;
             this.txtMaHD.TextChanged += new System.EventHandler(this.txtMaHD_TextChanged);
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(5, 108);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(148, 19);
-            this.label4.TabIndex = 0;
-            this.label4.Text = "Ngày Xuất Hóa Đơn";
             // 
             // label3
             // 
@@ -197,6 +216,24 @@ namespace QuanLyPhanMem
             this.label1.Size = new System.Drawing.Size(96, 19);
             this.label1.TabIndex = 0;
             this.label1.Text = "Mã Hóa Đơn";
+            // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dateTimePicker1.Location = new System.Drawing.Point(171, 106);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(100, 21);
+            this.dateTimePicker1.TabIndex = 2;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(5, 108);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(148, 19);
+            this.label4.TabIndex = 0;
+            this.label4.Text = "Ngày Xuất Hóa Đơn";
             // 
             // dataGridView1
             // 
@@ -267,7 +304,7 @@ namespace QuanLyPhanMem
             this.btnXoa.ForeColor = System.Drawing.Color.White;
             this.btnXoa.Image = null;
             this.btnXoa.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnXoa.Location = new System.Drawing.Point(749, 722);
+            this.btnXoa.Location = new System.Drawing.Point(694, 722);
             this.btnXoa.Name = "btnXoa";
             this.btnXoa.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
             this.btnXoa.OnHoverBorderColor = System.Drawing.Color.Black;
@@ -279,31 +316,6 @@ namespace QuanLyPhanMem
             this.btnXoa.Text = "Xóa";
             this.btnXoa.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
-            // 
-            // btnLuu
-            // 
-            this.btnLuu.AnimationHoverSpeed = 0.07F;
-            this.btnLuu.AnimationSpeed = 0.03F;
-            this.btnLuu.BaseColor = System.Drawing.SystemColors.ActiveCaption;
-            this.btnLuu.BorderColor = System.Drawing.Color.Black;
-            this.btnLuu.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.btnLuu.FocusedColor = System.Drawing.Color.Empty;
-            this.btnLuu.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnLuu.ForeColor = System.Drawing.Color.White;
-            this.btnLuu.Image = null;
-            this.btnLuu.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnLuu.Location = new System.Drawing.Point(859, 722);
-            this.btnLuu.Name = "btnLuu";
-            this.btnLuu.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
-            this.btnLuu.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.btnLuu.OnHoverForeColor = System.Drawing.Color.White;
-            this.btnLuu.OnHoverImage = null;
-            this.btnLuu.OnPressedColor = System.Drawing.Color.Black;
-            this.btnLuu.Size = new System.Drawing.Size(85, 34);
-            this.btnLuu.TabIndex = 3;
-            this.btnLuu.Text = "Lưu";
-            this.btnLuu.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.btnLuu.Click += new System.EventHandler(this.btnLuu_Click);
             // 
             // btnThem
             // 
@@ -317,7 +329,7 @@ namespace QuanLyPhanMem
             this.btnThem.ForeColor = System.Drawing.Color.White;
             this.btnThem.Image = null;
             this.btnThem.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnThem.Location = new System.Drawing.Point(630, 722);
+            this.btnThem.Location = new System.Drawing.Point(603, 722);
             this.btnThem.Name = "btnThem";
             this.btnThem.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
             this.btnThem.OnHoverBorderColor = System.Drawing.Color.Black;
@@ -522,41 +534,30 @@ namespace QuanLyPhanMem
             this.txtTongTien.Size = new System.Drawing.Size(276, 20);
             this.txtTongTien.TabIndex = 6;
             // 
-            // dataGridView3
+            // btnLamMoi
             // 
-            this.dataGridView3.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView3.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column10,
-            this.Column11,
-            this.Column12,
-            this.Column13});
-            this.dataGridView3.Location = new System.Drawing.Point(326, 27);
-            this.dataGridView3.Name = "dataGridView3";
-            this.dataGridView3.RowHeadersVisible = false;
-            this.dataGridView3.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView3.Size = new System.Drawing.Size(623, 228);
-            this.dataGridView3.TabIndex = 6;
-            // 
-            // Column10
-            // 
-            this.Column10.HeaderText = "Mã Hóa Đơn";
-            this.Column10.Name = "Column10";
-            // 
-            // Column11
-            // 
-            this.Column11.HeaderText = "Mã Khách Hàng";
-            this.Column11.Name = "Column11";
-            // 
-            // Column12
-            // 
-            this.Column12.HeaderText = "Mã Nhân Viên";
-            this.Column12.Name = "Column12";
-            // 
-            // Column13
-            // 
-            this.Column13.HeaderText = "Tổng Tiền";
-            this.Column13.Name = "Column13";
+            this.btnLamMoi.AnimationHoverSpeed = 0.07F;
+            this.btnLamMoi.AnimationSpeed = 0.03F;
+            this.btnLamMoi.BaseColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnLamMoi.BorderColor = System.Drawing.Color.Black;
+            this.btnLamMoi.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btnLamMoi.FocusedColor = System.Drawing.Color.Empty;
+            this.btnLamMoi.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnLamMoi.ForeColor = System.Drawing.Color.White;
+            this.btnLamMoi.Image = null;
+            this.btnLamMoi.ImageSize = new System.Drawing.Size(20, 20);
+            this.btnLamMoi.Location = new System.Drawing.Point(785, 722);
+            this.btnLamMoi.Name = "btnLamMoi";
+            this.btnLamMoi.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
+            this.btnLamMoi.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.btnLamMoi.OnHoverForeColor = System.Drawing.Color.White;
+            this.btnLamMoi.OnHoverImage = null;
+            this.btnLamMoi.OnPressedColor = System.Drawing.Color.Black;
+            this.btnLamMoi.Size = new System.Drawing.Size(85, 34);
+            this.btnLamMoi.TabIndex = 3;
+            this.btnLamMoi.Text = "Làm Mới";
+            this.btnLamMoi.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btnLamMoi.Click += new System.EventHandler(this.btnLamMoi_Click);
             // 
             // frmHoaDon
             // 
@@ -569,7 +570,7 @@ namespace QuanLyPhanMem
             this.Controls.Add(this.groupControl2);
             this.Controls.Add(this.btnXoa);
             this.Controls.Add(this.groupControl1);
-            this.Controls.Add(this.btnLuu);
+            this.Controls.Add(this.btnLamMoi);
             this.Controls.Add(this.btnThem);
             this.Name = "frmHoaDon";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -578,13 +579,13 @@ namespace QuanLyPhanMem
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
             this.groupControl1.ResumeLayout(false);
             this.groupControl1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).EndInit();
             this.groupControl2.ResumeLayout(false);
             this.groupControl2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -600,7 +601,6 @@ namespace QuanLyPhanMem
         private System.Windows.Forms.TextBox txtMaHD;
         private System.Windows.Forms.Label label4;
         private Guna.UI.WinForms.GunaButton btnXoa;
-        private Guna.UI.WinForms.GunaButton btnLuu;
         private Guna.UI.WinForms.GunaButton btnThem;
         private System.Windows.Forms.DataGridView dataGridView1;
         private DevExpress.XtraEditors.GroupControl groupControl2;
@@ -637,5 +637,6 @@ namespace QuanLyPhanMem
         private System.Windows.Forms.DataGridViewTextBoxColumn Column11;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column12;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column13;
+        private Guna.UI.WinForms.GunaButton btnLamMoi;
     }
 }

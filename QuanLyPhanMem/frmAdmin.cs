@@ -52,5 +52,11 @@ namespace QuanLyPhanMem
         {
             Help.ShowHelp(this, System.IO.Path.Combine(Application.StartupPath, @"C:\Users\Administrator\source\repos\QuanLyPhanMem\QuanLyPhanMem\Resources\FileHelpDoAn.chm"));
         }
+
+        private void accordionControlElement6_Click(object sender, EventArgs e)
+        {
+            frmThongKe fTK = new frmThongKe();
+            fTK.ShowDialog();
+        }
     }
 }

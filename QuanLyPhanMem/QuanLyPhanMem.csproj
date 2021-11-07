@@ -151,9 +151,6 @@
     <Compile Include="KhachHang.cs">
       <DependentUpon>QLDAModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="Kho.cs">
-      <DependentUpon>QLDAModel.tt</DependentUpon>
-    </Compile>
     <Compile Include="Loai.cs">
       <DependentUpon>QLDAModel.tt</DependentUpon>
     </Compile>

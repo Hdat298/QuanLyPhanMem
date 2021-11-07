@@ -94,6 +94,22 @@ namespace QuanLyPhanMem
             }
         }
 
+        private void loadGridCTHD(List<ChiTietHoaDon> listCTHD)
+        {
+            List<ChiTietHoaDon> cthd = context.ChiTietHoaDons.Where(p => p.MaHoaDon == txtMaHD.Text).ToList();
+            dataGridView1.Rows.Clear();
+            foreach (var item in cthd)
+            {
+                int index = dataGridView1.Rows.Add();
+                dataGridView1.Rows[index].Cells[0].Value = item.SanPham.TenSanPham;
+                dataGridView1.Rows[index].Cells[1].Value = item.SoLuong;
+                dataGridView1.Rows[index].Cells[2].Value = item.SanPham.DonGia;
+                dataGridView1.Rows[index].Cells[3].Value = item.ThanhTien;
+                dataGridView1.Rows[index].Cells[4].Value = item.MaHoaDon;
+                dataGridView1.Rows[index].Cells[5].Value = item.MaSanPham;
+            }
+        }
+
         private void frmHoaDon_Load(object sender, EventArgs e)
         {
             string temp = checkNV(frmSignIn.valueText);
@@ -170,6 +186,9 @@ namespace QuanLyPhanMem
             context.HoaDons.Add(hd);
             context.SaveChanges();
             MessageBox.Show("Thêm Hóa Đơn Thành Công!", "Thông Báo!");
+            dataGridView3.Rows.Clear();
+            List<HoaDon> listHDs = context.HoaDons.ToList();
+            loadGridHD(listHDs);
         }
 
         private void btnThem_Click(object sender, EventArgs e)
@@ -252,8 +271,8 @@ namespace QuanLyPhanMem
 
         private void btnXoa_Click(object sender, EventArgs e)
         {
-            int rowIndex = dataGridView1.CurrentCell.RowIndex;
-            dataGridView1.Rows.RemoveAt(rowIndex);
+            //int rowIndex = dataGridView1.CurrentCell.RowIndex;
+            //dataGridView1.Rows.RemoveAt(rowIndex);
 
             if (checkHD(txtMaHD.Text) == null || checkSP(txtMaSP.Text) == null)
             {
@@ -270,6 +289,7 @@ namespace QuanLyPhanMem
                         context.SaveChanges();
                         MessageBox.Show("Xóa sản phẩm thành công!", "Thông báo!", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         List<ChiTietHoaDon> list = context.ChiTietHoaDons.ToList();
+                        loadGridCTHD(list);
                     }
                 }
                 else
@@ -302,5 +322,41 @@ namespace QuanLyPhanMem
         }
 
         #endregion
+
+        private void dataGridView3_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            try
+            {
+                if (dataGridView3.Rows[e.RowIndex].Cells[e.ColumnIndex].Value != null)
+                {
+                    dataGridView3.CurrentCell.Selected = true;
+                    txtMaHD.Text = dataGridView3.Rows[e.RowIndex].Cells[0].FormattedValue.ToString();
+                    List<ChiTietHoaDon> cthd = context.ChiTietHoaDons.Where(p => p.MaHoaDon == txtMaHD.Text).ToList();
+                    dataGridView1.Rows.Clear();
+                    foreach (var item in cthd)
+                    {
+                        int index = dataGridView1.Rows.Add();
+                        dataGridView1.Rows[index].Cells[0].Value = item.SanPham.TenSanPham;
+                        dataGridView1.Rows[index].Cells[1].Value = item.SoLuong;
+                        dataGridView1.Rows[index].Cells[2].Value = item.SanPham.DonGia;
+                        dataGridView1.Rows[index].Cells[3].Value = item.ThanhTien;
+                        dataGridView1.Rows[index].Cells[4].Value = item.MaHoaDon;
+                        dataGridView1.Rows[index].Cells[5].Value = item.MaSanPham;
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Lỗi");
+                throw;
+            }
+        }
+
+        private void btnLamMoi_Click(object sender, EventArgs e)
+        {
+            List<HoaDon> list = context.HoaDons.ToList();
+            loadGridHD(list);
+            dataGridView1.Rows.Clear();
+        }
     }
 }
