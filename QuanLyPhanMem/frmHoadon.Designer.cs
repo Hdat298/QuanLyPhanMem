@@ -74,6 +74,7 @@ namespace QuanLyPhanMem
             this.label11 = new System.Windows.Forms.Label();
             this.txtTongTien = new System.Windows.Forms.TextBox();
             this.btnLamMoi = new Guna.UI.WinForms.GunaButton();
+            this.btnXoa1 = new Guna.UI.WinForms.GunaButton();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
@@ -87,6 +88,7 @@ namespace QuanLyPhanMem
             // groupControl1
             // 
             this.groupControl1.Controls.Add(this.dataGridView3);
+            this.groupControl1.Controls.Add(this.btnXoa1);
             this.groupControl1.Controls.Add(this.btnThem1);
             this.groupControl1.Controls.Add(this.txtMaNV);
             this.groupControl1.Controls.Add(this.cbxMaKH);
@@ -149,7 +151,7 @@ namespace QuanLyPhanMem
             this.btnThem1.ForeColor = System.Drawing.Color.White;
             this.btnThem1.Image = null;
             this.btnThem1.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnThem1.Location = new System.Drawing.Point(187, 156);
+            this.btnThem1.Location = new System.Drawing.Point(122, 153);
             this.btnThem1.Name = "btnThem1";
             this.btnThem1.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
             this.btnThem1.OnHoverBorderColor = System.Drawing.Color.Black;
@@ -559,6 +561,31 @@ namespace QuanLyPhanMem
             this.btnLamMoi.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.btnLamMoi.Click += new System.EventHandler(this.btnLamMoi_Click);
             // 
+            // btnXoa1
+            // 
+            this.btnXoa1.AnimationHoverSpeed = 0.07F;
+            this.btnXoa1.AnimationSpeed = 0.03F;
+            this.btnXoa1.BaseColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnXoa1.BorderColor = System.Drawing.Color.Black;
+            this.btnXoa1.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btnXoa1.FocusedColor = System.Drawing.Color.Empty;
+            this.btnXoa1.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnXoa1.ForeColor = System.Drawing.Color.White;
+            this.btnXoa1.Image = null;
+            this.btnXoa1.ImageSize = new System.Drawing.Size(20, 20);
+            this.btnXoa1.Location = new System.Drawing.Point(224, 153);
+            this.btnXoa1.Name = "btnXoa1";
+            this.btnXoa1.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
+            this.btnXoa1.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.btnXoa1.OnHoverForeColor = System.Drawing.Color.White;
+            this.btnXoa1.OnHoverImage = null;
+            this.btnXoa1.OnPressedColor = System.Drawing.Color.Black;
+            this.btnXoa1.Size = new System.Drawing.Size(85, 34);
+            this.btnXoa1.TabIndex = 5;
+            this.btnXoa1.Text = "Xóa";
+            this.btnXoa1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btnXoa1.Click += new System.EventHandler(this.btnXoa1_Click);
+            // 
             // frmHoaDon
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -638,5 +665,6 @@ namespace QuanLyPhanMem
         private System.Windows.Forms.DataGridViewTextBoxColumn Column12;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column13;
         private Guna.UI.WinForms.GunaButton btnLamMoi;
+        private Guna.UI.WinForms.GunaButton btnXoa1;
     }
 }

@@ -33,5 +33,11 @@ namespace QuanLyPhanMem
         {
             Help.ShowHelp(this, System.IO.Path.Combine(Application.StartupPath, @"C:\Users\Administrator\source\repos\QuanLyPhanMem\QuanLyPhanMem\Resources\FileHelpDoAn.chm"));
         }
+
+        private void navBarItem7_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
+        {
+            frmKhachHang fKH = new frmKhachHang();
+            fKH.ShowDialog();
+        }
     }
 }

@@ -33,10 +33,11 @@
             this.gunaLabel1 = new Guna.UI.WinForms.GunaLabel();
             this.gunaLabel2 = new Guna.UI.WinForms.GunaLabel();
             this.gunaLabel3 = new Guna.UI.WinForms.GunaLabel();
-            this.txtPass = new Guna.UI.WinForms.GunaTextBox();
             this.btnSignIn = new Guna.UI.WinForms.GunaButton();
             this.panel1 = new System.Windows.Forms.Panel();
             this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
+            this.gunaCheckBox1 = new Guna.UI.WinForms.GunaCheckBox();
+            this.txtPass = new Guna.UI.WinForms.GunaTextBox();
             this.SuspendLayout();
             // 
             // txtUserName
@@ -90,25 +91,6 @@
             this.gunaLabel3.TabIndex = 3;
             this.gunaLabel3.Text = "Mật Khẩu";
             // 
-            // txtPass
-            // 
-            this.txtPass.BackColor = System.Drawing.Color.Transparent;
-            this.txtPass.BaseColor = System.Drawing.Color.White;
-            this.txtPass.BorderColor = System.Drawing.Color.Silver;
-            this.txtPass.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtPass.FocusedBaseColor = System.Drawing.Color.White;
-            this.txtPass.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.txtPass.FocusedForeColor = System.Drawing.SystemColors.ControlText;
-            this.txtPass.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPass.Location = new System.Drawing.Point(336, 247);
-            this.txtPass.Name = "txtPass";
-            this.txtPass.PasswordChar = '●';
-            this.txtPass.Radius = 16;
-            this.txtPass.SelectedText = "";
-            this.txtPass.Size = new System.Drawing.Size(250, 34);
-            this.txtPass.TabIndex = 1;
-            this.txtPass.UseSystemPasswordChar = true;
-            // 
             // btnSignIn
             // 
             this.btnSignIn.AnimationHoverSpeed = 0.07F;
@@ -122,7 +104,7 @@
             this.btnSignIn.ForeColor = System.Drawing.Color.White;
             this.btnSignIn.Image = null;
             this.btnSignIn.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnSignIn.Location = new System.Drawing.Point(336, 328);
+            this.btnSignIn.Location = new System.Drawing.Point(326, 335);
             this.btnSignIn.Name = "btnSignIn";
             this.btnSignIn.OnHoverBaseColor = System.Drawing.Color.Maroon;
             this.btnSignIn.OnHoverBorderColor = System.Drawing.Color.Black;
@@ -156,6 +138,37 @@
             this.simpleButton1.TabIndex = 5;
             this.simpleButton1.Click += new System.EventHandler(this.simpleButton1_Click);
             // 
+            // gunaCheckBox1
+            // 
+            this.gunaCheckBox1.BaseColor = System.Drawing.Color.White;
+            this.gunaCheckBox1.CheckedOffColor = System.Drawing.Color.Gray;
+            this.gunaCheckBox1.CheckedOnColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.gunaCheckBox1.FillColor = System.Drawing.Color.White;
+            this.gunaCheckBox1.Location = new System.Drawing.Point(470, 288);
+            this.gunaCheckBox1.Name = "gunaCheckBox1";
+            this.gunaCheckBox1.Size = new System.Drawing.Size(102, 20);
+            this.gunaCheckBox1.TabIndex = 6;
+            this.gunaCheckBox1.Text = "Hiện mật khẩu";
+            this.gunaCheckBox1.CheckedChanged += new System.EventHandler(this.gunaCheckBox1_CheckedChanged);
+            // 
+            // txtPass
+            // 
+            this.txtPass.BackColor = System.Drawing.Color.Transparent;
+            this.txtPass.BaseColor = System.Drawing.Color.White;
+            this.txtPass.BorderColor = System.Drawing.Color.Silver;
+            this.txtPass.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtPass.FocusedBaseColor = System.Drawing.Color.White;
+            this.txtPass.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.txtPass.FocusedForeColor = System.Drawing.SystemColors.ControlText;
+            this.txtPass.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPass.Location = new System.Drawing.Point(335, 248);
+            this.txtPass.Name = "txtPass";
+            this.txtPass.PasswordChar = '\0';
+            this.txtPass.Radius = 16;
+            this.txtPass.SelectedText = "";
+            this.txtPass.Size = new System.Drawing.Size(250, 34);
+            this.txtPass.TabIndex = 1;
+            // 
             // frmSignIn
             // 
             this.AcceptButton = this.btnSignIn;
@@ -166,6 +179,7 @@
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.CancelButton = this.simpleButton1;
             this.ClientSize = new System.Drawing.Size(702, 455);
+            this.Controls.Add(this.gunaCheckBox1);
             this.Controls.Add(this.simpleButton1);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.btnSignIn);
@@ -178,6 +192,7 @@
             this.Name = "frmSignIn";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Đăng Nhập";
+            this.Load += new System.EventHandler(this.frmSignIn_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -188,9 +203,10 @@
         private Guna.UI.WinForms.GunaLabel gunaLabel1;
         private Guna.UI.WinForms.GunaLabel gunaLabel2;
         private Guna.UI.WinForms.GunaLabel gunaLabel3;
-        private Guna.UI.WinForms.GunaTextBox txtPass;
         private Guna.UI.WinForms.GunaButton btnSignIn;
         private System.Windows.Forms.Panel panel1;
         private DevExpress.XtraEditors.SimpleButton simpleButton1;
+        private Guna.UI.WinForms.GunaCheckBox gunaCheckBox1;
+        private Guna.UI.WinForms.GunaTextBox txtPass;
     }
 }

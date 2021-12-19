@@ -149,9 +149,10 @@ namespace QuanLyPhanMem
 
         private void btnThem_Click(object sender, EventArgs e)
         {
-            if (txtTenSP.Text == "" || txtMaSP.Text == "" || cbxNCC.Text == "" || txtGia.Text == "" || cbxLoai.Text == "" || cbxDonVi.Text == "")
+            if (txtTenSP.Text == "" || txtMaSP.Text == "" || cbxNCC.Text == "" || txtGia.Text == "" || cbxLoai.Text == "" || cbxDonVi.Text == "" || pictureBox1.Image == null)
             {
                 MessageBox.Show("Vui lòng nhập đầy đủ thông tin!", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
             }
             try
             {

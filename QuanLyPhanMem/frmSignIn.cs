@@ -60,5 +60,22 @@ namespace QuanLyPhanMem
                 Close();
             }
         }
+
+        private void gunaCheckBox1_CheckedChanged(object sender, EventArgs e)
+        {
+            if (gunaCheckBox1.Checked)
+            {
+                txtPass.UseSystemPasswordChar = false;
+            }
+            else
+            {
+                txtPass.UseSystemPasswordChar = true;
+            }
+        }
+
+        private void frmSignIn_Load(object sender, EventArgs e)
+        {
+            txtPass.UseSystemPasswordChar = true;
+        }
     }
 }

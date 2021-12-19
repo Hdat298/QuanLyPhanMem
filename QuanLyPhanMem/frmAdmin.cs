@@ -58,5 +58,17 @@ namespace QuanLyPhanMem
             frmThongKe fTK = new frmThongKe();
             fTK.ShowDialog();
         }
+
+        private void accordionControlElement15_Click(object sender, EventArgs e)
+        {
+            frmKhachHang fKH = new frmKhachHang();
+            fKH.ShowDialog();
+        }
+
+        private void accordionControlElement16_Click(object sender, EventArgs e)
+        {
+            var rp = new frmHDReport();
+            rp.ShowDialog();
+        }
     }
 }

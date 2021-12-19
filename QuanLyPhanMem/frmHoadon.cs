@@ -358,5 +358,23 @@ namespace QuanLyPhanMem
             loadGridHD(list);
             dataGridView1.Rows.Clear();
         }
+
+        private void btnXoa1_Click(object sender, EventArgs e)
+        {
+            ChiTietHoaDon cthd = context.ChiTietHoaDons.FirstOrDefault(p => p.MaHoaDon == txtMaHD.Text);
+            if(cthd != null)
+            {
+                MessageBox.Show("Hãy Xóa Chi Tiết Hóa Đơn Trước Khi Xóa Hóa Đơn!", "Thông Báo");
+            }
+            else
+            {
+                HoaDon hd = context.HoaDons.FirstOrDefault(p => p.MaHoaDon == txtMaHD.Text);
+                context.HoaDons.Remove(hd);
+                context.SaveChanges();
+                MessageBox.Show("Xóa hóa đơn thành công!", "Thông báo!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                List<HoaDon> list = context.HoaDons.ToList();
+                loadGridHD(list);
+            }
+        }
     }
 }
